@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Shadcraft",
+  "homepage": "https://shadcraft.com/",
+  "items": [
+    {
+      "name": "hello-world",
+      "type": "registry:component",
+      "title": "Hello World",
+      "description": "A simple hello world component.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/hello-world.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
