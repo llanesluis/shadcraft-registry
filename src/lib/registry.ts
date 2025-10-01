@@ -155,7 +155,7 @@ function fixFilePaths(files: RegistryItemFile[]) {
 export function fixImport(content: string) {
   const regex = /@\/(.+?)\/((?:.*?\/)?(?:components|ui|hooks|lib))\/([\w-]+)/g;
 
-  const replacement = (match: string, path: string, type: string, component: string) => {
+  const replacement = (match: string, _path: string, type: string, component: string) => {
     if (type.endsWith("components")) {
       return `@/components/${component}`;
     } else if (type.endsWith("ui")) {
