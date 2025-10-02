@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import React from "react";
 
-import { REGISTRY_DEMOS } from "@/app/(view)/view/[name]";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { getRegistryItem, getRegistryItems } from "@/lib/registry";
+import { REGISTRY_VIEW_DEMOS } from "@/registry/view-demos";
 
 export const revalidate = false;
 export const dynamic = "force-static";
@@ -20,7 +20,7 @@ export const generateStaticParams = async () => {
 export default async function ViewPage({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
   const item = await getCachedRegistryItem(name);
-  const RegistryItem = REGISTRY_DEMOS[name as keyof typeof REGISTRY_DEMOS];
+  const RegistryItem = REGISTRY_VIEW_DEMOS[name as keyof typeof REGISTRY_VIEW_DEMOS];
 
   if (!item || !RegistryItem) {
     return notFound();
