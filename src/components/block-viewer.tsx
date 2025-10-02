@@ -227,16 +227,18 @@ function BlockViewerView() {
   }, [isMobile, resizablePanelRef]);
 
   return (
-    <div className="flex group-data-[view=code]/block-view-wrapper:hidden md:h-(--height)">
+    <div className="flex size-full group-data-[view=code]/block-view-wrapper:hidden">
       <div className="relative grid w-full gap-4">
+        {/* Background of the preview area */}
         <div className="bg-muted absolute inset-0 right-3 rounded-lg opacity-25 inset-shadow-2xs md:rounded-xl"></div>
+
         <ResizablePanelGroup
           direction="horizontal"
           className="after:bg-surface/50 relative z-10 after:absolute after:inset-0 after:right-3 after:z-0 after:rounded-xl"
         >
           <ResizablePanel
             ref={resizablePanelRef}
-            className="bg-background relative aspect-[4/2.5] overflow-hidden rounded-lg border sm:min-w-[320px] md:aspect-auto md:rounded-xl"
+            className="bg-background relative overflow-hidden rounded-lg border sm:min-w-[320px] md:rounded-xl"
             defaultSize={100}
             minSize={30}
             onResize={(size: number) => {
@@ -245,7 +247,7 @@ function BlockViewerView() {
           >
             <BlockViewerIframe />
           </ResizablePanel>
-          <ResizableHandle className="after:bg-border relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:right-0 after:h-8 after:w-[6px] after:translate-x-[-1px] after:-translate-y-1/2 after:rounded-full after:transition-all after:hover:h-10 md:block" />
+          <ResizableHandle className="after:bg-border relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:right-0 after:h-10 after:w-[6px] after:translate-x-[-1px] after:-translate-y-1/2 after:rounded-full after:transition-all after:hover:h-10 md:block" />
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
       </div>
@@ -295,11 +297,10 @@ function BlockViewerCode() {
   // );
 
   return (
-    <div className="bg-code text-code-foreground mr-[14px] flex aspect-[4/2.5] size-full overflow-hidden rounded-xl border group-data-[view=preview]/block-view-wrapper:hidden md:aspect-auto md:h-(--height)">
-      <div className=""></div>
-      <span className="size-full content-center text-center font-mono font-medium">
-        Not available yet
-      </span>
+    <div className="flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
+      <div className="bg-code text-code-foreground size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
+        <span className="font-mono font-medium">Not available yet</span>
+      </div>
     </div>
   );
 }
@@ -420,8 +421,11 @@ function BlockViewer({ item, ...props }: Pick<BlockViewerContext, "item">) {
   return (
     <BlockViewerProvider item={item} {...props}>
       <BlockViewerToolbar />
-      <BlockViewerView />
-      <BlockViewerCode />
+
+      <div className="aspect-square md:aspect-auto md:h-(--height)">
+        <BlockViewerView />
+        <BlockViewerCode />
+      </div>
     </BlockViewerProvider>
   );
 }
