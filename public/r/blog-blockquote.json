@@ -4,7 +4,7 @@
   "type": "registry:component",
   "description": "TBC",
   "registryDependencies": [
-    "https://shadcraft-registry.vercel.app/r/blog-blockquote.json"
+    "https://shadcraft-registry.vercel.app/r/profile-card.json"
   ],
   "files": [
     {

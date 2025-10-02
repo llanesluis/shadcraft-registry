@@ -21,10 +21,22 @@
       "name": "blog-blockquote",
       "type": "registry:component",
       "description": "TBC",
-      "registryDependencies": ["https://shadcraft-registry.vercel.app/r/blog-blockquote.json"],
+      "registryDependencies": ["https://shadcraft-registry.vercel.app/r/profile-card.json"],
       "files": [
         {
           "path": "src/registry/pro-marketing/components/blog-blockquote.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "feature-chip",
+      "type": "registry:component",
+      "description": "A Feature Chip component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/feature-chip.tsx",
           "type": "registry:component"
         }
       ]

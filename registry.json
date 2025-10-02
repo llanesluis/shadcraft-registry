@@ -21,7 +21,7 @@
       "name": "blog-blockquote",
       "type": "registry:component",
       "description": "TBC",
-      "registryDependencies": ["https://shadcraft-registry.vercel.app/r/blog-blockquote.json"],
+      "registryDependencies": ["https://shadcraft-registry.vercel.app/r/profile-card.json"],
       "files": [
         {
           "path": "src/registry/pro-marketing/components/blog-blockquote.tsx",
