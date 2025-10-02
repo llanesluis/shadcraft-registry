@@ -1,4 +1,4 @@
-import _registry from "@/registry";
+import _registry from "@/_registry";
 import fs from "fs/promises";
 import { tmpdir } from "os";
 import path from "path";
@@ -20,13 +20,14 @@ export function getRegistryItems(): Registry["items"] {
   return items;
 }
 
-export function getComponents() {
+export function getComponentItems() {
   return getRegistryItems().filter((component) => component.type === "registry:component");
 }
 
-export function getBlocks() {
+export function getBlockItems() {
   return getRegistryItems().filter((component) => component.type === "registry:block");
 }
+
 export async function getRegistryItem(name: string) {
   const item = getRegistryItems().find((item: { name: string }) => item.name === name);
   if (!item) return null;
