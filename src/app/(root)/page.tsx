@@ -1,18 +1,20 @@
-import { DemoPreview } from "@/components/demo-preview";
-import { BlogBlockquoteExample } from "@/registry/pro-marketing/examples/blog-blockquote";
-import { ProfileCardExample } from "@/registry/pro-marketing/examples/profile-card-example";
+import { BlockDisplay } from "@/components/block-display";
+import { getRegistryItem } from "@/lib/registry";
+import React from "react";
 
-export default function HomePage() {
+const getCachedRegistryItem = React.cache(async (name: string) => {
+  return await getRegistryItem(name);
+});
+
+export default async function HomePage() {
+  const profileCard = await getCachedRegistryItem("profile-card");
+  const blogBlockquote = await getCachedRegistryItem("blog-blockquote");
+
   return (
     <div className="flex flex-col gap-12">
-      <div className="container mx-auto grid size-full gap-4 px-8 py-12">
-        <DemoPreview name="Profile Card">
-          <ProfileCardExample />
-        </DemoPreview>
-
-        <DemoPreview name="Blog Blockquote">
-          <BlogBlockquoteExample />
-        </DemoPreview>
+      <div className="container mx-auto grid size-full gap-16 px-8 py-12">
+        {profileCard && <BlockDisplay name={profileCard.name} />}
+        {blogBlockquote && <BlockDisplay name={blogBlockquote.name} />}
       </div>
     </div>
   );

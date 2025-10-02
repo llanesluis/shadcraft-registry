@@ -77,7 +77,7 @@ function BlockViewerProvider({
         className="group/block-view-wrapper flex min-w-0 scroll-mt-24 flex-col items-stretch gap-4 overflow-hidden"
         style={
           {
-            "--height": item.meta?.iframeHeight ?? "930px",
+            "--height": item.meta?.iframeHeight ?? "800px",
           } as React.CSSProperties
         }
       >
@@ -209,9 +209,9 @@ function BlockViewerIframe({ className }: { className?: string }) {
     <iframe
       key={iframeKey}
       src={`/view/${item.name}`}
-      height={item.meta?.iframeHeight ?? 930}
+      height={item.meta?.iframeHeight ?? 800}
       loading="lazy"
-      className={cn("bg-background no-scrollbar relative z-20 w-full", className)}
+      className={cn("bg-background no-scrollbar relative z-20 size-full", className)}
     />
   );
 }
