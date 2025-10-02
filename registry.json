@@ -1,10 +1,8 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Shadcraft",
   "homepage": "https://shadcraft.com/",
   "items": [
     {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "profile-card",
       "type": "registry:component",
       "description": "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
@@ -14,10 +12,12 @@
           "path": "src/registry/pro-marketing/components/profile-card.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     },
     {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "blog-blockquote",
       "type": "registry:component",
       "description": "TBC",
@@ -27,10 +27,12 @@
           "path": "src/registry/pro-marketing/components/blog-blockquote.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     },
     {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "feature-chip",
       "type": "registry:component",
       "description": "A Feature Chip component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
@@ -39,7 +41,10 @@
           "path": "src/registry/pro-marketing/components/feature-chip.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }

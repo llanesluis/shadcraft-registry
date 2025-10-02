@@ -9,5 +9,8 @@
       "content": "import { LucideIcon } from \"lucide-react\";\r\nimport * as React from \"react\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport type FeatureChipProps = {\r\n  label: string;\r\n  icon: LucideIcon;\r\n} & Omit<React.ComponentProps<\"div\">, \"children\">;\r\n\r\nexport function FeatureChip({ icon: Icon, label, className, ...props }: FeatureChipProps) {\r\n  return (\r\n    <div className={cn(\"flex items-center gap-1\", className)} {...props}>\r\n      <Icon aria-hidden=\"true\" className=\"text-muted-foreground size-4\" />\r\n      <span className=\"text-foreground text-sm font-medium\">{label}</span>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
 }
