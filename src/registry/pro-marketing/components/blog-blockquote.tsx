@@ -37,7 +37,7 @@ export function BlogBlockquote({
 }: BlogBlockquoteProps) {
   return (
     <div className="my-5 lg:my-9">
-      <blockquote className="grid gap-1.5 border-l-[3px] pl-5 lg:pl-9">
+      <blockquote className="grid max-w-3xl gap-1.5 border-l-[3px] pl-5 lg:pl-9">
         {showQuoteIcons && <Quote className="text-muted-foreground size-4" />}
         <p className="text-muted-foreground font-sans text-2xl leading-9 font-normal tracking-[-0.6px] text-pretty lg:text-3xl lg:leading-10 lg:tracking-[-0.75px]">
           {quote}
