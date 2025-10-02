@@ -1,5 +1,5 @@
 export function TailwindIndicator({ showInProduction = false }: { showInProduction?: boolean }) {
-  if (process.env.NODE_ENV === "production" || !showInProduction) {
+  if (process.env.NODE_ENV === "production" && showInProduction === false) {
     return null;
   }
 
