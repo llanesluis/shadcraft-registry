@@ -47,4 +47,19 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "sub-feature",
+    type: "registry:component",
+    description:
+      "A component that presents a smaller feature layout for a dialled-back look. This component balances detail with simplicity.",
+    files: [
+      {
+        path: "components/sub-feature.tsx",
+        type: "registry:component",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];
