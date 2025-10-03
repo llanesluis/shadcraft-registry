@@ -23,7 +23,9 @@ export function SubFeature({
     >
       <div className="flex items-center gap-2">
         {Icon && <Icon className="size-5" />}
-        <h3 className="text-foreground font-sans text-xl leading-8 tracking-[-0.6px]">{title}</h3>
+        <h3 className="text-foreground font-sans text-xl leading-8 font-medium tracking-[-0.6px]">
+          {title}
+        </h3>
       </div>
       <p className="text-muted-foreground font-sans text-base leading-6 font-normal">
         {description}
