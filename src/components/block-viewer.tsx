@@ -138,14 +138,6 @@ function BlockViewerToolbar() {
     useBlockViewer();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
-  const currentBreakpointPreset: "100" | "60" | "30" | "" = React.useMemo(() => {
-    const rounded = Math.round(panelSize);
-    if (rounded === 100) return "100";
-    if (rounded === 60) return "60";
-    if (rounded === 30) return "30";
-    return "";
-  }, [panelSize]);
-
   const handleResizeBreakpoint = (size: number) => {
     setView("preview");
     setPanelSize(size);
@@ -308,7 +300,7 @@ function BlockViewerView() {
           >
             <BlockViewerIframe />
           </ResizablePanel>
-          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-12 after:w-2 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-20 active:after:w-1 md:block" />
+          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-12 after:w-1.5 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-20 active:after:w-1 md:block" />
 
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
