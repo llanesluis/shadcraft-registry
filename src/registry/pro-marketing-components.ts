@@ -33,13 +33,13 @@ export const proMarketingComponents: Registry["items"] = [
     },
   },
   {
-    name: "feature-chip",
+    name: "chip",
     type: "registry:component",
     description:
-      "A Feature Chip component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
+      "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
     files: [
       {
-        path: "components/feature-chip.tsx",
+        path: "components/chip.tsx",
         type: "registry:component",
       },
     ],
