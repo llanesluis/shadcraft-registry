@@ -14,6 +14,7 @@ import {
   RotateCw,
   Smartphone,
   Tablet,
+  TabletSmartphone,
   Terminal,
 } from "lucide-react";
 import Link from "next/link";
@@ -293,7 +294,6 @@ function BlockViewerView() {
 
 function BlockViewerCode() {
   const { activeFile, files } = useBlockViewer();
-
   const file = React.useMemo(() => {
     return files?.find((file) => file.target === activeFile);
   }, [files, activeFile]);
@@ -304,9 +304,22 @@ function BlockViewerCode() {
 
   const language = file.path.split(".").pop() ?? "tsx";
 
+  const isMobile = useIsMobile();
+
   return (
-    <div className="flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
-      <div className="bg-code text-code-foreground flex size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
+    <div className="isolate flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
+      <div className="bg-code text-code-foreground relative flex size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
+        {isMobile && (
+          <div className="bg-code/25 absolute inset-0 z-10 backdrop-blur-sm">
+            <div className="flex size-full flex-col items-center justify-center gap-4 p-4">
+              <TabletSmartphone className="size-8" />
+              <span className="max-w-[30ch] font-mono text-sm text-balance">
+                Code preview is not available on mobile at the moment.
+              </span>
+            </div>
+          </div>
+        )}
+
         <BlockViewerFileTreeSidebar />
 
         <figure
@@ -317,7 +330,7 @@ function BlockViewerCode() {
             className="text-code-foreground [&_svg]:text-code-foreground flex h-12 shrink-0 items-center gap-2 border-b px-4 py-2 [&_svg]:size-4 [&_svg]:opacity-70"
             data-language={language}
           >
-            <FileIcon />
+            <FileIcon className="size-4 shrink-0" />
             <span className="line-clamp-1 text-sm font-medium">{file.target}</span>
             <div className="ml-auto flex items-center gap-2">
               <BlockCopyCodeButton />
@@ -460,7 +473,7 @@ function BlockViewer({
     <BlockViewerProvider item={item} tree={tree} files={files} {...props}>
       <BlockViewerToolbar />
 
-      <div className="aspect-square md:aspect-auto md:h-(--height)">
+      <div className="isolate aspect-square overflow-hidden md:aspect-auto md:h-(--height)">
         <BlockViewerView />
         <BlockViewerCode />
       </div>
