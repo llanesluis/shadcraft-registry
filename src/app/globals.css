@@ -144,3 +144,7 @@
     width: 8px;
   }
 }
+
+@utility container {
+  @apply max-w-screen-2xl;
+}

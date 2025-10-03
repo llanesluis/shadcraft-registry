@@ -25,8 +25,39 @@ export function RootSidebar({
   className,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { items: RegistryItem[] }) {
+  return (
+    <>
+      <div className="contents md:hidden">
+        <Sidebar
+          className={cn(
+            "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]!",
+            className
+          )}
+          collapsible={"offcanvas"}
+          {...props}
+        >
+          <SidebarContentWrapper items={items} />
+        </Sidebar>
+      </div>
+
+      <div className="hidden md:contents">
+        <Sidebar
+          className={cn(
+            "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]!",
+            className
+          )}
+          collapsible={"none"}
+          {...props}
+        >
+          <SidebarContentWrapper items={items} />
+        </Sidebar>
+      </div>
+    </>
+  );
+}
+
+function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
   const [activeHash, setActiveHash] = useState("");
-  const { isMobile } = useSidebar();
 
   useEffect(() => {
     setActiveHash(window.location.hash);
@@ -48,138 +79,129 @@ export function RootSidebar({
   );
 
   return (
-    <Sidebar
-      className={cn(
-        "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]!",
-        className
-      )}
-      collapsible={isMobile ? "offcanvas" : "none"}
-      {...props}
-    >
-      <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! py-6">
-        <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
+    <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! py-6">
+      <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
 
-        {/* Components */}
-        <Collapsible defaultOpen={true} className="group/collapsible">
-          <SidebarGroup>
-            <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex min-w-0 items-center">
-                  <Component className="size-4 flex-shrink-0" />
-                  <span className="ml-2 transition-all duration-200">Components</span>
-                </div>
-                <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-              </SidebarGroupLabel>
-            </CollapsibleTrigger>
+      {/* Components */}
+      <Collapsible defaultOpen={true} className="group/collapsible">
+        <SidebarGroup>
+          <CollapsibleTrigger className="w-full">
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+              <div className="flex min-w-0 items-center">
+                <Component className="size-4 flex-shrink-0" />
+                <span className="ml-2 transition-all duration-200">Components</span>
+              </div>
+              <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+            </SidebarGroupLabel>
+          </CollapsibleTrigger>
 
-            <CollapsibleContent>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {componentItems.length > 0 ? (
-                    componentItems.map((item) => (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                        <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
-                          <Link
-                            href={`#${item.name}`}
-                            onNavigate={() => handleLinkClick(`#${item.name}`)}
-                          >
-                            {formatComponentName(item.name)}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))
-                  ) : (
-                    <span className="text-muted-foreground py-2 text-center text-xs font-medium">
-                      No components found
-                    </span>
-                  )}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </CollapsibleContent>
-          </SidebarGroup>
-        </Collapsible>
+          <CollapsibleContent>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {componentItems.length > 0 ? (
+                  componentItems.map((item) => (
+                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
+                        <Link
+                          href={`#${item.name}`}
+                          onNavigate={() => handleLinkClick(`#${item.name}`)}
+                        >
+                          {formatComponentName(item.name)}
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))
+                ) : (
+                  <span className="text-muted-foreground py-2 text-center text-xs font-medium">
+                    No components found
+                  </span>
+                )}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </CollapsibleContent>
+        </SidebarGroup>
+      </Collapsible>
 
-        {/* Blocks */}
-        <Collapsible defaultOpen={blockItems.length > 0} className="group/collapsible">
-          <SidebarGroup>
-            <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex min-w-0 items-center">
-                  <Blocks className="size-4 flex-shrink-0" />
-                  <span className="ml-2 transition-all duration-200">Blocks</span>
-                </div>
-                <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-              </SidebarGroupLabel>
-            </CollapsibleTrigger>
+      {/* Blocks */}
+      <Collapsible defaultOpen={blockItems.length > 0} className="group/collapsible">
+        <SidebarGroup>
+          <CollapsibleTrigger className="w-full">
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+              <div className="flex min-w-0 items-center">
+                <Blocks className="size-4 flex-shrink-0" />
+                <span className="ml-2 transition-all duration-200">Blocks</span>
+              </div>
+              <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+            </SidebarGroupLabel>
+          </CollapsibleTrigger>
 
-            <CollapsibleContent>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {blockItems.length > 0 ? (
-                    blockItems.map((item) => (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                        <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
-                          <Link
-                            href={`#${item.name}`}
-                            onNavigate={() => handleLinkClick(`#${item.name}`)}
-                          >
-                            {formatComponentName(item.name)}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))
-                  ) : (
-                    <span className="text-muted-foreground py-2 text-center text-xs font-medium">
-                      No blocks found
-                    </span>
-                  )}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </CollapsibleContent>
-          </SidebarGroup>
-        </Collapsible>
+          <CollapsibleContent>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {blockItems.length > 0 ? (
+                  blockItems.map((item) => (
+                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
+                        <Link
+                          href={`#${item.name}`}
+                          onNavigate={() => handleLinkClick(`#${item.name}`)}
+                        >
+                          {formatComponentName(item.name)}
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))
+                ) : (
+                  <span className="text-muted-foreground py-2 text-center text-xs font-medium">
+                    No blocks found
+                  </span>
+                )}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </CollapsibleContent>
+        </SidebarGroup>
+      </Collapsible>
 
-        {/* Templates */}
-        <Collapsible defaultOpen={templateItems.length > 0} className="group/collapsible">
-          <SidebarGroup>
-            <CollapsibleTrigger className="w-full">
-              <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                <div className="flex min-w-0 items-center">
-                  <LayoutTemplate className="size-4 flex-shrink-0" />
-                  <span className="ml-2 transition-all duration-200">Templates</span>
-                </div>
-                <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-              </SidebarGroupLabel>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {templateItems.length > 0 ? (
-                    templateItems.map((item) => (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                        <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
-                          <Link
-                            href={`#${item.name}`}
-                            onNavigate={() => handleLinkClick(`#${item.name}`)}
-                          >
-                            {formatComponentName(item.name)}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))
-                  ) : (
-                    <span className="text-muted-foreground py-2 text-center text-xs font-medium">
-                      No templates found
-                    </span>
-                  )}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </CollapsibleContent>
-          </SidebarGroup>
-        </Collapsible>
+      {/* Templates */}
+      <Collapsible defaultOpen={templateItems.length > 0} className="group/collapsible">
+        <SidebarGroup>
+          <CollapsibleTrigger className="w-full">
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+              <div className="flex min-w-0 items-center">
+                <LayoutTemplate className="size-4 flex-shrink-0" />
+                <span className="ml-2 transition-all duration-200">Templates</span>
+              </div>
+              <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+            </SidebarGroupLabel>
+          </CollapsibleTrigger>
+          <CollapsibleContent>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {templateItems.length > 0 ? (
+                  templateItems.map((item) => (
+                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
+                        <Link
+                          href={`#${item.name}`}
+                          onNavigate={() => handleLinkClick(`#${item.name}`)}
+                        >
+                          {formatComponentName(item.name)}
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))
+                ) : (
+                  <span className="text-muted-foreground py-2 text-center text-xs font-medium">
+                    No templates found
+                  </span>
+                )}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </CollapsibleContent>
+        </SidebarGroup>
+      </Collapsible>
 
-        <div className="from-background absolute inset-x-0 bottom-0 h-6 bg-linear-to-t to-transparent" />
-      </SidebarContent>
-    </Sidebar>
+      <div className="from-background absolute inset-x-0 bottom-0 h-6 bg-linear-to-t to-transparent" />
+    </SidebarContent>
   );
 }

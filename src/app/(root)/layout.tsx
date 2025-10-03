@@ -20,9 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </header>
 
         <div className="container mx-auto flex flex-1 gap-4 px-4 md:gap-8 lg:px-8">
-          <div className="border-r">
-            <RootSidebar items={registryItems} className="bg-background" />
-          </div>
+          <RootSidebar items={registryItems} className="bg-background" />
           <SidebarInset>{children}</SidebarInset>
         </div>
       </SidebarProvider>
