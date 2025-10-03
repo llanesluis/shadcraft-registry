@@ -298,13 +298,13 @@ function BlockViewerCode() {
     return files?.find((file) => file.target === activeFile);
   }, [files, activeFile]);
 
+  const isMobile = useIsMobile();
+
   if (!file) {
     return null;
   }
 
   const language = file.path.split(".").pop() ?? "tsx";
-
-  const isMobile = useIsMobile();
 
   return (
     <div className="isolate flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
