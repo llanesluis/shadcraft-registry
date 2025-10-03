@@ -15,15 +15,18 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 import { formatComponentName } from "@/utils/registry";
 
 export function RootSidebar({
   items,
+  className,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { items: RegistryItem[] }) {
   const [activeHash, setActiveHash] = useState("");
+  const { isMobile } = useSidebar();
 
   useEffect(() => {
     setActiveHash(window.location.hash);
@@ -46,11 +49,16 @@ export function RootSidebar({
 
   return (
     <Sidebar
-      className="top-(--header-height) h-[calc(100svh-var(--header-height))]!"
-      collapsible="offcanvas"
+      className={cn(
+        "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]!",
+        className
+      )}
+      collapsible={isMobile ? "offcanvas" : "none"}
       {...props}
     >
-      <SidebarContent className="scrollbar-thin max-h-[calc(100svh-var(--header-height)-var(--footer-height))]">
+      <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! py-6">
+        <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
+
         {/* Components */}
         <Collapsible defaultOpen={true} className="group/collapsible">
           <SidebarGroup>
@@ -169,8 +177,9 @@ export function RootSidebar({
             </CollapsibleContent>
           </SidebarGroup>
         </Collapsible>
+
+        <div className="from-background absolute inset-x-0 bottom-0 h-6 bg-linear-to-t to-transparent" />
       </SidebarContent>
-      <SidebarRail />
     </Sidebar>
   );
 }

@@ -10,11 +10,11 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="container mx-auto grid size-full gap-20 px-8 py-12">
+      <main className="container mx-auto grid size-full gap-20 py-10">
         {registryItems.map((item) => (
           <BlockDisplay key={item.name} name={item.name} />
         ))}
-      </div>
+      </main>
     </div>
   );
 }

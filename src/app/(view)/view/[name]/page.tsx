@@ -28,9 +28,9 @@ export default async function ViewPage({ params }: { params: Promise<{ name: str
 
   return (
     <div className="grid min-h-svh">
-      <div className="container mx-auto flex size-full items-center justify-center p-8">
+      <main className="container mx-auto flex size-full items-center justify-center px-4 lg:px-8">
         <RegistryItem />
-      </div>
+      </main>
 
       <TailwindIndicator showInProduction={true} />
     </div>
