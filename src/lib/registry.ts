@@ -105,7 +105,9 @@ function getFileTarget(file: RegistryItemFile) {
   let target = file.target;
 
   if (!target || target === "") {
-    const fileName = file.path.split("/").pop();
+    // Normalize path separators to forward slashes for cross-platform compatibility
+    const normalizedPath = file.path.replace(/\\/g, "/");
+    const fileName = normalizedPath.split("/").pop();
     if (
       file.type === "registry:block" ||
       file.type === "registry:component" ||
