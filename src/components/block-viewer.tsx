@@ -5,6 +5,7 @@ import {
   ChevronRight,
   Clipboard,
   Code,
+  Copy,
   Eye,
   File,
   FileIcon,
@@ -15,7 +16,6 @@ import {
   Smartphone,
   Tablet,
   TabletSmartphone,
-  Terminal,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -23,10 +23,11 @@ import * as React from "react";
 import { ImperativePanelHandle } from "react-resizable-panels";
 import { type RegistryItem } from "shadcn/schema";
 
+import { CodeBlock } from "@/components/code-block";
 import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
-import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
@@ -39,13 +40,11 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { createFileTreeForRegistryItemFiles, FileTree, RegistryItemFile } from "@/lib/registry";
 import { cn } from "@/lib/utils";
 import { formatComponentName } from "@/utils/registry";
-import { CodeBlock } from "./code-block";
 
 const REGISTRY_URL = process.env.NEXT_PUBLIC_REGISTRY_URL;
 
@@ -140,6 +139,12 @@ function BlockViewerToolbar() {
     return "";
   }, [panelSize]);
 
+  const handleResizeBreakpoint = (size: number) => {
+    setView("preview");
+    setPanelSize(size);
+    resizablePanelRef?.current?.resize(size);
+  };
+
   return (
     <div className="flex flex-col gap-2">
       <header>
@@ -165,65 +170,66 @@ function BlockViewerToolbar() {
           className="shrink-0"
         >
           <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
-            <TabsTrigger value="preview">
+            <TabsTrigger value="preview" className="cursor-pointer">
               <Eye className="size-3.5" />
               <span className="max-md:sr-only">Preview</span>
             </TabsTrigger>
-            <TabsTrigger value="code">
+            <TabsTrigger value="code" className="cursor-pointer">
               <Code className="size-3.5" />
               <span className="max-md:sr-only">Code</span>
             </TabsTrigger>
           </TabsList>
         </Tabs>
 
-        {/* <Separator orientation="vertical" className="!h-4" />
-      <a
-        href={`#${item.name}`}
-        className="group/anchor inline-flex flex-1 flex-col text-sm font-medium md:flex-auto"
-      >
-        <span className="flex items-center gap-1 underline-offset-2 group-hover/anchor:underline">
-          {formatComponentName(item.name)}
-        </span>
-
-        <span className="text-muted-foreground line-clamp-1 text-xs">
-          {item.description?.replace(/\.$/, "")}
-        </span>
-      </a> */}
-
         <div className="ml-auto flex items-center gap-2">
-          <div className="hidden items-center gap-2 shadow-none lg:flex">
-            <ToggleGroup
-              type="single"
-              value={currentBreakpointPreset}
-              onValueChange={(value) => {
-                if (!value) return; // allow deselection when dragging off-preset
-                setView("preview");
-                const target = parseInt(value);
-                setPanelSize(target);
-                resizablePanelRef?.current?.resize(target);
-              }}
-              className="gap-0.5 border p-0.5 *:data-[slot=toggle-group-item]:!size-7 *:data-[slot=toggle-group-item]:!rounded-sm"
-            >
-              <ToggleGroupItem value="100" title="Desktop" className="cursor-pointer">
-                <Monitor />
-              </ToggleGroupItem>
-              <ToggleGroupItem value="60" title="Tablet" className="cursor-pointer">
-                <Tablet />
-              </ToggleGroupItem>
-              <ToggleGroupItem value="30" title="Mobile" className="cursor-pointer">
-                <Smartphone />
-              </ToggleGroupItem>
-            </ToggleGroup>
-
-            <Separator orientation="vertical" className="!h-4" />
-
-            <div className="flex items-center gap-1">
+          <ButtonGroup>
+            <ButtonGroup>
               <Button
-                size="icon"
                 variant="outline"
-                className="size-8 rounded-sm p-0"
+                size="icon-sm"
+                title="Refresh Preview"
+                onClick={() => setIframeKey?.((k) => k + 1)}
+                className="cursor-pointer"
+              >
+                <RotateCw />
+                <span className="sr-only">Refresh Preview</span>
+              </Button>
+            </ButtonGroup>
+
+            <ButtonGroup className="hidden lg:flex">
+              <Button
+                variant="outline"
+                size="icon-sm"
+                onClick={() => handleResizeBreakpoint(100)}
+                className="cursor-pointer"
+              >
+                <Monitor />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon-sm"
+                onClick={() => handleResizeBreakpoint(60)}
+                className="cursor-pointer"
+              >
+                <Tablet />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon-sm"
+                onClick={() => handleResizeBreakpoint(30)}
+                className="cursor-pointer"
+              >
+                <Smartphone />
+              </Button>
+            </ButtonGroup>
+
+            <ButtonGroup>
+              <Button
+                variant="outline"
+                size="icon-sm"
                 asChild
                 title="Open in New Tab"
+                className="cursor-pointer"
               >
                 <Link href={`/view/${item.name}`} target="_blank">
                   <span className="sr-only">Open in New Tab</span>
@@ -231,33 +237,19 @@ function BlockViewerToolbar() {
                 </Link>
               </Button>
               <Button
-                size="icon"
                 variant="outline"
-                className="size-8 rounded-sm p-0"
-                title="Refresh Preview"
+                size="sm"
+                className="cursor-pointer font-mono text-xs"
                 onClick={() => {
-                  if (setIframeKey) {
-                    setIframeKey((k) => k + 1);
-                  }
+                  copyToClipboard(`npx shadcn@latest add ${REGISTRY_URL}/${item.name}.json`);
                 }}
+                title="Copy CLI Command"
               >
-                <RotateCw />
-                <span className="sr-only">Refresh Preview</span>
+                {isCopied ? <Check /> : <Copy />}
+                <span>{item.name}</span>
               </Button>
-            </div>
-          </div>
-          <Separator orientation="vertical" className="hidden !h-4 lg:block" />
-          <Button
-            variant="outline"
-            className="h-8 gap-1 px-2 font-mono text-xs shadow-none"
-            onClick={() => {
-              copyToClipboard(`npx shadcn@latest add ${REGISTRY_URL}/${item.name}.json`);
-            }}
-            title="Copy CLI Command"
-          >
-            {isCopied ? <Check /> : <Terminal />}
-            <span>{item.name}</span>
-          </Button>
+            </ButtonGroup>
+          </ButtonGroup>
         </div>
       </div>
     </div>
