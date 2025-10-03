@@ -16,6 +16,7 @@ import {
   Tablet,
   TabletSmartphone,
   Terminal,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
@@ -45,6 +46,8 @@ import { createFileTreeForRegistryItemFiles, FileTree, RegistryItemFile } from "
 import { cn } from "@/lib/utils";
 import { formatComponentName } from "@/utils/registry";
 import { CodeBlock } from "./code-block";
+
+const REGISTRY_URL = process.env.NEXT_PUBLIC_REGISTRY_URL;
 
 type BlockViewerContext = {
   item: RegistryItem;
@@ -138,7 +141,7 @@ function BlockViewerToolbar() {
   }, [panelSize]);
 
   return (
-    <div className="flex h-10 w-full items-center gap-2 md:pr-3">
+    <div className="flex h-10 w-full items-center gap-2">
       <Tabs
         value={view}
         onValueChange={(value) => setView(value as "preview" | "code")}
@@ -170,7 +173,7 @@ function BlockViewerToolbar() {
         </span>
       </a>
       <div className="ml-auto flex items-center gap-2">
-        <div className="hidden h-8 items-center gap-1.5 rounded-md border p-1 shadow-none lg:flex">
+        <div className="hidden h-8 items-center gap-1.5 p-1 shadow-none lg:flex">
           <ToggleGroup
             type="single"
             value={currentBreakpointPreset}
@@ -181,7 +184,7 @@ function BlockViewerToolbar() {
               setPanelSize(target);
               resizablePanelRef?.current?.resize(target);
             }}
-            className="gap-1 *:data-[slot=toggle-group-item]:!size-6 *:data-[slot=toggle-group-item]:!rounded-sm"
+            className="gap-1 *:data-[slot=toggle-group-item]:!size-8 *:data-[slot=toggle-group-item]:!rounded-sm"
           >
             <ToggleGroupItem value="100" title="Desktop" className="cursor-pointer">
               <Monitor />
@@ -196,7 +199,7 @@ function BlockViewerToolbar() {
             <Button
               size="icon"
               variant="ghost"
-              className="size-6 rounded-sm p-0"
+              className="size-8 rounded-sm p-0"
               asChild
               title="Open in New Tab"
             >
@@ -205,11 +208,10 @@ function BlockViewerToolbar() {
                 <Fullscreen />
               </Link>
             </Button>
-            <Separator orientation="vertical" className="!h-4" />
             <Button
               size="icon"
               variant="ghost"
-              className="size-6 rounded-sm p-0"
+              className="size-8 rounded-sm p-0"
               title="Refresh Preview"
               onClick={() => {
                 if (setIframeKey) {
@@ -224,15 +226,14 @@ function BlockViewerToolbar() {
         </div>
         <Separator orientation="vertical" className="mx-1 !h-4" />
         <Button
-          disabled
           variant="outline"
-          className="gap-1 px-2 font-mono text-xs shadow-none"
-          size="icon"
+          className="h-8 gap-1 px-2 font-mono text-xs shadow-none max-lg:w-8"
           onClick={() => {
-            copyToClipboard(`npx shadcn@latest add @shadcraft/${item.name}`);
+            copyToClipboard(`npx shadcn@latest add ${REGISTRY_URL}/${item.name}.json`);
           }}
         >
           {isCopied ? <Check /> : <Terminal />}
+          <span className="hidden lg:inline-flex">Copy Command</span>
         </Button>
       </div>
     </div>
@@ -267,15 +268,15 @@ function BlockViewerView() {
     <div className="flex size-full group-data-[view=code]/block-view-wrapper:hidden">
       <div className="relative grid w-full gap-4">
         {/* Background of the preview area */}
-        <div className="bg-muted absolute inset-0 right-3 rounded-lg opacity-25 inset-shadow-2xs md:rounded-xl"></div>
+        <div className="absolute inset-0 right-3 [background-image:radial-gradient(var(--border)_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
 
         <ResizablePanelGroup
           direction="horizontal"
-          className="after:bg-surface/50 relative z-10 after:absolute after:inset-0 after:right-3 after:z-0 after:rounded-xl"
+          className="bg-muted/50 rounded-lg border md:rounded-xl"
         >
           <ResizablePanel
             ref={resizablePanelRef}
-            className="bg-background relative overflow-hidden rounded-lg border sm:min-w-[320px] md:rounded-xl"
+            className="relative overflow-hidden rounded-lg border-r sm:min-w-[320px] md:rounded-xl"
             defaultSize={100}
             minSize={30}
             onResize={(size: number) => {
@@ -284,7 +285,8 @@ function BlockViewerView() {
           >
             <BlockViewerIframe />
           </ResizablePanel>
-          <ResizableHandle className="after:bg-border relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:right-0 after:h-10 after:w-[6px] after:translate-x-[-1px] after:-translate-y-1/2 after:rounded-full after:transition-all after:hover:h-10 md:block" />
+          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-12 after:w-2 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-20 active:after:w-1 md:block" />
+
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
       </div>
@@ -299,6 +301,15 @@ function BlockViewerCode() {
   }, [files, activeFile]);
 
   const isMobile = useIsMobile();
+  const [showCodePanelOverlay, setShowCodePanelOverlay] = React.useState(false);
+
+  React.useEffect(() => {
+    if (isMobile) {
+      setShowCodePanelOverlay(true);
+    } else {
+      setShowCodePanelOverlay(false);
+    }
+  }, [isMobile]);
 
   if (!file) {
     return null;
@@ -309,12 +320,21 @@ function BlockViewerCode() {
   return (
     <div className="isolate flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
       <div className="bg-code text-code-foreground relative flex size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
-        {isMobile && (
+        {showCodePanelOverlay && (
           <div className="bg-code/25 absolute inset-0 z-10 backdrop-blur-sm">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute top-3 right-3 size-7"
+              onClick={() => setShowCodePanelOverlay(false)}
+            >
+              <X className="size-4" />
+            </Button>
+
             <div className="flex size-full flex-col items-center justify-center gap-4 p-4">
               <TabletSmartphone className="size-8" />
               <span className="max-w-[30ch] font-mono text-sm text-balance">
-                Code preview is not available on mobile at the moment.
+                Code preview is not fully supported on mobile yet.
               </span>
             </div>
           </div>
