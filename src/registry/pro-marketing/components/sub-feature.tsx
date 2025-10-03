@@ -18,7 +18,11 @@ export function SubFeature({
 }) {
   return (
     <div
-      className={cn("flex flex-col gap-3", leftBorder && "border-border border-l pl-9", className)}
+      className={cn(
+        "flex max-w-xl flex-col gap-3",
+        leftBorder && "border-border border-l pl-9",
+        className
+      )}
       {...props}
     >
       <div className="flex items-center gap-2">
