@@ -28,6 +28,12 @@ export function getBlockItems() {
   return getRegistryItems().filter((component) => component.type === "registry:block");
 }
 
+export function getTemplateItems() {
+  return getRegistryItems().filter(
+    (component) => component.type === "registry:block" && !!component.meta?.template
+  );
+}
+
 export async function getRegistryItem(name: string) {
   const item = getRegistryItems().find((item: { name: string }) => item.name === name);
   if (!item) return null;
