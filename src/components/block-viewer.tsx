@@ -16,7 +16,6 @@ import {
   Smartphone,
   Tablet,
   TabletSmartphone,
-  X,
 } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
@@ -27,6 +26,14 @@ import { CodeBlock } from "@/components/code-block";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@/components/ui/empty";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import {
   Sidebar,
@@ -311,7 +318,7 @@ function BlockViewerView() {
 }
 
 function BlockViewerCode() {
-  const { activeFile, files } = useBlockViewer();
+  const { activeFile, files, setView } = useBlockViewer();
   const file = React.useMemo(() => {
     return files?.find((file) => file.target === activeFile);
   }, [files, activeFile]);
@@ -336,50 +343,52 @@ function BlockViewerCode() {
   return (
     <div className="isolate flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
       <div className="bg-code text-code-foreground relative flex size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
-        {showCodePanelOverlay && (
-          <div className="bg-code/25 absolute inset-0 z-10 backdrop-blur-sm">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-3 right-3 size-7"
-              onClick={() => setShowCodePanelOverlay(false)}
+        {showCodePanelOverlay ? (
+          <Empty>
+            <EmptyHeader>
+              <EmptyMedia variant="icon">
+                <TabletSmartphone />
+              </EmptyMedia>
+              <EmptyTitle>Code Preview Not Available</EmptyTitle>
+              <EmptyDescription>
+                Code preview is not available on mobile devices yet. Please use the desktop version
+                to view the code.
+              </EmptyDescription>
+            </EmptyHeader>
+            <EmptyContent>
+              <Button size="sm" className="cursor-pointer" onClick={() => setView("preview")}>
+                <Eye />
+                View Component Preview
+              </Button>
+            </EmptyContent>
+          </Empty>
+        ) : (
+          <>
+            <BlockViewerFileTreeSidebar />
+            <figure
+              data-rehype-pretty-code-figure=""
+              className="!m-0 flex size-full min-w-0 flex-col overflow-hidden rounded-xl border-none"
             >
-              <X className="size-4" />
-            </Button>
+              <figcaption
+                className="text-code-foreground [&_svg]:text-code-foreground flex h-12 shrink-0 items-center gap-2 border-b px-4 py-2 [&_svg]:size-4 [&_svg]:opacity-70"
+                data-language={language}
+              >
+                <FileIcon className="size-4 shrink-0" />
+                <span className="line-clamp-1 text-sm font-medium">{file.target}</span>
+                <div className="ml-auto flex items-center gap-2">
+                  <BlockCopyCodeButton />
+                </div>
+              </figcaption>
 
-            <div className="flex size-full flex-col items-center justify-center gap-4 p-4">
-              <TabletSmartphone className="size-8" />
-              <span className="max-w-[30ch] font-mono text-sm text-balance">
-                Code preview is not fully supported on mobile yet.
-              </span>
-            </div>
-          </div>
+              <CodeBlock
+                showLineNumbers
+                code={file?.content}
+                language={language}
+                className="scrollbar-thin overflow-auto"
+              />
+            </figure>
+          </>
         )}
-
-        <BlockViewerFileTreeSidebar />
-
-        <figure
-          data-rehype-pretty-code-figure=""
-          className="!m-0 flex size-full min-w-0 flex-col overflow-hidden rounded-xl border-none"
-        >
-          <figcaption
-            className="text-code-foreground [&_svg]:text-code-foreground flex h-12 shrink-0 items-center gap-2 border-b px-4 py-2 [&_svg]:size-4 [&_svg]:opacity-70"
-            data-language={language}
-          >
-            <FileIcon className="size-4 shrink-0" />
-            <span className="line-clamp-1 text-sm font-medium">{file.target}</span>
-            <div className="ml-auto flex items-center gap-2">
-              <BlockCopyCodeButton />
-            </div>
-          </figcaption>
-
-          <CodeBlock
-            showLineNumbers
-            code={file?.content}
-            language={language}
-            className="scrollbar-thin overflow-auto"
-          />
-        </figure>
       </div>
     </div>
   );
