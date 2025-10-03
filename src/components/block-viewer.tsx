@@ -159,7 +159,7 @@ function BlockViewerToolbar() {
         </TabsList>
       </Tabs>
 
-      <Separator orientation="vertical" className="mx-2 !h-4" />
+      <Separator orientation="vertical" className="!h-4" />
       <a
         href={`#${item.name}`}
         className="group/anchor inline-flex flex-1 flex-col text-sm font-medium md:flex-auto"
@@ -173,7 +173,7 @@ function BlockViewerToolbar() {
         </span>
       </a>
       <div className="ml-auto flex items-center gap-2">
-        <div className="hidden h-8 items-center gap-1.5 p-1 shadow-none lg:flex">
+        <div className="hidden items-center gap-2 shadow-none lg:flex">
           <ToggleGroup
             type="single"
             value={currentBreakpointPreset}
@@ -184,7 +184,7 @@ function BlockViewerToolbar() {
               setPanelSize(target);
               resizablePanelRef?.current?.resize(target);
             }}
-            className="gap-1 *:data-[slot=toggle-group-item]:!size-8 *:data-[slot=toggle-group-item]:!rounded-sm"
+            className="gap-0.5 border p-0.5 *:data-[slot=toggle-group-item]:!size-7 *:data-[slot=toggle-group-item]:!rounded-sm"
           >
             <ToggleGroupItem value="100" title="Desktop" className="cursor-pointer">
               <Monitor />
@@ -195,10 +195,14 @@ function BlockViewerToolbar() {
             <ToggleGroupItem value="30" title="Mobile" className="cursor-pointer">
               <Smartphone />
             </ToggleGroupItem>
-            <Separator orientation="vertical" className="!h-4" />
+          </ToggleGroup>
+
+          <Separator orientation="vertical" className="!h-4" />
+
+          <div className="flex items-center gap-1">
             <Button
               size="icon"
-              variant="ghost"
+              variant="outline"
               className="size-8 rounded-sm p-0"
               asChild
               title="Open in New Tab"
@@ -210,7 +214,7 @@ function BlockViewerToolbar() {
             </Button>
             <Button
               size="icon"
-              variant="ghost"
+              variant="outline"
               className="size-8 rounded-sm p-0"
               title="Refresh Preview"
               onClick={() => {
@@ -222,18 +226,19 @@ function BlockViewerToolbar() {
               <RotateCw />
               <span className="sr-only">Refresh Preview</span>
             </Button>
-          </ToggleGroup>
+          </div>
         </div>
-        <Separator orientation="vertical" className="mx-1 !h-4" />
+        <Separator orientation="vertical" className="hidden !h-4 lg:block" />
         <Button
           variant="outline"
-          className="h-8 gap-1 px-2 font-mono text-xs shadow-none max-lg:w-8"
+          className="h-8 gap-1 px-2 font-mono text-xs shadow-none"
           onClick={() => {
             copyToClipboard(`npx shadcn@latest add ${REGISTRY_URL}/${item.name}.json`);
           }}
+          title="Copy CLI Command"
         >
           {isCopied ? <Check /> : <Terminal />}
-          <span className="hidden lg:inline-flex">Copy Command</span>
+          <span>{item.name}</span>
         </Button>
       </div>
     </div>
