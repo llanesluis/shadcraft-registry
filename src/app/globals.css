@@ -127,6 +127,10 @@
   }
 }
 
+@utility code-inline {
+  @apply text-code-foreground bg-code inline-flex rounded px-1.5 py-0.5 font-mono text-xs;
+}
+
 @utility no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
