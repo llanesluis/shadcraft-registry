@@ -6,7 +6,7 @@ function PlaceholderUI({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "bg-muted aspect-auto size-fit overflow-hidden rounded-[12px] border shadow-xl md:rounded-[27px] [&_img:not([class*='aspect-'])]:aspect-auto",
+        "bg-muted aspect-auto size-fit overflow-hidden rounded-[12px] border shadow-xl md:rounded-[27px] [&_img:not([class*='aspect-'])]:aspect-video",
         className
       )}
       {...props}
