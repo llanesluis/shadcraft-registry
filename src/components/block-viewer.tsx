@@ -134,8 +134,7 @@ function BlockViewerProvider({
 }
 
 function BlockViewerToolbar() {
-  const { setView, view, item, resizablePanelRef, setIframeKey, panelSize, setPanelSize } =
-    useBlockViewer();
+  const { setView, view, item, resizablePanelRef, setIframeKey, setPanelSize } = useBlockViewer();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   const handleResizeBreakpoint = (size: number) => {
