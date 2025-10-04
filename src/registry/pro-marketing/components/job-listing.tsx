@@ -53,7 +53,10 @@ function JobListingDescription({ className, ...props }: React.ComponentProps<"h3
   return (
     <p
       data-slot="job-listing-description"
-      className={cn("text-muted-foreground font-sans text-base leading-6 font-normal", className)}
+      className={cn(
+        "text-muted-foreground col-span-full font-sans text-base leading-6 font-normal",
+        className
+      )}
       {...props}
     />
   );
@@ -77,7 +80,10 @@ function JobListingAction({ className, ...props }: React.ComponentProps<"div">) 
   return (
     <div
       data-slot="job-listing-action"
-      className={cn("col-start-2 row-span-full row-start-1 self-start justify-self-end", className)}
+      className={cn(
+        "col-start-2 row-span-full row-start-1 self-start justify-self-end max-md:group-not-has-data-[slot=job-listing-badge]/header:col-span-full",
+        className
+      )}
       {...props}
     />
   );

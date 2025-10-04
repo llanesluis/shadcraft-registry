@@ -44,40 +44,40 @@ export function JobListingExample() {
                 View <ArrowUpRightIcon />
               </Button>
             </JobListingAction>
-            <JobListingTitle>Software Engineer</JobListingTitle>
+            <JobListingTitle>Creative Director</JobListingTitle>
             <JobListingDescription>
-              We are looking for a Software Engineer with 3 years of experience in web development.
+              Shape future brand experiences for our customers.
             </JobListingDescription>
           </JobListingHeader>
 
           <JobListingFooter>
             <Chip icon={MapPin} label="Remote" />
             <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="150-200k" />
+            <Chip icon={Coins} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
         <JobListing>
           <JobListingHeader>
             <JobListingBadge>Design</JobListingBadge>
-            <JobListingTitle>Software Engineer</JobListingTitle>
+            <JobListingTitle>Creative Director</JobListingTitle>
             <JobListingDescription>
-              We are looking for a Software Engineer with 3 years of experience in web development.
+              Shape future brand experiences for our customers.
             </JobListingDescription>
           </JobListingHeader>
 
           <JobListingFooter>
             <Chip icon={MapPin} label="Remote" />
             <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="150-200k" />
+            <Chip icon={Coins} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
         <JobListing>
           <JobListingHeader>
-            <JobListingTitle>Software Engineer</JobListingTitle>
+            <JobListingTitle>Creative Director</JobListingTitle>
             <JobListingDescription>
-              We are looking for a Software Engineer with 3 years of experience in web development.
+              Shape future brand experiences for our customers.
             </JobListingDescription>
           </JobListingHeader>
 
@@ -91,7 +91,7 @@ export function JobListingExample() {
           <JobListingFooter>
             <Chip icon={MapPin} label="Remote" />
             <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="150-200k" />
+            <Chip icon={Coins} label="100-120k" />
           </JobListingFooter>
         </JobListing>
       </div>
@@ -125,40 +125,40 @@ export function JobListingExample() {
                 View <ArrowUpRightIcon />
               </Button>
             </JobListingAction>
-            <JobListingTitle>Software Engineer</JobListingTitle>
+            <JobListingTitle>Creative Director</JobListingTitle>
             <JobListingDescription>
-              We are looking for a Software Engineer with 3 years of experience in web development.
+              Shape future brand experiences for our customers.
             </JobListingDescription>
           </JobListingHeader>
 
           <JobListingFooter>
             <Chip icon={MapPin} label="Remote" />
             <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="150-200k" />
+            <Chip icon={Coins} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
         <JobListing variant="card">
           <JobListingHeader>
             <JobListingBadge>Design</JobListingBadge>
-            <JobListingTitle>Software Engineer</JobListingTitle>
+            <JobListingTitle>Creative Director</JobListingTitle>
             <JobListingDescription>
-              We are looking for a Software Engineer with 3 years of experience in web development.
+              Shape future brand experiences for our customers.
             </JobListingDescription>
           </JobListingHeader>
 
           <JobListingFooter>
             <Chip icon={MapPin} label="Remote" />
             <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="150-200k" />
+            <Chip icon={Coins} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
         <JobListing variant="card">
           <JobListingHeader>
-            <JobListingTitle>Software Engineer</JobListingTitle>
+            <JobListingTitle>Creative Director</JobListingTitle>
             <JobListingDescription>
-              We are looking for a Software Engineer with 3 years of experience in web development.
+              Shape future brand experiences for our customers.
             </JobListingDescription>
           </JobListingHeader>
 
@@ -172,7 +172,7 @@ export function JobListingExample() {
           <JobListingFooter>
             <Chip icon={MapPin} label="Remote" />
             <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="150-200k" />
+            <Chip icon={Coins} label="100-120k" />
           </JobListingFooter>
         </JobListing>
       </div>
