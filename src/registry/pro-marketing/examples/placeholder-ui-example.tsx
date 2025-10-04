@@ -15,13 +15,13 @@ export function PlaceholderUIExample() {
       <div className="flex gap-8">
         <PlaceholderUI>
           <PlaceholderUIInset>
-            <img src="/assets/placeholder.svg" className="aspect-auto size-full object-cover" />
+            <img src="/assets/placeholder.svg" />
           </PlaceholderUIInset>
         </PlaceholderUI>
 
         <PlaceholderUI>
           <PlaceholderUIInset>
-            <img src="/assets/placeholder.svg" className="aspect-video object-cover" />
+            <img src="/assets/placeholder.svg" className="aspect-video" />
           </PlaceholderUIInset>
         </PlaceholderUI>
       </div>
