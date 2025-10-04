@@ -93,4 +93,20 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "job-listing",
+    type: "registry:component",
+    description:
+      "A component that displays open roles in a card format with a badge, title, short body, and feature chips. This component brings structure and clarity to careers pages.",
+    registryDependencies: ["badge"],
+    files: [
+      {
+        path: "components/job-listing.tsx",
+        type: "registry:component",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];
