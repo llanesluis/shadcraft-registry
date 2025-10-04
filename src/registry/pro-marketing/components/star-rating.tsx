@@ -36,7 +36,7 @@ export function StarRating({
       data-slot="star-rating"
       className={cn(
         "flex flex-col items-center gap-1.5",
-        size === "sm" && "[--star-size:calc(--spacing(3.5))]",
+        size === "sm" && "[--star-size:calc(--spacing(3))]",
         size === "md" && "[--star-size:calc(--spacing(4))]",
         size === "lg" && "[--star-size:calc(--spacing(5))]",
         alignment === "left" && "items-start text-left",
