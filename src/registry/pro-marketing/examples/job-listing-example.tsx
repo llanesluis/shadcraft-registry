@@ -10,7 +10,7 @@ import {
   JobListingHeader,
   JobListingTitle,
 } from "@/registry/pro-marketing/components/job-listing";
-import { ArrowRightIcon, Coins, MapPin, Timer } from "lucide-react";
+import { ArrowUpRightIcon, Coins, MapPin, Timer } from "lucide-react";
 
 export function JobListingExample() {
   return (
@@ -21,7 +21,7 @@ export function JobListingExample() {
             <JobListingBadge>Design</JobListingBadge>
             <JobListingAction>
               <Button variant="ghost" size="sm">
-                View <ArrowRightIcon />
+                View <ArrowUpRightIcon />
               </Button>
             </JobListingAction>
             <JobListingTitle>Creative Director</JobListingTitle>
@@ -41,7 +41,7 @@ export function JobListingExample() {
           <JobListingHeader>
             <JobListingAction>
               <Button variant="ghost" size="sm">
-                View <ArrowRightIcon />
+                View <ArrowUpRightIcon />
               </Button>
             </JobListingAction>
             <JobListingTitle>Software Engineer</JobListingTitle>
@@ -102,7 +102,7 @@ export function JobListingExample() {
             <JobListingBadge>Design</JobListingBadge>
             <JobListingAction>
               <Button variant="ghost" size="sm">
-                View <ArrowRightIcon />
+                View <ArrowUpRightIcon />
               </Button>
             </JobListingAction>
             <JobListingTitle>Creative Director</JobListingTitle>
@@ -122,7 +122,7 @@ export function JobListingExample() {
           <JobListingHeader>
             <JobListingAction>
               <Button variant="ghost" size="sm">
-                View <ArrowRightIcon />
+                View <ArrowUpRightIcon />
               </Button>
             </JobListingAction>
             <JobListingTitle>Software Engineer</JobListingTitle>
