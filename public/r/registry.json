@@ -103,6 +103,20 @@
       "meta": {
         "bundle": "pro-marketing"
       }
+    },
+    {
+      "name": "star-rating",
+      "type": "registry:component",
+      "description": "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/star-rating.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }
