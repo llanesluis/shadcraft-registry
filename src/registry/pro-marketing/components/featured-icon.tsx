@@ -22,17 +22,17 @@ const featuredIconVariants = cva(
       {
         size: "sm",
         variant: "square",
-        class: "rounded-[8px]",
+        class: "rounded-lg",
       },
       {
         size: "md",
         variant: "square",
-        class: "rounded-[12px]",
+        class: "rounded-xl",
       },
       {
         size: "lg",
         variant: "square",
-        class: "rounded-[16px]",
+        class: "rounded-2xl",
       },
     ],
     defaultVariants: {
