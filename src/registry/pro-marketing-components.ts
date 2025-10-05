@@ -78,14 +78,14 @@ export const proMarketingComponents: Registry["items"] = [
     },
   },
   {
-    name: "placeholder-ui",
+    name: "ui-showcase",
     type: "registry:component",
     description:
       "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
     registryDependencies: ["aspect-ratio"],
     files: [
       {
-        path: "components/placeholder-ui.tsx",
+        path: "components/ui-showcase.tsx",
         type: "registry:component",
       },
     ],
