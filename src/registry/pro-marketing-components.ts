@@ -124,4 +124,20 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "pricing-card",
+    type: "registry:component",
+    description:
+      "A component for Figma that compares plans with layout variants, including a “Most Popular” highlight. This component makes pricing clear and actionable.",
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "components/pricing-card.tsx",
+        type: "registry:component",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];
