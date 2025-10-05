@@ -109,10 +109,7 @@ function PricingCardPricing({ className, ...props }: React.ComponentProps<"div">
   return (
     <div
       data-slot="pricing-card-pricing"
-      className={cn(
-        "grid auto-rows-min grid-cols-[auto_1fr] grid-rows-[auto_auto] items-start gap-x-2",
-        className
-      )}
+      className={cn("grid grid-cols-[auto_1fr] grid-rows-2 items-start gap-x-2", className)}
       {...props}
     />
   );
@@ -123,9 +120,19 @@ function PricingCardAmount({ className, ...props }: React.ComponentProps<"span">
     <span
       data-slot="pricing-card-amount"
       className={cn(
-        "text-foreground row-span-full font-sans text-6xl leading-none font-bold tracking-[-2.5%]",
+        "text-foreground row-span-full self-end-safe font-sans text-6xl leading-none font-bold tracking-[-2.5%]",
         className
       )}
+      {...props}
+    />
+  );
+}
+
+function PricingCardDetails({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="pricing-card-details"
+      className={cn("row-span-full flex flex-col self-end-safe", className)}
       {...props}
     />
   );
@@ -136,7 +143,7 @@ function PricingCardCadence({ className, ...props }: React.ComponentProps<"span"
     <span
       data-slot="pricing-card-cadence"
       className={cn(
-        "text-foreground self-end-safe font-sans text-sm leading-5 font-medium",
+        "text-foreground col-start-2 font-sans text-sm leading-5 font-medium",
         className
       )}
       {...props}
@@ -148,7 +155,10 @@ function PricingCardFinePrint({ className, ...props }: React.ComponentProps<"spa
   return (
     <span
       data-slot="pricing-card-fine-print"
-      className={cn("text-muted-foreground w-full font-sans text-sm font-normal", className)}
+      className={cn(
+        "text-muted-foreground col-start-2 w-full font-sans text-sm font-normal",
+        className
+      )}
       {...props}
     />
   );
@@ -204,6 +214,7 @@ export {
   PricingCardContent,
   PricingCardCTAButton,
   PricingCardDescription,
+  PricingCardDetails,
   PricingCardFeatures,
   PricingCardFinePrint,
   PricingCardHeader,

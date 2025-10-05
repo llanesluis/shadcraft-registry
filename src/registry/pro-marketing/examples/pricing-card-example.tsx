@@ -6,6 +6,7 @@ import {
   PricingCardContent,
   PricingCardCTAButton,
   PricingCardDescription,
+  PricingCardDetails,
   PricingCardFeatures,
   PricingCardFinePrint,
   PricingCardHeader,
@@ -30,8 +31,10 @@ export function PricingCardExample() {
 
         <PricingCardPricing>
           <PricingCardAmount>$10</PricingCardAmount>
-          <PricingCardCadence>Per month</PricingCardCadence>
-          <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          <PricingCardDetails>
+            <PricingCardCadence>Per month</PricingCardCadence>
+            <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          </PricingCardDetails>
         </PricingCardPricing>
 
         <PricingCardCTAButton>Get started</PricingCardCTAButton>
@@ -57,8 +60,10 @@ export function PricingCardExample() {
 
         <PricingCardPricing>
           <PricingCardAmount>$20</PricingCardAmount>
-          <PricingCardCadence>Per month</PricingCardCadence>
-          <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          <PricingCardDetails>
+            <PricingCardCadence>Per month</PricingCardCadence>
+            <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          </PricingCardDetails>
         </PricingCardPricing>
 
         <PricingCardCTAButton>Get started</PricingCardCTAButton>
@@ -87,8 +92,10 @@ export function PricingCardExample() {
 
         <PricingCardPricing>
           <PricingCardAmount>$50</PricingCardAmount>
-          <PricingCardCadence>Per month</PricingCardCadence>
-          <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          <PricingCardDetails>
+            <PricingCardCadence>Per month</PricingCardCadence>
+            <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          </PricingCardDetails>
         </PricingCardPricing>
 
         <PricingCardCTAButton>Get started</PricingCardCTAButton>
