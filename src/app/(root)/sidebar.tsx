@@ -42,7 +42,7 @@ export function RootSidebar({
       <div className="hidden md:contents">
         <Sidebar
           className={cn(
-            "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]!",
+            "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]! w-48",
             className
           )}
           collapsible={"none"}
@@ -100,7 +100,11 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
                 {componentItems.length > 0 ? (
                   componentItems.map((item) => (
                     <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                      <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
+                      <SidebarMenuButton
+                        asChild
+                        isActive={activeHash === `#${item.name}`}
+                        className="line-clamp-1"
+                      >
                         <Link
                           href={`#${item.name}`}
                           onNavigate={() => handleLinkClick(`#${item.name}`)}
