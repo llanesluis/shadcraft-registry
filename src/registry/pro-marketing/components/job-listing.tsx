@@ -28,7 +28,7 @@ function JobListingHeader({ className, ...props }: React.ComponentProps<"header"
     <header
       data-slot="job-listing-header"
       className={cn(
-        "group/header grid auto-rows-min grid-rows-[auto_auto] items-start gap-x-9 not-has-data-[slot=job-listing-badge]:grid-rows-1 not-has-data-[slot=job-listing-badge]:items-center has-data-[slot=job-listing-action]:grid-cols-[1fr_auto] has-data-[slot=job-listing-badge]:grid-cols-[1fr_auto]",
+        "group/header grid auto-rows-min grid-rows-[auto_auto] items-start gap-x-5 not-has-data-[slot=job-listing-badge]:grid-rows-1 not-has-data-[slot=job-listing-badge]:items-center has-data-[slot=job-listing-action]:grid-cols-[1fr_auto] has-data-[slot=job-listing-badge]:grid-cols-[1fr_auto] lg:gap-x-9",
         className
       )}
       {...props}
@@ -80,10 +80,7 @@ function JobListingAction({ className, ...props }: React.ComponentProps<"div">) 
   return (
     <div
       data-slot="job-listing-action"
-      className={cn(
-        "col-start-2 row-span-full row-start-1 self-start justify-self-end max-md:group-not-has-data-[slot=job-listing-badge]/header:col-span-full",
-        className
-      )}
+      className={cn("col-start-2 row-span-full row-start-1 self-start justify-self-end", className)}
       {...props}
     />
   );
