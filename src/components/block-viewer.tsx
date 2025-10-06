@@ -151,7 +151,7 @@ function BlockViewerToolbar() {
           className="group/anchor inline-flex flex-1 flex-col font-medium md:flex-auto"
         >
           <h3 className="flex items-center gap-1 text-base underline-offset-2 group-hover/anchor:underline md:text-lg">
-            {formatComponentName(item.name)}
+            {item.title || formatComponentName(item.name)}
           </h3>
 
           {item.description && (

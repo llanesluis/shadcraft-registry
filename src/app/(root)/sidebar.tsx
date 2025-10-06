@@ -109,7 +109,7 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
                           href={`#${item.name}`}
                           onNavigate={() => handleLinkClick(`#${item.name}`)}
                         >
-                          {formatComponentName(item.name)}
+                          {item.title || formatComponentName(item.name)}
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -149,7 +149,7 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
                           href={`#${item.name}`}
                           onNavigate={() => handleLinkClick(`#${item.name}`)}
                         >
-                          {formatComponentName(item.name)}
+                          {item.title || formatComponentName(item.name)}
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -188,7 +188,7 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
                           href={`#${item.name}`}
                           onNavigate={() => handleLinkClick(`#${item.name}`)}
                         >
-                          {formatComponentName(item.name)}
+                          {item.title || formatComponentName(item.name)}
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
