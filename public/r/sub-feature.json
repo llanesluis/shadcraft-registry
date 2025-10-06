@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sub-feature",
   "type": "registry:component",
+  "title": "Sub Feature",
   "description": "A component that presents a smaller feature layout for a dialled-back look. This component balances detail with simplicity.",
   "files": [
     {

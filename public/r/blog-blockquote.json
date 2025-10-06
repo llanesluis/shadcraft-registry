@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "blog-blockquote",
   "type": "registry:component",
+  "title": "Blog Blockquote",
   "description": "TBC",
   "registryDependencies": [
     "https://shadcraft-registry.vercel.app/r/profile-card.json"

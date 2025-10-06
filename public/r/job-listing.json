@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "job-listing",
   "type": "registry:component",
+  "title": "Job Listing",
   "description": "A component that displays open roles in a card format with a badge, title, short body, and feature chips. This component brings structure and clarity to careers pages.",
   "registryDependencies": [
     "badge"

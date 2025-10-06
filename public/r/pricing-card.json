@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pricing-card",
   "type": "registry:component",
+  "title": "Pricing Card",
   "description": "A component for Figma that compares plans with layout variants, including a “Most Popular” highlight. This component makes pricing clear and actionable.",
   "registryDependencies": [
     "badge",

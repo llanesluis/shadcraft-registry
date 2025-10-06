@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chip",
   "type": "registry:component",
+  "title": "Chip",
   "description": "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
   "files": [
     {

@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "ui-showcase",
   "type": "registry:component",
+  "title": "UI Showcase",
   "description": "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
   "registryDependencies": [
     "aspect-ratio"

@@ -3,6 +3,7 @@ import { Registry } from "shadcn/schema";
 export const proMarketingComponents: Registry["items"] = [
   {
     name: "profile-card",
+    title: "Profile Card",
     type: "registry:component",
     description:
       "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
@@ -19,6 +20,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "blog-blockquote",
+    title: "Blog Blockquote",
     type: "registry:component",
     description: "TBC",
     registryDependencies: ["https://shadcraft-registry.vercel.app/r/profile-card.json"],
@@ -34,6 +36,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "chip",
+    title: "Chip",
     type: "registry:component",
     description:
       "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
@@ -49,6 +52,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "sub-feature",
+    title: "Sub Feature",
     type: "registry:component",
     description:
       "A component that presents a smaller feature layout for a dialled-back look. This component balances detail with simplicity.",
@@ -64,6 +68,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "featured-icon",
+    title: "Featured Icon",
     type: "registry:component",
     description:
       "A component that places an icon inside a styled square or circle frame for extra prominence. This component makes supporting visuals stand out in marketing layouts.",
@@ -79,6 +84,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "ui-showcase",
+    title: "UI Showcase",
     type: "registry:component",
     description:
       "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
@@ -95,6 +101,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "job-listing",
+    title: "Job Listing",
     type: "registry:component",
     description:
       "A component that displays open roles in a card format with a badge, title, short body, and feature chips. This component brings structure and clarity to careers pages.",
@@ -111,6 +118,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "star-rating",
+    title: "Star Rating",
     type: "registry:component",
     description:
       "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
@@ -126,6 +134,7 @@ export const proMarketingComponents: Registry["items"] = [
   },
   {
     name: "pricing-card",
+    title: "Pricing Card",
     type: "registry:component",
     description:
       "A component for Figma that compares plans with layout variants, including a “Most Popular” highlight. This component makes pricing clear and actionable.",
