@@ -7,19 +7,16 @@ import { cn } from "@/lib/utils";
 
 function PricingCard({
   mostPopular = false,
-  variant = "default",
   className,
   ...props
-}: React.ComponentProps<"div"> & { mostPopular?: boolean; variant?: "default" | "wide" }) {
+}: React.ComponentProps<"div"> & { mostPopular?: boolean }) {
   return (
     <div
       data-slot="pricing-card"
       data-most-popular={mostPopular}
-      data-variant={variant}
       className={cn(
-        "group/pricing-card bg-card @container relative grid w-full max-w-xl gap-4 rounded-2xl border p-6 shadow-sm has-data-[slot=pricing-card-badge]:py-9 lg:p-9 lg:has-data-[slot=pricing-card-badge]:py-12",
+        "group/pricing-card bg-card @container/pricing-card relative grid w-full max-w-xl gap-y-4 rounded-2xl border p-6 shadow-sm has-data-[slot=pricing-card-badge]:py-9 lg:p-9 lg:has-data-[slot=pricing-card-badge]:py-12",
         mostPopular && "border-primary border-2",
-        variant === "wide" && "max-w-5xl grid-cols-6",
         className
       )}
       {...props}
@@ -29,15 +26,7 @@ function PricingCard({
 
 function PricingCardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div
-      data-slot="pricing-card-header"
-      className={cn(
-        "col-span-full flex flex-col",
-        "@md:group-data-[variant=wide]/pricing-card:col-span-3 @md:group-data-[variant=wide]/pricing-card:col-start-1 @md:group-data-[variant=wide]/pricing-card:self-end-safe",
-        className
-      )}
-      {...props}
-    />
+    <div data-slot="pricing-card-header" className={cn("flex flex-col", className)} {...props} />
   );
 }
 
@@ -47,10 +36,7 @@ function PricingCardIcon({
   ...props
 }: React.ComponentProps<LucideIcon> & { icon: LucideIcon }) {
   return (
-    <div
-      data-slot="pricing-card-icon"
-      className="col-span-full @md:group-data-[variant=wide]/pricing-card:col-span-full @md:group-data-[variant=wide]/pricing-card:row-start-1"
-    >
+    <div data-slot="pricing-card-icon">
       <Icon className={cn("text-foreground size-6", className)} {...props} />
     </div>
   );
@@ -113,11 +99,7 @@ function PricingCardCTAButton({
       data-slot="pricing-card-button"
       size={size}
       variant={variant}
-      className={cn(
-        "col-span-full w-full",
-        "@md:group-data-[variant=wide]/pricing-card:col-span-full",
-        className
-      )}
+      className={cn("w-full", className)}
       {...props}
     />
   );
@@ -127,11 +109,7 @@ function PricingCardPricing({ className, ...props }: React.ComponentProps<"div">
   return (
     <div
       data-slot="pricing-card-pricing"
-      className={cn(
-        "col-span-full grid grid-cols-[auto_1fr] grid-rows-2 items-start gap-x-2",
-        "@md:group-data-[variant=wide]/pricing-card:col-span-3 @md:group-data-[variant=wide]/pricing-card:col-start-4 @md:group-data-[variant=wide]/pricing-card:justify-self-end",
-        className
-      )}
+      className={cn("grid grid-cols-[auto_1fr] grid-rows-2 items-start gap-x-2", className)}
       {...props}
     />
   );
@@ -190,11 +168,7 @@ function PricingCardContent({ className, ...props }: React.ComponentProps<"div">
   return (
     <div
       data-slot="pricing-card-content"
-      className={cn(
-        "col-span-full flex flex-col gap-4 lg:pt-4",
-        "@md:group-data-[variant=wide]/pricing-card:col-span-full",
-        className
-      )}
+      className={cn("flex flex-col gap-4 lg:pt-4", className)}
       {...props}
     />
   );
@@ -204,11 +178,7 @@ function PricingCardFeatures({ className, ...props }: React.ComponentProps<"div"
   return (
     <div
       data-slot="pricing-card-features"
-      className={cn(
-        "col-span-full gap-3 space-y-3",
-        "@md:group-data-[variant=wide]/pricing-card:col-span-full @md:group-data-[variant=wide]/pricing-card:columns-2 @md:group-data-[variant=wide]/pricing-card:space-x-4",
-        className
-      )}
+      className={cn("flex flex-col gap-3", className)}
       {...props}
     />
   );
@@ -228,7 +198,7 @@ function PricingCardListItem({
       className={cn("flex items-center gap-2", className)}
       {...props}
     >
-      {Icon && <Icon className="text-muted-foreground size-5 shrink-0 lg:size-6" />}
+      {Icon && <Icon className="text-muted-foreground size-5 lg:size-6" />}
       <span className="text-foreground font-sans text-sm leading-5 font-normal lg:text-base">
         {children}
       </span>

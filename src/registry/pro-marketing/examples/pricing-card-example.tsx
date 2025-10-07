@@ -19,195 +19,100 @@ import { Building, Gem, Star } from "lucide-react";
 
 export function PricingCardExample() {
   return (
-    <div className="grid size-full gap-20">
-      <div className="grid size-full place-items-center gap-8 lg:grid-cols-3">
-        <PricingCard>
-          <PricingCardIcon icon={Star} />
-          <PricingCardHeader>
-            <PricingCardTitle>Starter Plan</PricingCardTitle>
-            <PricingCardDescription>
-              For individuals who want AI assistance in their daily workflow.
-            </PricingCardDescription>
-          </PricingCardHeader>
+    <div className="grid size-full place-items-center gap-8 lg:grid-cols-3">
+      <PricingCard>
+        <PricingCardIcon icon={Star} />
+        <PricingCardHeader>
+          <PricingCardTitle>Starter Plan</PricingCardTitle>
+          <PricingCardDescription>
+            For individuals who want AI assistance in their daily workflow.
+          </PricingCardDescription>
+        </PricingCardHeader>
 
-          <PricingCardPricing>
-            <PricingCardAmount>$10</PricingCardAmount>
-            <PricingCardDetails>
-              <PricingCardCadence>Per month</PricingCardCadence>
-              <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
-            </PricingCardDetails>
-          </PricingCardPricing>
+        <PricingCardPricing>
+          <PricingCardAmount>$10</PricingCardAmount>
+          <PricingCardDetails>
+            <PricingCardCadence>Per month</PricingCardCadence>
+            <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          </PricingCardDetails>
+        </PricingCardPricing>
 
-          <PricingCardCTAButton>Get started</PricingCardCTAButton>
+        <PricingCardCTAButton>Get started</PricingCardCTAButton>
+
+        <PricingCardFeatures>
+          <PricingCardListItem>Unlimited projects</PricingCardListItem>
+          <PricingCardListItem>AI-powered insights </PricingCardListItem>
+          <PricingCardListItem>Real-time collaboration</PricingCardListItem>
+          <PricingCardListItem>Seamless integrations</PricingCardListItem>
+          <PricingCardListItem>Priority support</PricingCardListItem>
+        </PricingCardFeatures>
+      </PricingCard>
+
+      <PricingCard mostPopular>
+        <PricingCardIcon icon={Gem} />
+        <PricingCardHeader>
+          <PricingCardBadge>Most Popular</PricingCardBadge>
+          <PricingCardTitle>Pro Plan</PricingCardTitle>
+          <PricingCardDescription>
+            For individuals who want AI assistance in their daily workflow.
+          </PricingCardDescription>
+        </PricingCardHeader>
+
+        <PricingCardPricing>
+          <PricingCardAmount>$20</PricingCardAmount>
+          <PricingCardDetails>
+            <PricingCardCadence>Per month</PricingCardCadence>
+            <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          </PricingCardDetails>
+        </PricingCardPricing>
+
+        <PricingCardCTAButton>Get started</PricingCardCTAButton>
+
+        <PricingCardContent>
+          <span className="text-muted-foreground font-sans text-sm leading-5 font-medium">
+            All features in Starter Plan, plus:
+          </span>
+          <PricingCardFeatures>
+            <PricingCardListItem>Unlimited projects</PricingCardListItem>
+            <PricingCardListItem>AI-powered insights </PricingCardListItem>
+            <PricingCardListItem>Real-time collaboration</PricingCardListItem>
+            <PricingCardListItem>Seamless integrations</PricingCardListItem>
+          </PricingCardFeatures>
+        </PricingCardContent>
+      </PricingCard>
+
+      <PricingCard>
+        <PricingCardIcon icon={Building} />
+        <PricingCardHeader>
+          <PricingCardTitle>Enterprise Plan</PricingCardTitle>
+          <PricingCardDescription>
+            For individuals who want AI assistance in their daily workflow.
+          </PricingCardDescription>
+        </PricingCardHeader>
+
+        <PricingCardPricing>
+          <PricingCardAmount>$50</PricingCardAmount>
+          <PricingCardDetails>
+            <PricingCardCadence>Per month</PricingCardCadence>
+            <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
+          </PricingCardDetails>
+        </PricingCardPricing>
+
+        <PricingCardCTAButton>Get started</PricingCardCTAButton>
+
+        <PricingCardContent>
+          <span className="text-muted-foreground font-sans text-sm leading-5 font-medium">
+            All features in Pro Plan, plus:
+          </span>
 
           <PricingCardFeatures>
             <PricingCardListItem>Unlimited projects</PricingCardListItem>
             <PricingCardListItem>AI-powered insights </PricingCardListItem>
             <PricingCardListItem>Real-time collaboration</PricingCardListItem>
             <PricingCardListItem>Seamless integrations</PricingCardListItem>
-            <PricingCardListItem>Priority support</PricingCardListItem>
           </PricingCardFeatures>
-        </PricingCard>
-
-        <PricingCard mostPopular>
-          <PricingCardIcon icon={Gem} />
-          <PricingCardHeader>
-            <PricingCardBadge>Most Popular</PricingCardBadge>
-            <PricingCardTitle>Pro Plan</PricingCardTitle>
-            <PricingCardDescription>
-              For individuals who want AI assistance in their daily workflow.
-            </PricingCardDescription>
-          </PricingCardHeader>
-
-          <PricingCardPricing>
-            <PricingCardAmount>$20</PricingCardAmount>
-            <PricingCardDetails>
-              <PricingCardCadence>Per month</PricingCardCadence>
-              <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
-            </PricingCardDetails>
-          </PricingCardPricing>
-
-          <PricingCardCTAButton>Get started</PricingCardCTAButton>
-
-          <PricingCardContent>
-            <span className="text-muted-foreground font-sans text-sm leading-5 font-medium">
-              All features in Starter Plan, plus:
-            </span>
-            <PricingCardFeatures>
-              <PricingCardListItem>Unlimited projects</PricingCardListItem>
-              <PricingCardListItem>AI-powered insights </PricingCardListItem>
-              <PricingCardListItem>Real-time collaboration</PricingCardListItem>
-              <PricingCardListItem>Seamless integrations</PricingCardListItem>
-            </PricingCardFeatures>
-          </PricingCardContent>
-        </PricingCard>
-
-        <PricingCard>
-          <PricingCardIcon icon={Building} />
-          <PricingCardHeader>
-            <PricingCardTitle>Enterprise Plan</PricingCardTitle>
-            <PricingCardDescription>
-              For individuals who want AI assistance in their daily workflow.
-            </PricingCardDescription>
-          </PricingCardHeader>
-
-          <PricingCardPricing>
-            <PricingCardAmount>$50</PricingCardAmount>
-            <PricingCardDetails>
-              <PricingCardCadence>Per month</PricingCardCadence>
-              <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
-            </PricingCardDetails>
-          </PricingCardPricing>
-
-          <PricingCardCTAButton>Get started</PricingCardCTAButton>
-
-          <PricingCardContent>
-            <span className="text-muted-foreground font-sans text-sm leading-5 font-medium">
-              All features in Pro Plan, plus:
-            </span>
-
-            <PricingCardFeatures>
-              <PricingCardListItem>Unlimited projects</PricingCardListItem>
-              <PricingCardListItem>AI-powered insights </PricingCardListItem>
-              <PricingCardListItem>Real-time collaboration</PricingCardListItem>
-              <PricingCardListItem>Seamless integrations</PricingCardListItem>
-            </PricingCardFeatures>
-          </PricingCardContent>
-        </PricingCard>
-      </div>
-
-      <div className="grid place-items-center">
-        <PricingCard variant="wide">
-          <PricingCardIcon icon={Star} />
-          <PricingCardHeader>
-            <PricingCardTitle>Starter Plan</PricingCardTitle>
-            <PricingCardDescription>
-              For individuals who want AI assistance in their daily workflow.
-            </PricingCardDescription>
-          </PricingCardHeader>
-
-          <PricingCardPricing>
-            <PricingCardAmount>$10</PricingCardAmount>
-            <PricingCardDetails>
-              <PricingCardCadence>Per month</PricingCardCadence>
-              <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
-            </PricingCardDetails>
-          </PricingCardPricing>
-
-          <PricingCardCTAButton>Get started</PricingCardCTAButton>
-
-          <PricingCardFeatures>
-            <PricingCardListItem>Unlimited projects</PricingCardListItem>
-            <PricingCardListItem>AI-powered insights </PricingCardListItem>
-            <PricingCardListItem>Real-time collaboration</PricingCardListItem>
-            <PricingCardListItem>Seamless integrations</PricingCardListItem>
-            <PricingCardListItem>Priority support</PricingCardListItem>
-          </PricingCardFeatures>
-        </PricingCard>
-      </div>
-
-      <div className="grid place-items-center gap-8 lg:grid-cols-2">
-        <PricingCard variant="wide">
-          <PricingCardIcon icon={Star} />
-          <PricingCardHeader>
-            <PricingCardTitle>Starter Plan</PricingCardTitle>
-            <PricingCardDescription>
-              For individuals who want AI assistance in their daily workflow.
-            </PricingCardDescription>
-          </PricingCardHeader>
-
-          <PricingCardPricing>
-            <PricingCardAmount>$10</PricingCardAmount>
-            <PricingCardDetails>
-              <PricingCardCadence>Per month</PricingCardCadence>
-              <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
-            </PricingCardDetails>
-          </PricingCardPricing>
-
-          <PricingCardCTAButton>Get started</PricingCardCTAButton>
-
-          <PricingCardFeatures>
-            <PricingCardListItem>Unlimited projects</PricingCardListItem>
-            <PricingCardListItem>AI-powered insights </PricingCardListItem>
-            <PricingCardListItem>Real-time collaboration</PricingCardListItem>
-            <PricingCardListItem>Seamless integrations</PricingCardListItem>
-            <PricingCardListItem>Priority support</PricingCardListItem>
-          </PricingCardFeatures>
-        </PricingCard>
-
-        <PricingCard mostPopular variant="wide">
-          <PricingCardIcon icon={Gem} />
-          <PricingCardHeader>
-            <PricingCardBadge>Most Popular</PricingCardBadge>
-            <PricingCardTitle>Pro Plan</PricingCardTitle>
-            <PricingCardDescription>
-              For individuals who want AI assistance in their daily workflow.
-            </PricingCardDescription>
-          </PricingCardHeader>
-
-          <PricingCardPricing>
-            <PricingCardAmount>$20</PricingCardAmount>
-            <PricingCardDetails>
-              <PricingCardCadence>Per month</PricingCardCadence>
-              <PricingCardFinePrint>Plus local taxes</PricingCardFinePrint>
-            </PricingCardDetails>
-          </PricingCardPricing>
-
-          <PricingCardCTAButton>Get started</PricingCardCTAButton>
-
-          <PricingCardContent>
-            <span className="text-muted-foreground font-sans text-sm leading-5 font-medium">
-              All features in Starter Plan, plus:
-            </span>
-            <PricingCardFeatures>
-              <PricingCardListItem>Unlimited projects</PricingCardListItem>
-              <PricingCardListItem>AI-powered insights </PricingCardListItem>
-              <PricingCardListItem>Real-time collaboration</PricingCardListItem>
-              <PricingCardListItem>Seamless integrations</PricingCardListItem>
-            </PricingCardFeatures>
-          </PricingCardContent>
-        </PricingCard>
-      </div>
+        </PricingCardContent>
+      </PricingCard>
     </div>
   );
 }
