@@ -36,7 +36,7 @@ function BlogBlockquote({
   );
 }
 
-function BlogBlockquoteText({ children, className, ...props }: React.ComponentProps<"p">) {
+function BlogBlockquoteText({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <>
       <Quote className="text-muted-foreground size-4 self-start group-not-data-[show-icons=true]/blog-blockquote:hidden" />
@@ -45,9 +45,8 @@ function BlogBlockquoteText({ children, className, ...props }: React.ComponentPr
           "text-muted-foreground font-sans text-2xl leading-9 font-normal tracking-[-0.6px] text-pretty lg:text-3xl lg:leading-10 lg:tracking-[-0.75px]",
           className
         )}
-      >
-        {children}
-      </p>
+        {...props}
+      />
       <Quote className="text-muted-foreground size-4 self-end group-not-data-[show-icons=true]/blog-blockquote:hidden" />
     </>
   );
