@@ -156,6 +156,22 @@
       "meta": {
         "bundle": "pro-marketing"
       }
+    },
+    {
+      "name": "metric",
+      "type": "registry:component",
+      "title": "Metric",
+      "description": "A component that displays large stats with a sub-label for context. This component is designed to highlight performance or usage data.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/metric.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }

@@ -165,4 +165,21 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "metric",
+    title: "Metric",
+    type: "registry:component",
+    description:
+      "A component that displays large stats with a sub-label for context. This component is designed to highlight performance or usage data.",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "components/metric.tsx",
+        type: "registry:component",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];
