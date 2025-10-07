@@ -141,6 +141,21 @@
       "meta": {
         "bundle": "pro-marketing"
       }
+    },
+    {
+      "name": "blog-image",
+      "type": "registry:component",
+      "title": "Blog Image",
+      "description": "A component that displays an inline or full-width image with an optional caption. This component makes blog articles more engaging and visually appealing.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/blog-image.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }

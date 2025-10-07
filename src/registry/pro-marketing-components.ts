@@ -149,4 +149,20 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "blog-image",
+    title: "Blog Image",
+    type: "registry:component",
+    description:
+      "A component that displays an inline or full-width image with an optional caption. This component makes blog articles more engaging and visually appealing.",
+    files: [
+      {
+        path: "components/blog-image.tsx",
+        type: "registry:component",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];

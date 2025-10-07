@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-image",
+  "type": "registry:component",
+  "title": "Blog Image",
+  "description": "A component that displays an inline or full-width image with an optional caption. This component makes blog articles more engaging and visually appealing.",
+  "files": [
+    {
+      "path": "src/registry/pro-marketing/components/blog-image.tsx",
+      "content": "import { Link2, LucideIcon } from \"lucide-react\";\r\nimport * as React from \"react\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nfunction BlogImage({ className, ...props }: React.ComponentProps<\"figure\">) {\r\n  return (\r\n    <figure\r\n      data-slot=\"blog-image\"\r\n      className={cn(\"flex flex-col gap-3.5 py-5 lg:py-9\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction BlogImageImage({ className, ...props }: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"blog-image-image\"\r\n      className={cn(\r\n        \"overflow-hidden rounded-2xl\",\r\n        // image defaults\r\n        \"[&_img:not([class*='aspect-'])]:aspect-auto [&_img:not([class*='size-'])]:h-auto [&_img:not([class*='size-'])]:w-full\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction BlogImageCaption({\r\n  icon: Icon = Link2,\r\n  showIcon = true,\r\n  className,\r\n  children,\r\n  ...props\r\n}: React.ComponentProps<\"figcaption\"> & { icon?: LucideIcon; showIcon?: boolean }) {\r\n  return (\r\n    <figcaption\r\n      data-slot=\"blog-image-caption\"\r\n      className={cn(\r\n        \"text-muted-foreground flex items-center gap-1.5 font-sans text-sm leading-5\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      {showIcon && <Icon className=\"text-muted-foreground size-4\" aria-hidden=\"true\" />}\r\n      {children}\r\n    </figcaption>\r\n  );\r\n}\r\n\r\nfunction BlogImageAttribution({\r\n  author,\r\n  authorHref,\r\n  source,\r\n  sourceHref,\r\n  prefix = \"Photo by\",\r\n  separator = \"on\",\r\n}: {\r\n  author: string;\r\n  authorHref?: string;\r\n  source: string;\r\n  sourceHref?: string;\r\n  prefix?: string;\r\n  separator?: string;\r\n}) {\r\n  const normalizedPrefix = prefix.trim();\r\n  const normalizedSeparator = separator.trim();\r\n  const normalizedAuthor = author.trim();\r\n  const normalizedSource = source.trim();\r\n  return (\r\n    <span data-slot=\"blog-image-attribution\" className=\"text-muted-foreground\">\r\n      <span>{normalizedPrefix}</span>{\" \"}\r\n      {authorHref ? (\r\n        <a className=\"underline\" href={authorHref} target=\"_blank\" rel=\"noopener noreferrer\">\r\n          {normalizedAuthor}\r\n        </a>\r\n      ) : (\r\n        <span>{normalizedAuthor}</span>\r\n      )}{\" \"}\r\n      <span>{normalizedSeparator}</span>{\" \"}\r\n      {sourceHref ? (\r\n        <a className=\"underline\" href={sourceHref} target=\"_blank\" rel=\"noopener noreferrer\">\r\n          {normalizedSource}\r\n        </a>\r\n      ) : (\r\n        <span>{normalizedSource}</span>\r\n      )}\r\n    </span>\r\n  );\r\n}\r\n\r\nexport { BlogImage, BlogImageAttribution, BlogImageCaption, BlogImageImage };\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}
