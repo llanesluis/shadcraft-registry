@@ -15,7 +15,7 @@ function PricingCard({
       data-slot="pricing-card"
       data-most-popular={mostPopular}
       className={cn(
-        "group/pricing-card bg-card @container/pricing-card relative grid w-full max-w-xl gap-y-4 rounded-2xl border p-6 shadow-sm has-data-[slot=pricing-card-badge]:py-9 lg:p-9 lg:has-data-[slot=pricing-card-badge]:py-12",
+        "group/pricing-card bg-card @container/pricing-card relative grid w-full max-w-xl gap-y-4 rounded-2xl border p-6 shadow-sm has-data-[slot=pricing-card-badge]:py-11 lg:p-9 lg:has-data-[slot=pricing-card-badge]:py-12",
         mostPopular && "border-primary border-2",
         className
       )}
