@@ -4,3 +4,7 @@ export function formatComponentName(name: string): string {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
+
+export function getRegistryItemJsonUrl(name: string): string {
+  return `https://shadcraft-registry.vercel.app/r/${name}.json`;
+}
