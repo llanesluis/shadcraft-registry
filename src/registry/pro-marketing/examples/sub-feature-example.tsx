@@ -1,5 +1,6 @@
-import { SubFeature } from "@/registry/pro-marketing/components/sub-feature";
 import { Activity, Brain, ClipboardClock, Workflow } from "lucide-react";
+
+import { SubFeature } from "@/registry/pro-marketing/components/sub-feature";
 
 export function SubFeatureExample() {
   return (
@@ -7,24 +8,24 @@ export function SubFeatureExample() {
       <SubFeature
         title="Smarter Analytics"
         description="Turn data into clarity with AI-powered insights that help you act faster and more confidently."
-        icon={Activity}
+        icon={<Activity />}
       />
       <SubFeature
         title="Real-time Monitoring"
         description="Stay ahead with live data streams and instant alerts that keep your business running smoothly."
-        icon={ClipboardClock}
+        icon={<ClipboardClock />}
         leftBorder
       />
 
       <SubFeature
         title="AI-Powered Analytics"
         description="Explore data with actionable intelligence crafted by your own AI assistant."
-        icon={Brain}
+        icon={<Brain />}
       />
       <SubFeature
         title="Intelligent Automation"
         description="Streamline workflows with smart automation that learns from your patterns and optimizes performance."
-        icon={Workflow}
+        icon={<Workflow />}
         leftBorder
       />
     </div>

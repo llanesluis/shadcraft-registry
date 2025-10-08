@@ -1,3 +1,5 @@
+import { ArrowUpRightIcon, Coins, MapPin, Timer } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/registry/pro-marketing/components/chip";
 import {
@@ -10,7 +12,6 @@ import {
   JobListingHeader,
   JobListingTitle,
 } from "@/registry/pro-marketing/components/job-listing";
-import { ArrowUpRightIcon, Coins, MapPin, Timer } from "lucide-react";
 
 export function JobListingExample() {
   return (
@@ -31,9 +32,9 @@ export function JobListingExample() {
           </JobListingHeader>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
@@ -51,9 +52,9 @@ export function JobListingExample() {
           </JobListingHeader>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
@@ -67,9 +68,9 @@ export function JobListingExample() {
           </JobListingHeader>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
@@ -89,9 +90,9 @@ export function JobListingExample() {
           </JobListingContent>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
       </div>
@@ -112,9 +113,9 @@ export function JobListingExample() {
           </JobListingHeader>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
@@ -132,9 +133,9 @@ export function JobListingExample() {
           </JobListingHeader>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
@@ -148,9 +149,9 @@ export function JobListingExample() {
           </JobListingHeader>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
 
@@ -170,9 +171,9 @@ export function JobListingExample() {
           </JobListingContent>
 
           <JobListingFooter>
-            <Chip icon={MapPin} label="Remote" />
-            <Chip icon={Timer} label="Full-time" />
-            <Chip icon={Coins} label="100-120k" />
+            <Chip icon={<MapPin />} label="Remote" />
+            <Chip icon={<Timer />} label="Full-time" />
+            <Chip icon={<Coins />} label="100-120k" />
           </JobListingFooter>
         </JobListing>
       </div>
