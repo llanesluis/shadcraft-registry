@@ -1,5 +1,7 @@
 import { Registry } from "shadcn/schema";
 
+import { getRegistryItemJsonUrl } from "@/utils/registry";
+
 export const proMarketingComponents: Registry["items"] = [
   {
     name: "profile-card",
@@ -23,7 +25,7 @@ export const proMarketingComponents: Registry["items"] = [
     title: "Blog Blockquote",
     type: "registry:component",
     description: "TBC",
-    registryDependencies: ["https://shadcraft-registry.vercel.app/r/profile-card.json"],
+    registryDependencies: [getRegistryItemJsonUrl("profile-card")],
     files: [
       {
         path: "components/blog-blockquote.tsx",
@@ -175,6 +177,23 @@ export const proMarketingComponents: Registry["items"] = [
     files: [
       {
         path: "components/metric.tsx",
+        type: "registry:component",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "feature-stack",
+    title: "Feature Stack",
+    type: "registry:component",
+    description:
+      "A component that arranges an icon, header, body text, and CTA in different layout styles. This component makes features clear and actionable.",
+    registryDependencies: [getRegistryItemJsonUrl("featured-icon")],
+    files: [
+      {
+        path: "components/feature-stack.tsx",
         type: "registry:component",
       },
     ],

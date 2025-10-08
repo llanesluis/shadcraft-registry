@@ -172,6 +172,22 @@
       "meta": {
         "bundle": "pro-marketing"
       }
+    },
+    {
+      "name": "feature-stack",
+      "type": "registry:component",
+      "title": "Feature Stack",
+      "description": "A component that arranges an icon, header, body text, and CTA in different layout styles. This component makes features clear and actionable.",
+      "registryDependencies": ["https://shadcraft-registry.vercel.app/r/featured-icon.json"],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/feature-stack.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }
