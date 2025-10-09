@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ui-showcase-example",
+  "type": "registry:example",
+  "title": "UI Showcase Example",
+  "registryDependencies": [
+    "https://shadcraft-registry.vercel.app/r/ui-showcase.json"
+  ],
+  "files": [
+    {
+      "path": "examples/ui-showcase-example.tsx",
+      "content": "import { UIShowcase, UIShowcaseInset } from \"@/components/ui-showcase\";\n\nexport function UIShowcaseExample() {\n  return (\n    <div className=\"flex flex-col gap-8\">\n      <UIShowcase>\n        <UIShowcaseInset>\n          <img src=\"/assets/dashboard-01-light.webp\" />\n        </UIShowcaseInset>\n      </UIShowcase>\n\n      <div className=\"flex gap-8\">\n        <UIShowcase>\n          <UIShowcaseInset>\n            <img src=\"/assets/placeholder.svg\" />\n          </UIShowcaseInset>\n        </UIShowcase>\n\n        <UIShowcase>\n          <UIShowcaseInset>\n            <img src=\"/assets/placeholder.svg\" className=\"aspect-video\" />\n          </UIShowcaseInset>\n        </UIShowcase>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}

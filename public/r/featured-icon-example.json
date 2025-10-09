@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "featured-icon-example",
+  "type": "registry:example",
+  "title": "Featured Icon Example",
+  "registryDependencies": [
+    "https://shadcraft-registry.vercel.app/r/featured-icon.json"
+  ],
+  "files": [
+    {
+      "path": "examples/featured-icon-example.tsx",
+      "content": "import { Activity } from \"lucide-react\";\n\nimport { FeaturedIcon } from \"@/components/featured-icon\";\n\nexport function FeaturedIconExample() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-8\">\n      <div className=\"flex gap-8\">\n        <FeaturedIcon size=\"lg\">\n          <Activity />\n        </FeaturedIcon>\n        <FeaturedIcon size=\"md\">\n          <Activity />\n        </FeaturedIcon>\n        <FeaturedIcon size=\"sm\">\n          <Activity />\n        </FeaturedIcon>\n      </div>\n\n      <div className=\"flex gap-8\">\n        <FeaturedIcon size=\"lg\" variant=\"square\">\n          <Activity />\n        </FeaturedIcon>\n        <FeaturedIcon size=\"md\" variant=\"square\">\n          <Activity />\n        </FeaturedIcon>\n        <FeaturedIcon size=\"sm\" variant=\"square\">\n          <Activity />\n        </FeaturedIcon>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}

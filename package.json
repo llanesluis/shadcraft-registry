@@ -2,11 +2,13 @@
   "name": "shadcraft-registry",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
+    "registry:build:shadcn": "tsx --tsconfig ./tsconfig.scripts.json ./src/scripts/build-registry.mts && prettier --log-level silent --write \"src/registry/**/*.{ts,tsx,json,mdx}\" --cache",
     "registry:generate": "tsx src/scripts/generate-registry.ts",
     "registry:build": "shadcn build"
   },

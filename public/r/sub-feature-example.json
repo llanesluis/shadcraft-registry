@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sub-feature-example",
+  "type": "registry:example",
+  "title": "Sub Feature Example",
+  "registryDependencies": [
+    "https://shadcraft-registry.vercel.app/r/sub-feature.json"
+  ],
+  "files": [
+    {
+      "path": "examples/sub-feature-example.tsx",
+      "content": "import { Activity, Brain, ClipboardClock, Workflow } from \"lucide-react\";\n\nimport { SubFeature } from \"@/components/sub-feature\";\n\nexport function SubFeatureExample() {\n  return (\n    <div className=\"flex flex-col gap-8\">\n      <SubFeature\n        title=\"Smarter Analytics\"\n        description=\"Turn data into clarity with AI-powered insights that help you act faster and more confidently.\"\n        icon={<Activity />}\n      />\n      <SubFeature\n        title=\"Real-time Monitoring\"\n        description=\"Stay ahead with live data streams and instant alerts that keep your business running smoothly.\"\n        icon={<ClipboardClock />}\n        leftBorder\n      />\n\n      <SubFeature\n        title=\"AI-Powered Analytics\"\n        description=\"Explore data with actionable intelligence crafted by your own AI assistant.\"\n        icon={<Brain />}\n      />\n      <SubFeature\n        title=\"Intelligent Automation\"\n        description=\"Streamline workflows with smart automation that learns from your patterns and optimizes performance.\"\n        icon={<Workflow />}\n        leftBorder\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}

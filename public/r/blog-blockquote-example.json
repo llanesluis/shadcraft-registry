@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-blockquote-example",
+  "type": "registry:example",
+  "title": "Blog Blockquote Example",
+  "registryDependencies": [
+    "https://shadcraft-registry.vercel.app/r/blog-blockquote.json"
+  ],
+  "files": [
+    {
+      "path": "examples/blog-blockquote-example.tsx",
+      "content": "import {\n  BlogBlockquote,\n  BlogBlockquoteAuthor,\n  BlogBlockquoteText,\n} from \"@/components/blog-blockquote\";\n\nexport function BlogBlockquoteExample() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      <BlogBlockquote>\n        <BlogBlockquoteText>\n          AI isn’t here to replace how we work, it’s here to remove the friction. The real advantage\n          comes when teams spend less time on busywork and more time on the decisions that matter.\n        </BlogBlockquoteText>\n        <BlogBlockquoteAuthor\n          name=\"Sophie Tan\"\n          imageUrl=\"https://github.com/shadcn.png\"\n          date=\"4 Sept, 2025\"\n        />\n      </BlogBlockquote>\n\n      <BlogBlockquote showIcons={false}>\n        <BlogBlockquoteText>\n          AI isn’t here to replace how we work, it’s here to remove the friction. The real advantage\n          comes when teams spend less time on busywork and more time on the decisions that matter.\n        </BlogBlockquoteText>\n        <BlogBlockquoteAuthor\n          name=\"Sophie Tan\"\n          imageUrl=\"https://github.com/shadcn.png\"\n          date=\"4 Sept, 2025\"\n        />\n      </BlogBlockquote>\n\n      <BlogBlockquote>\n        <BlogBlockquoteText>\n          AI isn’t here to replace how we work, it’s here to remove the friction. The real advantage\n          comes when teams spend less time on busywork and more time on the decisions that matter.\n        </BlogBlockquoteText>\n      </BlogBlockquote>\n    </div>\n  );\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}
