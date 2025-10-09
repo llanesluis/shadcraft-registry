@@ -204,6 +204,22 @@
       "meta": {
         "bundle": "pro-marketing"
       }
+    },
+    {
+      "name": "section-heading",
+      "type": "registry:component",
+      "title": "Section Heading",
+      "description": "A component that standardises heading typography and spacing. This component includes a pre-heading label, main heading, and body text in different layout variants.",
+      "registryDependencies": ["https://shadcraft-registry.vercel.app/r/heading.json"],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/components/section-heading.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }

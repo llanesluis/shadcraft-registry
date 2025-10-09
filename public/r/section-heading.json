@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "section-heading",
+  "type": "registry:component",
+  "title": "Section Heading",
+  "description": "A component that standardises heading typography and spacing. This component includes a pre-heading label, main heading, and body text in different layout variants.",
+  "registryDependencies": [
+    "https://shadcraft-registry.vercel.app/r/heading.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pro-marketing/components/section-heading.tsx",
+      "content": "import * as React from \"react\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Heading } from \"@/registry/pro-marketing/ui/heading\";\r\n\r\nfunction SectionHeading({\r\n  alignment = \"left\",\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\"> & { alignment?: \"left\" | \"center\" | \"right\" }) {\r\n  return (\r\n    <div\r\n      data-slot=\"section-heading\"\r\n      data-alignment={alignment}\r\n      className={cn(\r\n        \"group/section-heading flex flex-col gap-3\",\r\n        alignment === \"left\" && \"items-start text-left\",\r\n        alignment === \"center\" && \"items-center text-center\",\r\n        alignment === \"right\" && \"items-end text-right\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction SectionHeadingTitle({\r\n  level = 2,\r\n  size = \"2xl\",\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<typeof Heading>) {\r\n  return (\r\n    <Heading\r\n      data-slot=\"section-heading-title\"\r\n      level={level}\r\n      size={size}\r\n      className={cn(\r\n        \"group-data-[alignment=center]/section-heading:text-center group-data-[alignment=left]/section-heading:text-left group-data-[alignment=right]/section-heading:text-right\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction SectionHeadingContentType({ className, ...props }: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"section-heading-content-type\"\r\n      className={cn(\"text-foreground font-sans text-base leading-6 font-medium\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction SectionHeadingBody({ className, ...props }: React.ComponentProps<\"p\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"section-heading-body\"\r\n      className={cn(\r\n        \"text-muted-foreground max-w-2xl font-sans text-base leading-6 font-normal text-pretty\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { SectionHeading, SectionHeadingBody, SectionHeadingContentType, SectionHeadingTitle };\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}

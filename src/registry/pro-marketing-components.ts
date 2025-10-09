@@ -201,6 +201,7 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  // Maybe move to another UI specific file?
   {
     name: "heading",
     title: "Heading",
@@ -211,6 +212,23 @@ export const proMarketingComponents: Registry["items"] = [
       {
         path: "ui/heading.tsx",
         type: "registry:ui",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "section-heading",
+    title: "Section Heading",
+    type: "registry:component",
+    description:
+      "A component that standardises heading typography and spacing. This component includes a pre-heading label, main heading, and body text in different layout variants.",
+    registryDependencies: [getRegistryItemJsonUrl("heading")],
+    files: [
+      {
+        path: "components/section-heading.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
