@@ -1,40 +1,49 @@
-import { cva, type VariantProps } from "class-variance-authority";
+"use client";
+
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { FeaturedIcon } from "@/registry/pro-marketing/components/featured-icon";
 
-const featureStackVariants = cva("group/feature-stack flex flex-col max-w-xl gap-4", {
-  variants: {
-    variant: {
-      default: "",
-      card: "bg-card gap-5 lg:gap-9 p-5 lg:p-9 border shadow-sm rounded-2xl",
-    },
-    alignment: {
-      left: "items-start justify-start",
-      center: "items-center justify-start text-center",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    alignment: "center",
-  },
+type FeatureStackContextValue = {
+  size: "sm" | "md";
+  alignment: "left" | "center";
+};
+
+const FeatureStackContext = React.createContext<FeatureStackContextValue>({
+  alignment: "center",
+  size: "md",
 });
 
+function useFeatureStackContext(): FeatureStackContextValue {
+  const context = React.useContext(FeatureStackContext);
+  if (!context) {
+    throw new Error("FeatureStack subcomponents must be used within a <FeatureStack> parent.");
+  }
+  return context;
+}
+
 function FeatureStack({
-  variant = "default",
+  size = "md",
   alignment = "center",
   className,
   ...props
-}: React.ComponentProps<"div"> & VariantProps<typeof featureStackVariants>) {
+}: React.ComponentProps<"div"> & { size?: "sm" | "md"; alignment?: "left" | "center" }) {
   return (
-    <div
-      data-slot="feature-stack"
-      data-alignment={alignment}
-      data-variant={variant}
-      className={cn(featureStackVariants({ variant, alignment, className }))}
-      {...props}
-    />
+    <FeatureStackContext.Provider value={{ size, alignment }}>
+      <div
+        data-slot="feature-stack"
+        data-size={size}
+        data-alignment={alignment}
+        className={cn(
+          "group/feature-stack flex max-w-xl flex-col gap-4",
+          alignment === "left" && "items-start justify-start",
+          alignment === "center" && "items-center justify-start text-center",
+          className
+        )}
+        {...props}
+      />
+    </FeatureStackContext.Provider>
   );
 }
 
@@ -47,6 +56,7 @@ function FeatureStackIcon({
   variant?: "default" | "featured";
   icon: React.ReactElement;
 }) {
+  const { size } = useFeatureStackContext();
   return (
     <div
       data-slot="feature-stack-icon"
@@ -58,27 +68,18 @@ function FeatureStackIcon({
       {...props}
     >
       {variant === "featured" && (
-        <>
-          <FeaturedIcon
-            className={cn("lg:group-data-[variant=default]/feature-stack:hidden")}
-            variant="circular"
-            size="md"
-          >
-            {icon}
-          </FeaturedIcon>
-
-          <FeaturedIcon
-            className={cn("hidden lg:group-data-[variant=default]/feature-stack:flex")}
-            variant="circular"
-            size="lg"
-          >
-            {icon}
-          </FeaturedIcon>
-        </>
+        <FeaturedIcon variant="circular" size={size === "md" ? "lg" : "md"}>
+          {icon}
+        </FeaturedIcon>
       )}
 
       {variant === "default" && (
-        <div className="[&_svg:not([class*='size-'])]:size-6 lg:[&_svg:not([class*='size-'])]:size-7">
+        <div
+          className={cn(
+            size == "sm" && "[&_svg:not([class*='size-'])]:size-6",
+            size == "md" && "[&_svg:not([class*='size-'])]:size-7"
+          )}
+        >
           {icon}
         </div>
       )}
@@ -86,10 +87,10 @@ function FeatureStackIcon({
   );
 }
 
-function FeatureStackContent({ className, ...props }: React.ComponentProps<"div">) {
+function FeatureStackHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      data-slot="feature-stack-content"
+      data-slot="feature-stack-header"
       className={cn("flex flex-col gap-1", className)}
       {...props}
     />
@@ -97,13 +98,14 @@ function FeatureStackContent({ className, ...props }: React.ComponentProps<"div"
 }
 
 function FeatureStackTitle({ className, ...props }: React.ComponentProps<"div">) {
+  const { size } = useFeatureStackContext();
   return (
     <div
       data-slot="feature-stack-title"
       className={cn(
-        "text-foreground font-sans",
-        "text-base leading-6 font-medium tracking-[-0.6px] lg:group-data-[variant=default]/feature-stack:text-xl lg:group-data-[variant=default]/feature-stack:leading-8 lg:group-data-[variant=default]/feature-stack:font-semibold",
-
+        "text-foreground font-sans tracking-[-0.6px]",
+        size == "sm" && "text-base leading-6 font-medium",
+        size == "md" && "text-xl leading-8 font-semibold",
         className
       )}
       {...props}
@@ -112,17 +114,23 @@ function FeatureStackTitle({ className, ...props }: React.ComponentProps<"div">)
 }
 
 function FeatureStackBody({ className, ...props }: React.ComponentProps<"div">) {
+  const { size } = useFeatureStackContext();
   return (
     <div
       data-slot="feature-stack-body"
       className={cn(
-        "text-muted-foreground font-sans font-normal",
-        "text-sm leading-5 lg:group-data-[variant=default]/feature-stack:text-lg lg:group-data-[variant=default]/feature-stack:leading-8",
+        "text-muted-foreground font-sans font-normal text-pretty",
+        size == "sm" && "text-sm leading-5",
+        size == "md" && "text-lg leading-8",
         className
       )}
       {...props}
     />
   );
+}
+
+function FeatureStackContent({ className, ...props }: React.ComponentProps<"div">) {
+  return <div data-slot="feature-stack-content" className={cn("w-full", className)} {...props} />;
 }
 
 function FeatureStackAction({ className, ...props }: React.ComponentProps<"div">) {
@@ -134,6 +142,7 @@ export {
   FeatureStackAction,
   FeatureStackBody,
   FeatureStackContent,
+  FeatureStackHeader,
   FeatureStackIcon,
   FeatureStackTitle,
 };
