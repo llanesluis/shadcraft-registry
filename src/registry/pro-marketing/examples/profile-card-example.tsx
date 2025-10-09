@@ -3,8 +3,6 @@ import {
   ProfileCardAvatar,
   ProfileCardBody,
   ProfileCardDetails,
-  ProfileCardFallback,
-  ProfileCardImage,
   ProfileCardName,
 } from "@/registry/pro-marketing/components/profile-card";
 
@@ -12,10 +10,7 @@ export function ProfileCardExample() {
   return (
     <div className="flex flex-col gap-8">
       <ProfileCard>
-        <ProfileCardAvatar>
-          <ProfileCardImage src="https://github.com/shadcn.png" />
-          <ProfileCardFallback>CN</ProfileCardFallback>
-        </ProfileCardAvatar>
+        <ProfileCardAvatar src="https://github.com/shadcn.png" name="shadcn" />
 
         <ProfileCardDetails>
           <ProfileCardName>Sophie Tan</ProfileCardName>
@@ -24,10 +19,7 @@ export function ProfileCardExample() {
       </ProfileCard>
 
       <ProfileCard variant="horizontal">
-        <ProfileCardAvatar size="sm">
-          <ProfileCardImage src="https://github.com/shadcn.png" />
-          <ProfileCardFallback>CN</ProfileCardFallback>
-        </ProfileCardAvatar>
+        <ProfileCardAvatar size="sm" src="https://github.com/shadcn.png" name="shadcn" />
 
         <ProfileCardDetails>
           <ProfileCardName>Sophie Tan</ProfileCardName>
@@ -36,10 +28,7 @@ export function ProfileCardExample() {
       </ProfileCard>
 
       <ProfileCard variant="vertical">
-        <ProfileCardAvatar size="lg">
-          <ProfileCardImage src="https://github.com/shadcn.png" />
-          <ProfileCardFallback>CN</ProfileCardFallback>
-        </ProfileCardAvatar>
+        <ProfileCardAvatar size="lg" src="https://github.com/shadcn.png" name="shadcn" />
 
         <ProfileCardDetails>
           <ProfileCardName>Sophie</ProfileCardName>

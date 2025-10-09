@@ -30,9 +30,13 @@ function ProfileCard({
 function ProfileCardAvatar({
   className,
   size = "default",
+  src,
+  name,
   ...props
-}: React.ComponentProps<typeof Avatar> & {
+}: Omit<React.ComponentProps<typeof Avatar>, "children"> & {
   size?: "default" | "sm" | "lg";
+  src: string;
+  name?: string;
 }) {
   return (
     <Avatar
@@ -43,7 +47,10 @@ function ProfileCardAvatar({
         className
       )}
       {...props}
-    />
+    >
+      <AvatarImage alt="Avatar" src={src} />
+      <AvatarFallback className="uppercase">{name?.slice(0, 2) || "ME"}</AvatarFallback>
+    </Avatar>
   );
 }
 
@@ -77,12 +84,4 @@ function ProfileCardBody({ className, ...props }: React.ComponentProps<"span">) 
   );
 }
 
-export {
-  ProfileCard,
-  ProfileCardAvatar,
-  ProfileCardBody,
-  ProfileCardDetails,
-  AvatarFallback as ProfileCardFallback,
-  AvatarImage as ProfileCardImage,
-  ProfileCardName,
-};
+export { ProfileCard, ProfileCardAvatar, ProfileCardBody, ProfileCardDetails, ProfileCardName };

@@ -7,8 +7,6 @@ import {
   ProfileCardAvatar,
   ProfileCardBody,
   ProfileCardDetails,
-  ProfileCardFallback,
-  ProfileCardImage,
   ProfileCardName,
 } from "@/registry/pro-marketing/components/profile-card";
 
@@ -54,7 +52,7 @@ function BlogBlockquoteText({ className, ...props }: React.ComponentProps<"p">) 
 
 function BlogBlockquoteAuthor({
   name,
-  imageUrl,
+  imageUrl = "",
   date,
 }: {
   name: string;
@@ -63,10 +61,7 @@ function BlogBlockquoteAuthor({
 }) {
   return (
     <ProfileCard>
-      <ProfileCardAvatar>
-        <ProfileCardImage src={imageUrl} />
-        <ProfileCardFallback>{name.charAt(0)}</ProfileCardFallback>
-      </ProfileCardAvatar>
+      <ProfileCardAvatar src={imageUrl} name={name} />
       <ProfileCardDetails>
         <ProfileCardName>{name}</ProfileCardName>
         {date && <ProfileCardBody>{date}</ProfileCardBody>}
