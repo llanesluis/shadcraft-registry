@@ -1,3 +1,5 @@
+import { Activity, Check, Mail } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   FeatureStack,
@@ -8,7 +10,6 @@ import {
   FeatureStackIcon,
   FeatureStackTitle,
 } from "@/registry/pro-marketing/components/feature-stack";
-import { Activity, Check, Mail } from "lucide-react";
 
 export function FeatureStackExample() {
   return (

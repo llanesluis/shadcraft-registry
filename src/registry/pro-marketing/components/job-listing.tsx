@@ -85,6 +85,7 @@ function JobListingAction({ className, ...props }: React.ComponentProps<"div">) 
     />
   );
 }
+
 function JobListingContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div

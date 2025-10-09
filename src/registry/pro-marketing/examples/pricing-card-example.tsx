@@ -1,3 +1,5 @@
+import { Building, Gem, Star } from "lucide-react";
+
 import {
   PricingCard,
   PricingCardAmount,
@@ -15,7 +17,6 @@ import {
   PricingCardPricing,
   PricingCardTitle,
 } from "@/registry/pro-marketing/components/pricing-card";
-import { Building, Gem, Star } from "lucide-react";
 
 export function PricingCardExample() {
   return (
