@@ -188,6 +188,22 @@
       "meta": {
         "bundle": "pro-marketing"
       }
+    },
+    {
+      "name": "heading",
+      "type": "registry:ui",
+      "title": "Heading",
+      "description": "A component that displays a heading.",
+      "dependencies": ["@radix-ui/react-slot"],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/heading.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
     }
   ]
 }
