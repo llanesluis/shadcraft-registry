@@ -20,6 +20,10 @@ export function getRegistryItems(): Registry["items"] {
   return items;
 }
 
+export function getUIItems() {
+  return getRegistryItems().filter((component) => component.type === "registry:ui");
+}
+
 export function getComponentItems() {
   return getRegistryItems().filter((component) => component.type === "registry:component");
 }

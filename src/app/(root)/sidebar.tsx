@@ -1,6 +1,6 @@
 "use client";
 
-import { Blocks, ChevronDown, Component, LayoutTemplate } from "lucide-react";
+import { Blocks, ChevronDown, Component, LayoutTemplate, Puzzle } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RegistryItem } from "shadcn/schema";
@@ -71,6 +71,7 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
     setActiveHash(hash);
   };
 
+  const uiItems = items.filter((item) => item.type === "registry:ui");
   const componentItems = items.filter((item) => item.type === "registry:component");
   const blockItems = items.filter((item) => item.type === "registry:block");
   const templateItems = items.filter(
@@ -80,6 +81,50 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
   return (
     <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! py-6">
       <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
+
+      {/* UI */}
+      <Collapsible defaultOpen={true} className="group/collapsible">
+        <SidebarGroup>
+          <CollapsibleTrigger className="w-full">
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+              <div className="flex min-w-0 items-center">
+                <Puzzle className="size-4 flex-shrink-0" />
+                <span className="ml-2 transition-all duration-200">UI Components</span>
+              </div>
+              <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+            </SidebarGroupLabel>
+          </CollapsibleTrigger>
+
+          <CollapsibleContent>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {uiItems.length > 0 ? (
+                  uiItems.map((item) => (
+                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuButton
+                        asChild
+                        isActive={activeHash === `#${item.name}`}
+                        className="line-clamp-1"
+                      >
+                        <Link
+                          href={`#${item.name}`}
+                          onNavigate={() => handleLinkClick(`#${item.name}`)}
+                        >
+                          {item.title || formatComponentName(item.name)}
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))
+                ) : (
+                  <span className="text-muted-foreground py-2 text-center text-xs font-medium">
+                    No UI components found
+                  </span>
+                )}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </CollapsibleContent>
+        </SidebarGroup>
+      </Collapsible>
 
       {/* Components */}
       <Collapsible defaultOpen={true} className="group/collapsible">

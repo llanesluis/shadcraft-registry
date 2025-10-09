@@ -201,4 +201,20 @@ export const proMarketingComponents: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "heading",
+    title: "Heading",
+    type: "registry:ui",
+    description: "A component that displays a heading.",
+    dependencies: ["@radix-ui/react-slot"],
+    files: [
+      {
+        path: "ui/heading.tsx",
+        type: "registry:ui",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];
