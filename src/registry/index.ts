@@ -1,5 +1,6 @@
 import { type Registry } from "shadcn/schema";
-import { proMarketingComponents } from "./pro-marketing-components";
+
+import { registryComponents } from "@/registry/registry-components";
 
 // The TypeScript registry is the source of truth.
 // A build script generates the root-level registry.json from this object.
@@ -10,5 +11,5 @@ import { proMarketingComponents } from "./pro-marketing-components";
 export const REGISTRY = {
   name: "Shadcraft",
   homepage: "https://shadcraft.com/",
-  items: [...proMarketingComponents],
+  items: [...registryComponents],
 } satisfies Registry;

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { proMarketingComponents } from "@/registry/pro-marketing-components";
+import { registryComponents } from "@/registry/registry-components";
 
 const REGISTRY_PATH = "@/registry/pro-marketing";
 
@@ -9,7 +9,7 @@ type ViewComponent<Props = Record<string, never>> = React.LazyExoticComponent<
 >;
 
 const proMarketingViewComponents = Object.fromEntries(
-  proMarketingComponents.map((item) => {
+  registryComponents.map((item) => {
     const Component = React.lazy(async () => {
       const mod = await import(`${REGISTRY_PATH}/examples/${item.name}-example`);
       const exportName =
