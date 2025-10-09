@@ -8,3 +8,7 @@ export function formatComponentName(name: string): string {
 export function getRegistryItemJsonUrl(name: string): string {
   return `https://shadcraft-registry.vercel.app/r/${name}.json`;
 }
+
+export function getRegistryItemsJsonUrls(...names: string[]): string[] {
+  return names.map((name) => getRegistryItemJsonUrl(name));
+}
