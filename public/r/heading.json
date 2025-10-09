@@ -3,7 +3,7 @@
   "name": "heading",
   "type": "registry:ui",
   "title": "Heading",
-  "description": "A component that displays a heading.",
+  "description": "Pending",
   "dependencies": [
     "@radix-ui/react-slot"
   ],

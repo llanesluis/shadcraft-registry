@@ -1,6 +1,6 @@
 #!/usr/bin/env tsx
 
-import { REGISTRY } from "@/registry";
+import { registry } from "@/registry";
 
 import { exec } from "child_process";
 import fs from "fs/promises";
@@ -86,7 +86,7 @@ async function buildRegistryJsonFile(registryObject: unknown) {
 
 async function main() {
   console.log(`🔄 Generating registry.json`);
-  await buildRegistryJsonFile(REGISTRY);
+  await buildRegistryJsonFile(registry);
   console.log(`✅ Generated registry.json`);
 }
 

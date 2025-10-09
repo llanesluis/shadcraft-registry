@@ -1,6 +1,7 @@
 import { type Registry } from "shadcn/schema";
 
-import { registryComponents } from "@/registry/registry-components";
+import { components } from "@/registry/registry-components";
+import { ui } from "@/registry/registry-ui";
 
 // The TypeScript registry is the source of truth.
 // A build script generates the root-level registry.json from this object.
@@ -8,8 +9,8 @@ import { registryComponents } from "@/registry/registry-components";
 // run `pnpm registry:generate` to generate the registry.json file.
 // and then run `pnpm registry:build` to build the shadcn/ui registry.
 
-export const REGISTRY = {
+export const registry = {
   name: "Shadcraft",
   homepage: "https://shadcraft.com/",
-  items: [...registryComponents],
+  items: [...ui, ...components],
 } satisfies Registry;

@@ -1,8 +1,8 @@
-import { Registry } from "shadcn/schema";
+import { type Registry } from "shadcn/schema";
 
 import { getRegistryItemsJsonUrls } from "@/utils/registry";
 
-export const proMarketingBlocks: Registry["items"] = [
+export const blocks: Registry["items"] = [
   {
     name: "careers-1",
     title: "Careers 1",
@@ -20,5 +20,8 @@ export const proMarketingBlocks: Registry["items"] = [
         target: "app/careers/page.tsx",
       },
     ],
+    meta: {
+      bundle: "pro-marketing",
+    },
   },
 ];

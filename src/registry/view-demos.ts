@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import { registryComponents } from "@/registry/registry-components";
+import { components } from "@/registry/registry-components";
+import { ui } from "@/registry/registry-ui";
 
 const REGISTRY_PATH = "@/registry/pro-marketing";
 
@@ -8,8 +9,9 @@ type ViewComponent<Props = Record<string, never>> = React.LazyExoticComponent<
   React.ComponentType<Props>
 >;
 
-const proMarketingViewComponents = Object.fromEntries(
-  registryComponents.map((item) => {
+const allComponents = [...ui, ...components];
+const viewComponents = Object.fromEntries(
+  allComponents.map((item) => {
     const Component = React.lazy(async () => {
       const mod = await import(`${REGISTRY_PATH}/examples/${item.name}-example`);
       const exportName =
@@ -29,5 +31,5 @@ const proMarketingViewComponents = Object.fromEntries(
 // TODO: Shadcraft Pro Marketing Templates
 
 export const REGISTRY_VIEW_DEMOS = {
-  ...proMarketingViewComponents,
+  ...viewComponents,
 } satisfies Record<string, ViewComponent>;

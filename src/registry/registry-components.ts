@@ -1,8 +1,8 @@
-import { Registry } from "shadcn/schema";
+import { type Registry } from "shadcn/schema";
 
 import { getRegistryItemJsonUrl } from "@/utils/registry";
 
-export const registryComponents: Registry["items"] = [
+export const components: Registry["items"] = [
   {
     name: "blog-blockquote",
     title: "Blog Blockquote",
@@ -207,7 +207,6 @@ export const registryComponents: Registry["items"] = [
     type: "registry:component",
     description:
       "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
-    registryDependencies: ["aspect-ratio"],
     files: [
       {
         path: "components/ui-showcase.tsx",

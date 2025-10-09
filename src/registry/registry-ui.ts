@@ -1,6 +1,6 @@
-import { Registry } from "shadcn/schema";
+import { type Registry } from "shadcn/schema";
 
-export const registryUI: Registry["items"] = [
+export const ui: Registry["items"] = [
   {
     name: "heading",
     title: "Heading",

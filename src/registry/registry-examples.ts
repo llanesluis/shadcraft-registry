@@ -1,8 +1,8 @@
-import { Registry } from "shadcn/schema";
+import { type Registry } from "shadcn/schema";
 
 import { getRegistryItemJsonUrl, getRegistryItemsJsonUrls } from "@/utils/registry";
 
-export const registryExamples: Registry["items"] = [
+export const examples: Registry["items"] = [
   {
     name: "blog-blockquote-example",
     title: "Blog Blockquote Example",
