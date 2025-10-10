@@ -133,6 +133,28 @@ function BlockViewerProvider({
   );
 }
 
+function BlockViewerHeader() {
+  const { item } = useBlockViewer();
+  return (
+    <header data-slot="block-viewer-header">
+      <a
+        href={`#${item.name}`}
+        className="group/anchor inline-flex flex-1 flex-col font-medium md:flex-auto"
+      >
+        <h3 className="flex items-center gap-1 text-base underline-offset-2 group-hover/anchor:underline md:text-lg">
+          {item.title || formatComponentName(item.name)}
+        </h3>
+
+        {item.description && (
+          <span className="text-muted-foreground line-clamp-1 text-xs md:text-sm">
+            {item.description.replace(/\.$/, "")}
+          </span>
+        )}
+      </a>
+    </header>
+  );
+}
+
 function BlockViewerToolbar() {
   const { setView, view, item, resizablePanelRef, setIframeKey, setPanelSize } = useBlockViewer();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
@@ -144,111 +166,93 @@ function BlockViewerToolbar() {
   };
 
   return (
-    <div className="flex flex-col gap-2">
-      <header>
-        <a
-          href={`#${item.name}`}
-          className="group/anchor inline-flex flex-1 flex-col font-medium md:flex-auto"
-        >
-          <h3 className="flex items-center gap-1 text-base underline-offset-2 group-hover/anchor:underline md:text-lg">
-            {item.title || formatComponentName(item.name)}
-          </h3>
+    <div className="flex w-full items-center gap-2">
+      <Tabs
+        value={view}
+        onValueChange={(value) => setView(value as "preview" | "code")}
+        className="shrink-0"
+      >
+        <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
+          <TabsTrigger value="preview" className="cursor-pointer">
+            <Eye className="size-3.5" />
+            <span className="max-md:sr-only">Preview</span>
+          </TabsTrigger>
+          <TabsTrigger value="code" className="cursor-pointer">
+            <Code className="size-3.5" />
+            <span className="max-md:sr-only">Code</span>
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
 
-          {item.description && (
-            <span className="text-muted-foreground line-clamp-1 text-xs md:text-sm">
-              {item.description.replace(/\.$/, "")}
-            </span>
-          )}
-        </a>
-      </header>
-      <div className="flex w-full items-center gap-2">
-        <Tabs
-          value={view}
-          onValueChange={(value) => setView(value as "preview" | "code")}
-          className="shrink-0"
-        >
-          <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
-            <TabsTrigger value="preview" className="cursor-pointer">
-              <Eye className="size-3.5" />
-              <span className="max-md:sr-only">Preview</span>
-            </TabsTrigger>
-            <TabsTrigger value="code" className="cursor-pointer">
-              <Code className="size-3.5" />
-              <span className="max-md:sr-only">Code</span>
-            </TabsTrigger>
-          </TabsList>
-        </Tabs>
-
-        <div className="ml-auto flex items-center gap-2">
+      <div className="ml-auto flex items-center gap-2">
+        <ButtonGroup>
           <ButtonGroup>
-            <ButtonGroup>
-              <Button
-                variant="outline"
-                size="icon-sm"
-                title="Refresh Preview"
-                onClick={() => setIframeKey?.((k) => k + 1)}
-                className="cursor-pointer"
-              >
-                <RotateCw />
-                <span className="sr-only">Refresh Preview</span>
-              </Button>
-            </ButtonGroup>
-
-            <ButtonGroup className="hidden lg:flex">
-              <Button
-                variant="outline"
-                size="icon-sm"
-                onClick={() => handleResizeBreakpoint(100)}
-                className="cursor-pointer"
-              >
-                <Monitor />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon-sm"
-                onClick={() => handleResizeBreakpoint(60)}
-                className="cursor-pointer"
-              >
-                <Tablet />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon-sm"
-                onClick={() => handleResizeBreakpoint(30)}
-                className="cursor-pointer"
-              >
-                <Smartphone />
-              </Button>
-            </ButtonGroup>
-
-            <ButtonGroup>
-              <Button
-                variant="outline"
-                size="icon-sm"
-                asChild
-                title="Open in New Tab"
-                className="cursor-pointer"
-              >
-                <Link href={`/view/${item.name}`} target="_blank">
-                  <span className="sr-only">Open in New Tab</span>
-                  <Fullscreen />
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="cursor-pointer font-mono text-xs"
-                onClick={() => {
-                  copyToClipboard(`npx shadcn@latest add ${REGISTRY_URL}/${item.name}.json`);
-                }}
-                title="Copy CLI Command"
-              >
-                {isCopied ? <Check /> : <Copy />}
-                <span>{item.name}</span>
-              </Button>
-            </ButtonGroup>
+            <Button
+              variant="outline"
+              size="icon-sm"
+              title="Refresh Preview"
+              onClick={() => setIframeKey?.((k) => k + 1)}
+              className="cursor-pointer"
+            >
+              <RotateCw />
+              <span className="sr-only">Refresh Preview</span>
+            </Button>
           </ButtonGroup>
-        </div>
+
+          <ButtonGroup className="hidden lg:flex">
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => handleResizeBreakpoint(100)}
+              className="cursor-pointer"
+            >
+              <Monitor />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => handleResizeBreakpoint(60)}
+              className="cursor-pointer"
+            >
+              <Tablet />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => handleResizeBreakpoint(30)}
+              className="cursor-pointer"
+            >
+              <Smartphone />
+            </Button>
+          </ButtonGroup>
+
+          <ButtonGroup>
+            <Button
+              variant="outline"
+              size="icon-sm"
+              asChild
+              title="Open in New Tab"
+              className="cursor-pointer"
+            >
+              <Link href={`/view/${item.name}`} target="_blank">
+                <span className="sr-only">Open in New Tab</span>
+                <Fullscreen />
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="cursor-pointer font-mono text-xs"
+              onClick={() => {
+                copyToClipboard(`npx shadcn@latest add ${REGISTRY_URL}/${item.name}.json`);
+              }}
+              title="Copy CLI Command"
+            >
+              {isCopied ? <Check /> : <Copy />}
+              <span>{item.name}</span>
+            </Button>
+          </ButtonGroup>
+        </ButtonGroup>
       </div>
     </div>
   );
@@ -503,11 +507,15 @@ function BlockViewer({
   item,
   tree,
   files,
+  showHeader = true,
   ...props
-}: Pick<BlockViewerContext, "item" | "tree" | "files">) {
+}: Pick<BlockViewerContext, "item" | "tree" | "files"> & { showHeader?: boolean }) {
   return (
     <BlockViewerProvider item={item} tree={tree} files={files} {...props}>
-      <BlockViewerToolbar />
+      <div className="flex flex-col gap-2">
+        {showHeader && <BlockViewerHeader />}
+        <BlockViewerToolbar />
+      </div>
 
       <div className="isolate aspect-square overflow-hidden md:aspect-auto md:h-(--height)">
         <BlockViewerView />

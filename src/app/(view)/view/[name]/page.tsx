@@ -2,8 +2,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { getRegistryItem, getRegistryItems } from "@/lib/registry";
-import { REGISTRY_VIEW_DEMOS } from "@/registry/view-demos";
+import { getRegistryItem, getRegistryRenderComponent } from "@/lib/registry";
 
 export const revalidate = false;
 export const dynamic = "force-static";
@@ -14,22 +13,36 @@ const getCachedRegistryItem = React.cache(async (name: string) => {
 });
 
 export const generateStaticParams = async () => {
-  return getRegistryItems().map((item) => ({ name: item.name }));
+  const { Index } = await import("@/registry/__index__");
+
+  return Object.values(Index)
+    .filter((block) => ["registry:example", "registry:block"].includes(block.type))
+    .map((block) => ({ name: block.name }));
 };
 
 export default async function ViewPage({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
   const item = await getCachedRegistryItem(name);
-  const RegistryItem = REGISTRY_VIEW_DEMOS[name as keyof typeof REGISTRY_VIEW_DEMOS];
 
-  if (!item || !RegistryItem) {
+  if (!item) {
+    return notFound();
+  }
+
+  let itemName = name;
+  const { type } = item;
+  if (type === "registry:ui" || type === "registry:component") {
+    itemName = `${name}-example`;
+  }
+  const RenderComponent = getRegistryRenderComponent(itemName);
+
+  if (!RenderComponent) {
     return notFound();
   }
 
   return (
     <>
       <main className="container flex min-h-svh items-center justify-center px-4 py-8 lg:px-8">
-        <RegistryItem />
+        <RenderComponent />
       </main>
 
       <TailwindIndicator showInProduction={true} />

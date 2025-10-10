@@ -7,7 +7,13 @@ import {
   RegistryItemFile,
 } from "@/lib/registry";
 
-export async function BlockDisplay({ name }: { name: string }) {
+export async function BlockDisplay({
+  name,
+  showHeader = true,
+}: {
+  name: string;
+  showHeader?: boolean;
+}) {
   const item = await getCachedRegistryItem(name);
 
   if (!item?.files) return null;
@@ -15,7 +21,7 @@ export async function BlockDisplay({ name }: { name: string }) {
   const tree = getCachedFileTree(item.files);
   const files = getCachedFiles(item.files);
 
-  return <BlockViewer item={item} tree={tree} files={files} />;
+  return <BlockViewer item={item} tree={tree} files={files} showHeader={showHeader} />;
 }
 
 const getCachedRegistryItem = React.cache(async (name: string) => {

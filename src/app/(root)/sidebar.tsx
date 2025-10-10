@@ -2,7 +2,7 @@
 
 import { Blocks, ChevronDown, Component, LayoutTemplate, Puzzle } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { RegistryItem } from "shadcn/schema";
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -56,20 +56,7 @@ export function RootSidebar({
 }
 
 function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
-  const [activeHash, setActiveHash] = useState("");
-
-  useEffect(() => {
-    setActiveHash(window.location.hash);
-    const handleHashChange = () => {
-      setActiveHash(window.location.hash);
-    };
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  const handleLinkClick = (hash: string) => {
-    setActiveHash(hash);
-  };
+  const pathname = usePathname();
 
   const uiItems = items.filter((item) => item.type === "registry:ui");
   const componentItems = items.filter((item) => item.type === "registry:component");
@@ -99,22 +86,17 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
             <SidebarGroupContent>
               <SidebarMenu>
                 {uiItems.length > 0 ? (
-                  uiItems.map((item) => (
-                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                      <SidebarMenuButton
-                        asChild
-                        isActive={activeHash === `#${item.name}`}
-                        className="line-clamp-1"
-                      >
-                        <Link
-                          href={`#${item.name}`}
-                          onNavigate={() => handleLinkClick(`#${item.name}`)}
-                        >
-                          {item.title || formatComponentName(item.name)}
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))
+                  uiItems.map((item) => {
+                    const href = `/ui/${item.name}`;
+                    const isActive = pathname === href;
+                    return (
+                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                        <SidebarMenuButton asChild isActive={isActive} className="line-clamp-1">
+                          <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    );
+                  })
                 ) : (
                   <span className="text-muted-foreground py-2 text-center text-xs font-medium">
                     No UI components found
@@ -143,22 +125,17 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
             <SidebarGroupContent>
               <SidebarMenu>
                 {componentItems.length > 0 ? (
-                  componentItems.map((item) => (
-                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                      <SidebarMenuButton
-                        asChild
-                        isActive={activeHash === `#${item.name}`}
-                        className="line-clamp-1"
-                      >
-                        <Link
-                          href={`#${item.name}`}
-                          onNavigate={() => handleLinkClick(`#${item.name}`)}
-                        >
-                          {item.title || formatComponentName(item.name)}
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))
+                  componentItems.map((item) => {
+                    const href = `/components/${item.name}`;
+                    const isActive = pathname === href;
+                    return (
+                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                        <SidebarMenuButton asChild isActive={isActive} className="line-clamp-1">
+                          <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    );
+                  })
                 ) : (
                   <span className="text-muted-foreground py-2 text-center text-xs font-medium">
                     No components found
@@ -187,18 +164,17 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
             <SidebarGroupContent>
               <SidebarMenu>
                 {blockItems.length > 0 ? (
-                  blockItems.map((item) => (
-                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                      <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
-                        <Link
-                          href={`#${item.name}`}
-                          onNavigate={() => handleLinkClick(`#${item.name}`)}
-                        >
-                          {item.title || formatComponentName(item.name)}
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))
+                  blockItems.map((item) => {
+                    const href = `/blocks/${item.name}`;
+                    const isActive = pathname === href;
+                    return (
+                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                        <SidebarMenuButton asChild isActive={isActive}>
+                          <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    );
+                  })
                 ) : (
                   <span className="text-muted-foreground py-2 text-center text-xs font-medium">
                     No blocks found
@@ -226,18 +202,17 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
             <SidebarGroupContent>
               <SidebarMenu>
                 {templateItems.length > 0 ? (
-                  templateItems.map((item) => (
-                    <SidebarMenuItem key={item.name} className="text-muted-foreground">
-                      <SidebarMenuButton asChild isActive={activeHash === `#${item.name}`}>
-                        <Link
-                          href={`#${item.name}`}
-                          onNavigate={() => handleLinkClick(`#${item.name}`)}
-                        >
-                          {item.title || formatComponentName(item.name)}
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))
+                  templateItems.map((item) => {
+                    const href = `/templates/${item.name}`;
+                    const isActive = pathname === href;
+                    return (
+                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                        <SidebarMenuButton asChild isActive={isActive}>
+                          <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    );
+                  })
                 ) : (
                   <span className="text-muted-foreground py-2 text-center text-xs font-medium">
                     No templates found
