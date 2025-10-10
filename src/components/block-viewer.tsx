@@ -348,8 +348,8 @@ function BlockViewerCode() {
   const language = file.path.split(".").pop() ?? "tsx";
 
   return (
-    <div className="isolate flex size-full group-data-[view=preview]/block-view-wrapper:hidden">
-      <div className="bg-code text-code-foreground relative flex size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
+    <div className="isolate size-full group-data-[view=preview]/block-view-wrapper:hidden">
+      <div className="bg-code text-code-foreground relative size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
         {showCodePanelOverlay ? (
           <Empty>
             <EmptyHeader>
@@ -370,31 +370,28 @@ function BlockViewerCode() {
             </EmptyContent>
           </Empty>
         ) : (
-          <>
+          <div className="flex size-full">
             <BlockViewerFileTreeSidebar />
-            <figure
-              data-rehype-pretty-code-figure=""
-              className="!m-0 flex size-full min-w-0 flex-col overflow-hidden rounded-xl border-none"
-            >
+            <figure className="!m-0 flex size-full min-w-0 flex-col rounded-xl border-none">
               <figcaption
                 className="text-code-foreground [&_svg]:text-code-foreground flex h-12 shrink-0 items-center gap-2 border-b px-4 py-2 [&_svg]:size-4 [&_svg]:opacity-70"
                 data-language={language}
               >
                 <FileIcon className="size-4 shrink-0" />
-                <span className="line-clamp-1 text-sm font-medium">{file.target}</span>
+                <span className="line-clamp-1 text-sm">{file.target}</span>
                 <div className="ml-auto flex items-center gap-2">
                   <BlockCopyCodeButton />
                 </div>
               </figcaption>
 
               <CodeBlock
-                showLineNumbers
-                code={file?.content}
                 language={language}
+                code={file?.content}
+                showLineNumbers
                 className="scrollbar-thin overflow-auto"
               />
             </figure>
-          </>
+          </div>
         )}
       </div>
     </div>
@@ -529,7 +526,7 @@ function BlockViewer({
         <BlockViewerToolbar />
       </div>
 
-      <div className="isolate aspect-square overflow-hidden md:aspect-auto md:h-(--height)">
+      <div className="isolate aspect-square md:aspect-auto md:h-(--height)">
         <BlockViewerView />
         <BlockViewerCode />
       </div>
