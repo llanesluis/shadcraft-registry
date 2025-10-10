@@ -165,6 +165,12 @@ function BlockViewerToolbar() {
     resizablePanelRef?.current?.resize(size);
   };
 
+  let url = `/view/${item.name}`;
+
+  if (item.type === "registry:ui" || item.type === "registry:component") {
+    url = `/view/${item.name}-example`;
+  }
+
   return (
     <div className="flex w-full items-center gap-2">
       <Tabs
@@ -234,7 +240,7 @@ function BlockViewerToolbar() {
               title="Open in New Tab"
               className="cursor-pointer"
             >
-              <Link href={`/view/${item.name}`} target="_blank">
+              <Link href={url} target="_blank">
                 <span className="sr-only">Open in New Tab</span>
                 <Fullscreen />
               </Link>
@@ -261,10 +267,16 @@ function BlockViewerToolbar() {
 function BlockViewerIframe({ className }: { className?: string }) {
   const { item, iframeKey } = useBlockViewer();
 
+  let url = `/view/${item.name}`;
+
+  if (item.type === "registry:ui" || item.type === "registry:component") {
+    url = `/view/${item.name}-example`;
+  }
+
   return (
     <iframe
       key={iframeKey}
-      src={`/view/${item.name}`}
+      src={url}
       height={item.meta?.iframeHeight ?? 800}
       loading="lazy"
       className={cn("bg-background no-scrollbar relative z-20 size-full", className)}

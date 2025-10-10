@@ -15,9 +15,10 @@ const getCachedRegistryItem = React.cache(async (name: string) => {
 export const generateStaticParams = async () => {
   const { Index } = await import("@/registry/__index__");
 
-  return Object.values(Index)
+  const params = Object.values(Index)
     .filter((block) => ["registry:example", "registry:block"].includes(block.type))
     .map((block) => ({ name: block.name }));
+  return params;
 };
 
 export default async function ViewPage({ params }: { params: Promise<{ name: string }> }) {
