@@ -36,6 +36,38 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "banner-3",
+    title: "Banner 3",
+    type: "registry:block",
+    registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
+    files: [
+      {
+        path: "blocks/banner-3/page.tsx",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "banner-4",
+    title: "Banner 4",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/banner-4/page.tsx",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
     name: "careers-1",
     title: "Careers 1",
     type: "registry:block",
