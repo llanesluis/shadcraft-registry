@@ -32,29 +32,32 @@ export default function Page() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="flex flex-col">
-        {careersData.map((career) => (
-          <JobListing key={career.id}>
-            <JobListingHeader>
-              <JobListingBadge>{career.category}</JobListingBadge>
-              <JobListingAction>
-                <Button variant="ghost" size="sm" className="cursor-pointer">
-                  View <ArrowUpRightIcon />
-                </Button>
-              </JobListingAction>
-              <JobListingTitle>{career.title}</JobListingTitle>
-              <JobListingDescription>{career.description}</JobListingDescription>
-            </JobListingHeader>
+      <div>
+        <div className="flex flex-col gap-5 md:gap-2">
+          {careersData.map((career) => (
+            <JobListing key={career.id}>
+              <JobListingHeader>
+                <JobListingBadge>{career.category}</JobListingBadge>
+                <JobListingAction>
+                  <Button variant="ghost" size="sm" className="cursor-pointer">
+                    View <ArrowUpRightIcon />
+                  </Button>
+                </JobListingAction>
+                <JobListingTitle>{career.title}</JobListingTitle>
+                <JobListingDescription>{career.description}</JobListingDescription>
+              </JobListingHeader>
 
-            <JobListingFooter>
-              {career.tags.map((tag) => (
-                <Chip key={tag.label} icon={<tag.icon />} label={tag.label} />
-              ))}
-            </JobListingFooter>
-          </JobListing>
-        ))}
-        <div className="space-y-9">
+              <JobListingFooter>
+                {career.tags.map((tag) => (
+                  <Chip key={tag.label} icon={<tag.icon />} label={tag.label} />
+                ))}
+              </JobListingFooter>
+            </JobListing>
+          ))}
           <Separator />
+        </div>
+
+        <div className="pt-9">
           <Button variant="outline" className="w-full sm:w-fit">
             All jobs <ArrowUpRightIcon />
           </Button>

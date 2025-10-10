@@ -14,7 +14,7 @@ function JobListing({
     <div
       className={cn(
         "flex flex-col gap-3",
-        variant === "default" && "border-t pt-3 pb-4",
+        variant === "default" && "border-t pt-3 lg:pb-4",
         variant === "card" && "bg-card rounded-2xl border p-5 shadow-sm lg:p-9",
         className
       )}
