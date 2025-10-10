@@ -315,7 +315,7 @@ function BlockViewerView() {
           >
             <BlockViewerIframe />
           </ResizablePanel>
-          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-12 after:w-1.5 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-20 active:after:w-1 md:block" />
+          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-10 after:w-1.5 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-12 active:after:w-1 md:block" />
 
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
