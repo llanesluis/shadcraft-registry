@@ -1,8 +1,40 @@
 import { type Registry } from "shadcn/schema";
 
-import { getRegistryItemsJsonUrls } from "@/utils/registry";
+import { getRegistryItemJsonUrl, getRegistryItemsJsonUrls } from "@/utils/registry";
 
 export const blocks: Registry["items"] = [
+  {
+    name: "banner-1",
+    title: "Banner 1",
+    type: "registry:block",
+    registryDependencies: ["button", "input", getRegistryItemJsonUrl("featured-icon")],
+    files: [
+      {
+        path: "blocks/banner-1/page.tsx",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "banner-2",
+    title: "Banner 2",
+    type: "registry:block",
+    registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
+    files: [
+      {
+        path: "blocks/banner-2/page.tsx",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
   {
     name: "careers-1",
     title: "Careers 1",

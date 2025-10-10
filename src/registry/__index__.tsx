@@ -698,6 +698,58 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     categories: undefined,
     meta: { bundle: "pro-marketing" },
   },
+  "banner-1": {
+    name: "banner-1",
+    type: "registry:block",
+    title: "Banner 1",
+    description: "",
+    registryDependencies: [
+      "button",
+      "input",
+      "https://shadcraft-registry.vercel.app/r/featured-icon.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/banner-1/page.tsx",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/banner-1/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "banner-2": {
+    name: "banner-2",
+    type: "registry:block",
+    title: "Banner 2",
+    description: "",
+    registryDependencies: ["button", "https://shadcraft-registry.vercel.app/r/featured-icon.json"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/banner-2/page.tsx",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/banner-2/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
   "careers-1": {
     name: "careers-1",
     type: "registry:block",

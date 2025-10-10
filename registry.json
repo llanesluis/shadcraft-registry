@@ -438,6 +438,45 @@
       }
     },
     {
+      "name": "banner-1",
+      "title": "Banner 1",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "input",
+        "https://shadcraft-registry.vercel.app/r/featured-icon.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banner-1/page.tsx",
+          "type": "registry:page",
+          "target": "app/banner/page.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "banner-2",
+      "title": "Banner 2",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/featured-icon.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banner-2/page.tsx",
+          "type": "registry:page",
+          "target": "app/banner/page.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
       "name": "careers-1",
       "title": "Careers 1",
       "type": "registry:block",
