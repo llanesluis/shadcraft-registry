@@ -32,6 +32,10 @@ export default function Page() {
         </SectionHeadingBody>
       </SectionHeading>
 
+      <div className="aspect-video h-auto w-full overflow-hidden rounded-2xl md:aspect-[5/2]">
+        <img src="/assets/placeholder.svg" alt="Careers" className="size-full object-cover" />
+      </div>
+
       <div className="mx-auto w-full max-w-3xl">
         <div className="flex flex-col gap-5 lg:gap-9">
           {data.map((career) => (

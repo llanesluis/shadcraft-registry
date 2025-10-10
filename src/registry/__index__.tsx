@@ -702,7 +702,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     name: "careers-1",
     type: "registry:block",
     title: "Careers 1",
-    description: "Pending",
+    description: "",
     registryDependencies: [
       "button",
       "separator",
@@ -719,6 +719,95 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/careers-1/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "careers-2": {
+    name: "careers-2",
+    type: "registry:block",
+    title: "Careers 2",
+    description: "",
+    registryDependencies: [
+      "button",
+      "separator",
+      "https://shadcraft-registry.vercel.app/r/job-listing.json",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/chip.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/careers-2/page.tsx",
+        type: "registry:page",
+        target: "app/careers/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/careers-2/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "careers-3": {
+    name: "careers-3",
+    type: "registry:block",
+    title: "Careers 3",
+    description: "",
+    registryDependencies: [
+      "button",
+      "https://shadcraft-registry.vercel.app/r/job-listing.json",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/chip.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/careers-3/page.tsx",
+        type: "registry:page",
+        target: "app/careers/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/careers-3/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "careers-4": {
+    name: "careers-4",
+    type: "registry:block",
+    title: "Careers 4",
+    description: "",
+    registryDependencies: [
+      "button",
+      "separator",
+      "https://shadcraft-registry.vercel.app/r/job-listing.json",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/chip.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/careers-4/page.tsx",
+        type: "registry:page",
+        target: "app/careers/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/careers-4/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

@@ -21,7 +21,7 @@ import {
 
 export default function Page() {
   return (
-    <section className="mx-auto grid w-full max-w-[1440px] gap-5 px-5 py-12 lg:gap-10 lg:p-20">
+    <section className="mx-auto grid w-full max-w-[1440px] gap-5 px-5 py-12 lg:gap-9 lg:p-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-3xl">
         <SectionHeadingContentType>Careers</SectionHeadingContentType>
         <SectionHeadingTitle>Careers at Acme Inc.</SectionHeadingTitle>
@@ -32,35 +32,41 @@ export default function Page() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="mx-auto w-full max-w-3xl">
-        <div className="flex flex-col gap-5 lg:gap-9">
-          {data.map((career) => (
-            <JobListing key={career.id}>
-              <JobListingHeader>
-                <JobListingBadge>{career.badge}</JobListingBadge>
-                <JobListingAction>
-                  <Button variant="ghost" size="sm" className="cursor-pointer">
-                    View <ArrowUpRightIcon />
-                  </Button>
-                </JobListingAction>
-                <JobListingTitle>{career.title}</JobListingTitle>
-                <JobListingDescription>{career.description}</JobListingDescription>
-              </JobListingHeader>
-
-              <JobListingFooter>
-                {career.tags.map((tag) => (
-                  <Chip key={tag.label} icon={<tag.icon />} label={tag.label} />
-                ))}
-              </JobListingFooter>
-            </JobListing>
-          ))}
-          <Separator />
+      <div className="grid gap-5 md:grid-cols-2 lg:gap-9">
+        <div className="aspect-[5/4] size-full overflow-hidden rounded-2xl md:aspect-auto">
+          <img src="/assets/placeholder.svg" alt="Careers" className="size-full object-cover" />
         </div>
 
-        <div className="pt-9">
-          <Button variant="outline" className="w-full sm:w-fit">
-            All jobs <ArrowUpRightIcon />
-          </Button>
+        <div>
+          <div className="flex flex-col gap-5 lg:gap-9">
+            {data.map((career) => (
+              <JobListing key={career.id}>
+                <JobListingHeader>
+                  <JobListingBadge>{career.badge}</JobListingBadge>
+                  <JobListingAction>
+                    <Button variant="ghost" size="sm" className="cursor-pointer">
+                      View <ArrowUpRightIcon />
+                    </Button>
+                  </JobListingAction>
+                  <JobListingTitle>{career.title}</JobListingTitle>
+                  <JobListingDescription>{career.description}</JobListingDescription>
+                </JobListingHeader>
+
+                <JobListingFooter>
+                  {career.tags.map((tag) => (
+                    <Chip key={tag.label} icon={<tag.icon />} label={tag.label} />
+                  ))}
+                </JobListingFooter>
+              </JobListing>
+            ))}
+            <Separator />
+          </div>
+
+          <div className="pt-9">
+            <Button variant="outline" className="w-full sm:w-fit">
+              All jobs <ArrowUpRightIcon />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

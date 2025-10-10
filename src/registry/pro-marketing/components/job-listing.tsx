@@ -13,9 +13,9 @@ function JobListing({
   return (
     <div
       className={cn(
-        "flex flex-col gap-3",
-        variant === "default" && "border-t pt-3 lg:pb-4",
-        variant === "card" && "bg-card rounded-2xl border p-5 shadow-sm lg:p-9",
+        "flex max-w-3xl flex-col",
+        variant === "default" && "gap-3 border-t pt-5 lg:gap-4 lg:pt-9",
+        variant === "card" && "bg-card gap-3 rounded-2xl border p-5 shadow-sm lg:p-9",
         className
       )}
       {...props}
