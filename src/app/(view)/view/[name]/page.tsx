@@ -3,6 +3,7 @@ import React from "react";
 
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { getRegistryItem, getRegistryRenderComponent } from "@/lib/registry";
+import { cn } from "@/lib/utils";
 
 export const revalidate = false;
 export const dynamic = "force-static";
@@ -42,7 +43,12 @@ export default async function ViewPage({ params }: { params: Promise<{ name: str
 
   return (
     <>
-      <main className="container flex min-h-svh items-center justify-center px-4 py-8 lg:px-8">
+      <main
+        className={cn(
+          "flex size-full min-h-svh items-center justify-center",
+          item.meta?.containerClassname
+        )}
+      >
         <RenderComponent />
       </main>
 

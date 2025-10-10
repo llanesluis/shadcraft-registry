@@ -6,7 +6,7 @@ import {
 
 export function BlogBlockquoteExample() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 px-4 py-8 lg:px-8">
       <BlogBlockquote>
         <BlogBlockquoteText>
           AI isn’t here to replace how we work, it’s here to remove the friction. The real advantage

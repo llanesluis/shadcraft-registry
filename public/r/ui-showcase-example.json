@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "examples/ui-showcase-example.tsx",
-      "content": "import { UIShowcase, UIShowcaseInset } from \"@/components/ui-showcase\";\n\nexport function UIShowcaseExample() {\n  return (\n    <div className=\"flex flex-col gap-8\">\n      <UIShowcase>\n        <UIShowcaseInset>\n          <img src=\"/assets/dashboard-01-light.webp\" />\n        </UIShowcaseInset>\n      </UIShowcase>\n\n      <div className=\"flex gap-8\">\n        <UIShowcase>\n          <UIShowcaseInset>\n            <img src=\"/assets/placeholder.svg\" />\n          </UIShowcaseInset>\n        </UIShowcase>\n\n        <UIShowcase>\n          <UIShowcaseInset>\n            <img src=\"/assets/placeholder.svg\" className=\"aspect-video\" />\n          </UIShowcaseInset>\n        </UIShowcase>\n      </div>\n    </div>\n  );\n}\n",
+      "content": "import { UIShowcase, UIShowcaseInset } from \"@/components/ui-showcase\";\n\nexport function UIShowcaseExample() {\n  return (\n    <div className=\"flex flex-col gap-8 px-4 py-8 lg:px-8\">\n      <UIShowcase>\n        <UIShowcaseInset>\n          <img src=\"/assets/dashboard-01-light.webp\" />\n        </UIShowcaseInset>\n      </UIShowcase>\n\n      <div className=\"flex gap-8\">\n        <UIShowcase>\n          <UIShowcaseInset>\n            <img src=\"/assets/placeholder.svg\" />\n          </UIShowcaseInset>\n        </UIShowcase>\n\n        <UIShowcase>\n          <UIShowcaseInset>\n            <img src=\"/assets/placeholder.svg\" className=\"aspect-video\" />\n          </UIShowcaseInset>\n        </UIShowcase>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:example"
     }
   ],

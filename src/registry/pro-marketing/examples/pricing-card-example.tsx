@@ -20,7 +20,7 @@ import {
 
 export function PricingCardExample() {
   return (
-    <div className="grid size-full place-items-center gap-8 lg:grid-cols-3">
+    <div className="grid size-full place-items-center gap-8 px-4 py-8 lg:grid-cols-3 lg:px-8">
       <PricingCard>
         <PricingCardIcon icon={Star} />
         <PricingCardHeader>

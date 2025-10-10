@@ -2,7 +2,7 @@ import { Heading } from "@/registry/pro-marketing/ui/heading";
 
 export function HeadingExample() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 px-4 py-8 lg:px-8">
       <Heading level={1} size={"3xl"}>
         Heading 1 <span className="text-muted-foreground">Main Title</span>
       </Heading>

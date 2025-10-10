@@ -13,7 +13,7 @@ import {
 
 export function FeatureStackExample() {
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-16 px-4 py-8 lg:px-8 lg:py-12">
       {/* Medium size */}
       <div className="grid gap-16">
         <FeatureStack>

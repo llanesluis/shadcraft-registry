@@ -4,7 +4,7 @@ import { SubFeature } from "@/registry/pro-marketing/components/sub-feature";
 
 export function SubFeatureExample() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 px-4 py-8 lg:px-8">
       <SubFeature
         title="Smarter Analytics"
         description="Turn data into clarity with AI-powered insights that help you act faster and more confidently."

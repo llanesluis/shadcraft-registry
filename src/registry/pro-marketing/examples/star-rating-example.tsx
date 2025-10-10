@@ -2,7 +2,7 @@ import { StarRating } from "@/registry/pro-marketing/components/star-rating";
 
 export function StarRatingExample() {
   return (
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="grid gap-8 px-4 py-8 md:grid-cols-2 lg:px-8">
       <div className="flex flex-col gap-8">
         <StarRating value={5} />
         <StarRating value={1} label="Empty stars" />

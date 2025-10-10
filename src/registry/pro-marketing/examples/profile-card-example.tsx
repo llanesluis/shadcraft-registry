@@ -8,7 +8,7 @@ import {
 
 export function ProfileCardExample() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 px-4 py-8 lg:px-8">
       <ProfileCard>
         <ProfileCardAvatar src="https://github.com/shadcn.png" name="shadcn" />
 

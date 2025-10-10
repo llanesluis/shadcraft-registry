@@ -9,7 +9,7 @@ import {
 
 export function MetricExample() {
   return (
-    <div className="grid size-full gap-20">
+    <div className="grid size-full gap-20 px-4 py-8 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-3">
         <Metric size="lg">
           <MetricLabel>12,500+</MetricLabel>

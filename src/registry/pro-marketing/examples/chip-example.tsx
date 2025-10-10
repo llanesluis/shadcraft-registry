@@ -13,7 +13,7 @@ import { Chip } from "@/registry/pro-marketing/components/chip";
 
 export function ChipExample() {
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-2 gap-8 px-4 py-8 lg:px-8">
       <Chip label="Remote" icon={<MapPin />} />
       <Chip label="Full-time" icon={<Timer />} />
       <Chip label="Contract" icon={<Briefcase />} />

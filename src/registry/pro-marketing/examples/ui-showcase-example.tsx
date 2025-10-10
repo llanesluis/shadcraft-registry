@@ -2,7 +2,7 @@ import { UIShowcase, UIShowcaseInset } from "@/registry/pro-marketing/components
 
 export function UIShowcaseExample() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 px-4 py-8 lg:px-8">
       <UIShowcase>
         <UIShowcaseInset>
           <img src="/assets/dashboard-01-light.webp" />

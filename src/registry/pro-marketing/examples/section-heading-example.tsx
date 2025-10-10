@@ -7,7 +7,7 @@ import {
 
 export function SectionHeadingExample() {
   return (
-    <div className="flex w-full flex-col gap-16">
+    <div className="flex w-full flex-col gap-16 px-4 py-8 lg:px-8">
       <SectionHeading>
         <SectionHeadingContentType>Pricing</SectionHeadingContentType>
         <SectionHeadingTitle>Simple Pricing, Smarter Work</SectionHeadingTitle>

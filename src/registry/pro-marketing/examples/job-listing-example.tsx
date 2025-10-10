@@ -15,7 +15,7 @@ import {
 
 export function JobListingExample() {
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 px-4 py-8 lg:px-8">
       <div className="flex flex-col gap-8">
         <JobListing>
           <JobListingHeader>

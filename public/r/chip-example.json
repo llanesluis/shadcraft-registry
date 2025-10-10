@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "examples/chip-example.tsx",
-      "content": "import {\n  Briefcase,\n  Building,\n  CircleDollarSign,\n  Clock,\n  GraduationCap,\n  HeartHandshake,\n  MapPin,\n  Timer,\n} from \"lucide-react\";\n\nimport { Chip } from \"@/components/chip\";\n\nexport function ChipExample() {\n  return (\n    <div className=\"grid grid-cols-2 gap-8\">\n      <Chip label=\"Remote\" icon={<MapPin />} />\n      <Chip label=\"Full-time\" icon={<Timer />} />\n      <Chip label=\"Contract\" icon={<Briefcase />} />\n      <Chip label=\"Internship\" icon={<GraduationCap />} />\n      <Chip label=\"Salary\" icon={<CircleDollarSign />} />\n      <Chip label=\"Benefits\" icon={<HeartHandshake />} />\n      <Chip label=\"4 minutes read\" icon={<Clock />} />\n      <Chip label=\"On-site\" icon={<Building />} />\n    </div>\n  );\n}\n",
+      "content": "import {\n  Briefcase,\n  Building,\n  CircleDollarSign,\n  Clock,\n  GraduationCap,\n  HeartHandshake,\n  MapPin,\n  Timer,\n} from \"lucide-react\";\n\nimport { Chip } from \"@/components/chip\";\n\nexport function ChipExample() {\n  return (\n    <div className=\"grid grid-cols-2 gap-8 px-4 py-8 lg:px-8\">\n      <Chip label=\"Remote\" icon={<MapPin />} />\n      <Chip label=\"Full-time\" icon={<Timer />} />\n      <Chip label=\"Contract\" icon={<Briefcase />} />\n      <Chip label=\"Internship\" icon={<GraduationCap />} />\n      <Chip label=\"Salary\" icon={<CircleDollarSign />} />\n      <Chip label=\"Benefits\" icon={<HeartHandshake />} />\n      <Chip label=\"4 minutes read\" icon={<Clock />} />\n      <Chip label=\"On-site\" icon={<Building />} />\n    </div>\n  );\n}\n",
       "type": "registry:example"
     }
   ],
