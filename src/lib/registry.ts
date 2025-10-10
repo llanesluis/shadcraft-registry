@@ -1,26 +1,20 @@
-import _registry from "@/_registry";
 import fs from "fs/promises";
 import { tmpdir } from "os";
 import path from "path";
-import {
-  registryItemSchema,
-  registrySchema,
-  type Registry,
-  type RegistryItem,
-} from "shadcn/schema";
+import { registryItemSchema, type Registry, type RegistryItem } from "shadcn/schema";
 import { Project, ScriptKind } from "ts-morph";
 
-export const registry = registrySchema.parse(_registry);
+import { registry } from "@/registry";
+import { Index } from "@/registry/__index__";
 
 export type RegistryItemFile = NonNullable<RegistryItem["files"]>[number];
 
 export function getRegistryItems(): Registry["items"] {
   // Exclude style item as it's not relevant to show in the UI
-  const items = registry.items.filter((item) => item.type !== "registry:style");
-  return items;
+  return registry.items.filter((item) => item.type !== "registry:style");
 }
 
-export function getUIItems() {
+export function getUiItems() {
   return getRegistryItems().filter((component) => component.type === "registry:ui");
 }
 
@@ -38,15 +32,20 @@ export function getTemplateItems() {
   );
 }
 
-export async function getRegistryItem(name: string) {
-  const item = getRegistryItems().find((item: { name: string }) => item.name === name);
+export function getRegistryRenderComponent(name: string) {
+  return Index[name]?.component;
+}
+
+export async function getRegistryItem(name: string): Promise<RegistryItem | null> {
+  const item = Index[name];
+  console.log(item);
   if (!item) return null;
 
   // Convert all file paths to object (pre-parse), without mutating typed data.
   const candidate = {
     ...item,
     files: Array.isArray(item.files)
-      ? item.files.map((file) => (typeof file === "string" ? { path: file } : file))
+      ? item.files.map((file: unknown) => (typeof file === "string" ? { path: file } : file))
       : item.files,
   };
 
