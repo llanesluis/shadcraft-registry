@@ -100,7 +100,7 @@ function JobListingFooter({ className, ...props }: React.ComponentProps<"div">) 
   return (
     <div
       data-slot="job-listing-footer"
-      className={cn("flex flex-wrap items-start gap-3", className)}
+      className={cn("mt-auto flex flex-wrap items-start gap-3", className)}
       {...props}
     />
   );
