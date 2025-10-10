@@ -3,6 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { rimraf } from "rimraf";
 
+import { RegistryItemFile } from "@/lib/registry";
 import { registry } from "@/registry/index";
 
 async function buildRegistryIndex() {
@@ -141,7 +142,7 @@ async function cleanupGeneratedPaths() {
       // Build a mapping of source paths to target paths for this block
       const pathMappings = new Map<string, string>();
 
-      json.files.forEach((file: any) => {
+      json.files.forEach((file: RegistryItemFile) => {
         if (typeof file === "object" && file.path && file.target) {
           // Map the source registry path to the target path
           const sourcePath = file.path.replace(/^src\/registry\/pro-marketing\//, "");
@@ -149,7 +150,7 @@ async function cleanupGeneratedPaths() {
         }
       });
 
-      json.files = json.files.map((file: any) => {
+      json.files = json.files.map((file: RegistryItemFile) => {
         if (typeof file === "object" && file.path) {
           // Remove registry/pro-marketing/ prefix
           let cleanPath = file.path.replace(/^src\/registry\/pro-marketing\//, "");
