@@ -146,4 +146,52 @@ export const blocks: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "footer-1",
+    title: "Footer 1",
+    type: "registry:block",
+    registryDependencies: ["badge", "separator"],
+    files: [
+      {
+        path: "blocks/footer-1/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "footer-2",
+    title: "Footer 2",
+    type: "registry:block",
+    registryDependencies: ["input", "button", "badge", "separator"],
+    files: [
+      {
+        path: "blocks/footer-2/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "footer-3",
+    title: "Footer 3",
+    type: "registry:block",
+    registryDependencies: ["separator"],
+    files: [
+      {
+        path: "blocks/footer-3/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];

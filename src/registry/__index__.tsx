@@ -917,4 +917,76 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     categories: undefined,
     meta: { bundle: "pro-marketing" },
   },
+  "footer-1": {
+    name: "footer-1",
+    type: "registry:block",
+    title: "Footer 1",
+    description: "",
+    registryDependencies: ["badge", "separator"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/footer-1/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/footer-1/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "footer-2": {
+    name: "footer-2",
+    type: "registry:block",
+    title: "Footer 2",
+    description: "",
+    registryDependencies: ["input", "button", "badge", "separator"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/footer-2/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/footer-2/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "footer-3": {
+    name: "footer-3",
+    type: "registry:block",
+    title: "Footer 3",
+    description: "",
+    registryDependencies: ["separator"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/footer-3/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/footer-3/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
 };
