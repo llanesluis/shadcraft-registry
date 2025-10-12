@@ -22,7 +22,7 @@ export default function Component() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="grid justify-center gap-5 md:grid-cols-2 md:gap-9 lg:grid-cols-4">
+      <div className="grid justify-center gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
         <Metric alignment="center" className="bg-muted rounded-2xl p-9">
           <MetricLabel>12,500+</MetricLabel>
           <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>
