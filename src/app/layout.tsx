@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script crossOrigin="anonymous" src="https://tweakcn.com/live-preview.js" />
+        <script async crossOrigin="anonymous" src="https://tweakcn.com/live-preview.js" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider>
