@@ -19,7 +19,7 @@ function Metric({
       className={cn(
         "group/metric flex max-w-xl flex-col font-sans",
         alignment === "left" && "border-border items-start border-l pl-6",
-        alignment === "center" && "items-center justify-center gap-y-1.5 text-center",
+        alignment === "center" && "items-center gap-y-1.5 text-center",
         alignment === "right" && "border-border items-end border-r pr-6",
         className
       )}

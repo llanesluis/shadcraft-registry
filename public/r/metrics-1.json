@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "metrics-1",
+  "type": "registry:block",
+  "title": "Metrics 1",
+  "registryDependencies": [
+    "https://shadcraft-registry.vercel.app/r/metric.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/metrics-1/page.tsx",
+      "content": "import { Metric, MetricLabel, MetricSubLabel } from \"@/components/metric\";\n\nexport default function Component() {\n  return (\n    <div className=\"flex w-full flex-col gap-5 md:gap-9\">\n      <div className=\"aspect-[21/9] h-auto w-full overflow-hidden\">\n        <img src=\"/assets/placeholder.svg\" className=\"size-full object-cover\" />\n      </div>\n      <div className=\"grid gap-5 md:grid-cols-2 md:gap-9 lg:grid-cols-4\">\n        <Metric>\n          <MetricLabel>12,500+</MetricLabel>\n          <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>\n        </Metric>\n\n        <Metric>\n          <MetricLabel>38% faster</MetricLabel>\n          <MetricSubLabel>Delivery across teams</MetricSubLabel>\n        </Metric>\n\n        <Metric>\n          <MetricLabel>94%</MetricLabel>\n          <MetricSubLabel>User satisfaction reported</MetricSubLabel>\n        </Metric>\n\n        <Metric>\n          <MetricLabel>8 countries</MetricLabel>\n          <MetricSubLabel>With active customers and growing</MetricSubLabel>\n        </Metric>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/metrics/page.tsx"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  }
+}

@@ -194,4 +194,116 @@ export const blocks: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "metrics-1",
+    title: "Metrics 1",
+    type: "registry:block",
+    registryDependencies: [getRegistryItemJsonUrl("metric")],
+    files: [
+      {
+        path: "blocks/metrics-1/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "metrics-2",
+    title: "Metrics 2",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
+    files: [
+      {
+        path: "blocks/metrics-2/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "metrics-3",
+    title: "Metrics 3",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
+    files: [
+      {
+        path: "blocks/metrics-3/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "metrics-4",
+    title: "Metrics 4",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
+    files: [
+      {
+        path: "blocks/metrics-4/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "metrics-5",
+    title: "Metrics 5",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
+    files: [
+      {
+        path: "blocks/metrics-5/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "metrics-6",
+    title: "Metrics 6",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
+    files: [
+      {
+        path: "blocks/metrics-6/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "metrics-7",
+    title: "Metrics 7",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
+    files: [
+      {
+        path: "blocks/metrics-7/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];

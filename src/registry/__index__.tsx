@@ -989,4 +989,190 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     categories: undefined,
     meta: { bundle: "pro-marketing" },
   },
+  "metrics-1": {
+    name: "metrics-1",
+    type: "registry:block",
+    title: "Metrics 1",
+    description: "",
+    registryDependencies: ["https://shadcraft-registry.vercel.app/r/metric.json"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-1/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-1/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "metrics-2": {
+    name: "metrics-2",
+    type: "registry:block",
+    title: "Metrics 2",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/metric.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-2/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-2/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "metrics-3": {
+    name: "metrics-3",
+    type: "registry:block",
+    title: "Metrics 3",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/metric.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-3/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-3/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "metrics-4": {
+    name: "metrics-4",
+    type: "registry:block",
+    title: "Metrics 4",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/metric.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-4/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-4/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "metrics-5": {
+    name: "metrics-5",
+    type: "registry:block",
+    title: "Metrics 5",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/metric.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-5/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-5/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "metrics-6": {
+    name: "metrics-6",
+    type: "registry:block",
+    title: "Metrics 6",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/metric.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-6/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-6/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "metrics-7": {
+    name: "metrics-7",
+    type: "registry:block",
+    title: "Metrics 7",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/metric.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-7/page.tsx",
+        type: "registry:page",
+        target: "app/metrics/page.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/metrics-7/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
 };
