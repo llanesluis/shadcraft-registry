@@ -4,7 +4,7 @@ import {
   ProfileCardBody,
   ProfileCardDetails,
   ProfileCardName,
-} from "@/registry/pro-marketing/components/profile-card";
+} from "@/registry/pro-marketing/ui/profile-card";
 
 export function ProfileCardExample() {
   return (

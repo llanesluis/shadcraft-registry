@@ -2,7 +2,6 @@ import { ArrowUpRightIcon, CircleDollarSign, Clock, MapPin } from "lucide-react"
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Chip } from "@/registry/pro-marketing/components/chip";
 import {
   JobListing,
   JobListingAction,
@@ -18,6 +17,7 @@ import {
   SectionHeadingContentType,
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
+import { Chip } from "@/registry/pro-marketing/ui/chip";
 
 export default function Page() {
   return (

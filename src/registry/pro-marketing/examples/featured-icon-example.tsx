@@ -1,6 +1,6 @@
 import { Activity } from "lucide-react";
 
-import { FeaturedIcon } from "@/registry/pro-marketing/components/featured-icon";
+import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
 export function FeaturedIconExample() {
   return (

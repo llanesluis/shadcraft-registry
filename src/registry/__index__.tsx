@@ -10,6 +10,56 @@ type RegistryItemWithComponent = RegistryItem & {
 };
 
 export const Index: Record<string, RegistryItemWithComponent> = {
+  chip: {
+    name: "chip",
+    type: "registry:ui",
+    title: "Chip",
+    description:
+      "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/pro-marketing/ui/chip.tsx",
+        type: "registry:ui",
+        target: "components/shadcraft/chip.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/ui/chip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "featured-icon": {
+    name: "featured-icon",
+    type: "registry:ui",
+    title: "Featured Icon",
+    description:
+      "A component that places an icon inside a styled square or circle frame for extra prominence. This component makes supporting visuals stand out in marketing layouts.",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/pro-marketing/ui/featured-icon.tsx",
+        type: "registry:ui",
+        target: "components/shadcraft/featured-icon.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/ui/featured-icon.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
   heading: {
     name: "heading",
     type: "registry:ui",
@@ -20,11 +70,86 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/heading.tsx",
         type: "registry:ui",
-        target: "",
+        target: "components/shadcraft/heading.tsx",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/ui/heading.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "profile-card": {
+    name: "profile-card",
+    type: "registry:ui",
+    title: "Profile Card",
+    description:
+      "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
+    registryDependencies: ["avatar"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/ui/profile-card.tsx",
+        type: "registry:ui",
+        target: "components/shadcraft/profile-card.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/ui/profile-card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "star-rating": {
+    name: "star-rating",
+    type: "registry:ui",
+    title: "Star Rating",
+    description:
+      "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/pro-marketing/ui/star-rating.tsx",
+        type: "registry:ui",
+        target: "components/shadcraft/star-rating.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/ui/star-rating.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: { bundle: "pro-marketing" },
+  },
+  "ui-showcase": {
+    name: "ui-showcase",
+    type: "registry:ui",
+    title: "UI Showcase",
+    description:
+      "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/pro-marketing/ui/ui-showcase.tsx",
+        type: "registry:ui",
+        target: "components/shadcraft/ui-showcase.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/ui/ui-showcase.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -44,7 +169,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/blog-blockquote.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/blog-blockquote.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -69,61 +194,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/blog-image.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/blog-image.tsx",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/components/blog-image.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: { bundle: "pro-marketing" },
-  },
-  chip: {
-    name: "chip",
-    type: "registry:component",
-    title: "Chip",
-    description:
-      "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/pro-marketing/components/chip.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/components/chip.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: { bundle: "pro-marketing" },
-  },
-  "featured-icon": {
-    name: "featured-icon",
-    type: "registry:component",
-    title: "Featured Icon",
-    description:
-      "A component that places an icon inside a styled square or circle frame for extra prominence. This component makes supporting visuals stand out in marketing layouts.",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/pro-marketing/components/featured-icon.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/components/featured-icon.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -144,7 +219,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/feature-stack.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/feature-stack.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -169,7 +244,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/job-listing.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/job-listing.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -194,7 +269,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/metric.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/metric.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -219,36 +294,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/pricing-card.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/pricing-card.tsx",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/components/pricing-card.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: { bundle: "pro-marketing" },
-  },
-  "profile-card": {
-    name: "profile-card",
-    type: "registry:component",
-    title: "Profile Card",
-    description:
-      "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
-    registryDependencies: ["avatar"],
-    files: [
-      {
-        path: "src/registry/pro-marketing/components/profile-card.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/components/profile-card.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -269,36 +319,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/section-heading.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/section-heading.tsx",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/components/section-heading.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: { bundle: "pro-marketing" },
-  },
-  "star-rating": {
-    name: "star-rating",
-    type: "registry:component",
-    title: "Star Rating",
-    description:
-      "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/pro-marketing/components/star-rating.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/components/star-rating.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -319,36 +344,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/sub-feature.tsx",
         type: "registry:component",
-        target: "",
+        target: "components/shadcraft/sub-feature.tsx",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/components/sub-feature.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: { bundle: "pro-marketing" },
-  },
-  "ui-showcase": {
-    name: "ui-showcase",
-    type: "registry:component",
-    title: "UI Showcase",
-    description:
-      "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/pro-marketing/components/ui-showcase.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/components/ui-showcase.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -735,8 +735,8 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     files: [
       {
         path: "src/registry/pro-marketing/blocks/banner-2/page.tsx",
-        type: "registry:block",
-        target: "",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
       },
     ],
     component: React.lazy(async () => {
@@ -759,8 +759,8 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     files: [
       {
         path: "src/registry/pro-marketing/blocks/banner-3/page.tsx",
-        type: "registry:component",
-        target: "",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
       },
     ],
     component: React.lazy(async () => {

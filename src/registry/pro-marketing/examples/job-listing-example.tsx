@@ -1,7 +1,6 @@
 import { ArrowUpRightIcon, Coins, MapPin, Timer } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Chip } from "@/registry/pro-marketing/components/chip";
 import {
   JobListing,
   JobListingAction,
@@ -12,6 +11,7 @@ import {
   JobListingHeader,
   JobListingTitle,
 } from "@/registry/pro-marketing/components/job-listing";
+import { Chip } from "@/registry/pro-marketing/ui/chip";
 
 export function JobListingExample() {
   return (

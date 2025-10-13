@@ -1,4 +1,4 @@
-import { StarRating } from "@/registry/pro-marketing/components/star-rating";
+import { StarRating } from "@/registry/pro-marketing/ui/star-rating";
 
 export function StarRatingExample() {
   return (

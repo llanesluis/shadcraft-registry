@@ -1,7 +1,7 @@
 import { ArrowUpRightIcon, CircleDollarSign, Clock, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Chip } from "@/registry/pro-marketing/components/chip";
+import { Chip } from "@/registry/pro-marketing/ui/chip";
 import {
   JobListing,
   JobListingAction,

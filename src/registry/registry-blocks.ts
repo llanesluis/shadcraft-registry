@@ -27,7 +27,8 @@ export const blocks: Registry["items"] = [
     files: [
       {
         path: "blocks/banner-2/page.tsx",
-        type: "registry:block",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
       },
     ],
     meta: {
@@ -42,7 +43,8 @@ export const blocks: Registry["items"] = [
     files: [
       {
         path: "blocks/banner-3/page.tsx",
-        type: "registry:component",
+        type: "registry:page",
+        target: "app/banner/page.tsx",
       },
     ],
     meta: {

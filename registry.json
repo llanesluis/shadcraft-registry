@@ -3,6 +3,38 @@
   "homepage": "https://shadcraft.com/",
   "items": [
     {
+      "name": "chip",
+      "title": "Chip",
+      "type": "registry:ui",
+      "description": "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/chip.tsx",
+          "type": "registry:ui",
+          "target": "components/shadcraft/chip.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "featured-icon",
+      "title": "Featured Icon",
+      "type": "registry:ui",
+      "description": "A component that places an icon inside a styled square or circle frame for extra prominence. This component makes supporting visuals stand out in marketing layouts.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/featured-icon.tsx",
+          "type": "registry:ui",
+          "target": "components/shadcraft/featured-icon.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
       "name": "heading",
       "title": "Heading",
       "type": "registry:ui",
@@ -11,7 +43,57 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/ui/heading.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/shadcraft/heading.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "profile-card",
+      "title": "Profile Card",
+      "type": "registry:ui",
+      "description": "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/profile-card.tsx",
+          "type": "registry:ui",
+          "target": "components/shadcraft/profile-card.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "star-rating",
+      "title": "Star Rating",
+      "type": "registry:ui",
+      "description": "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/star-rating.tsx",
+          "type": "registry:ui",
+          "target": "components/shadcraft/star-rating.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "ui-showcase",
+      "title": "UI Showcase",
+      "type": "registry:ui",
+      "description": "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/ui-showcase.tsx",
+          "type": "registry:ui",
+          "target": "components/shadcraft/ui-showcase.tsx"
         }
       ],
       "meta": {
@@ -27,7 +109,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/blog-blockquote.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/blog-blockquote.tsx"
         }
       ],
       "meta": {
@@ -42,37 +125,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/blog-image.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "bundle": "pro-marketing"
-      }
-    },
-    {
-      "name": "chip",
-      "title": "Chip",
-      "type": "registry:component",
-      "description": "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
-      "files": [
-        {
-          "path": "src/registry/pro-marketing/components/chip.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "bundle": "pro-marketing"
-      }
-    },
-    {
-      "name": "featured-icon",
-      "title": "Featured Icon",
-      "type": "registry:component",
-      "description": "A component that places an icon inside a styled square or circle frame for extra prominence. This component makes supporting visuals stand out in marketing layouts.",
-      "files": [
-        {
-          "path": "src/registry/pro-marketing/components/featured-icon.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/blog-image.tsx"
         }
       ],
       "meta": {
@@ -88,7 +142,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/feature-stack.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/feature-stack.tsx"
         }
       ],
       "meta": {
@@ -104,7 +159,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/job-listing.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/job-listing.tsx"
         }
       ],
       "meta": {
@@ -120,7 +176,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/metric.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/metric.tsx"
         }
       ],
       "meta": {
@@ -136,23 +193,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/pricing-card.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "bundle": "pro-marketing"
-      }
-    },
-    {
-      "name": "profile-card",
-      "title": "Profile Card",
-      "type": "registry:component",
-      "description": "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
-      "registryDependencies": ["avatar"],
-      "files": [
-        {
-          "path": "src/registry/pro-marketing/components/profile-card.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/pricing-card.tsx"
         }
       ],
       "meta": {
@@ -168,22 +210,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/section-heading.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "bundle": "pro-marketing"
-      }
-    },
-    {
-      "name": "star-rating",
-      "title": "Star Rating",
-      "type": "registry:component",
-      "description": "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
-      "files": [
-        {
-          "path": "src/registry/pro-marketing/components/star-rating.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/section-heading.tsx"
         }
       ],
       "meta": {
@@ -198,22 +226,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/components/sub-feature.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "bundle": "pro-marketing"
-      }
-    },
-    {
-      "name": "ui-showcase",
-      "title": "UI Showcase",
-      "type": "registry:component",
-      "description": "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
-      "files": [
-        {
-          "path": "src/registry/pro-marketing/components/ui-showcase.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/shadcraft/sub-feature.tsx"
         }
       ],
       "meta": {
@@ -468,7 +482,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/blocks/banner-2/page.tsx",
-          "type": "registry:block"
+          "type": "registry:page",
+          "target": "app/banner/page.tsx"
         }
       ],
       "meta": {
@@ -486,7 +501,8 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/blocks/banner-3/page.tsx",
-          "type": "registry:component"
+          "type": "registry:page",
+          "target": "app/banner/page.tsx"
         }
       ],
       "meta": {

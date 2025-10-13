@@ -1,4 +1,4 @@
-import { UIShowcase, UIShowcaseInset } from "@/registry/pro-marketing/components/ui-showcase";
+import { UIShowcase, UIShowcaseInset } from "@/registry/pro-marketing/ui/ui-showcase";
 
 export function UIShowcaseExample() {
   return (

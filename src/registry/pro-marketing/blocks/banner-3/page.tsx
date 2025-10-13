@@ -4,7 +4,7 @@ import { Info, X } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { FeaturedIcon } from "@/registry/pro-marketing/components/featured-icon";
+import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
 export default function Component() {
   const [isVisible, setIsVisible] = useState(true);

@@ -9,7 +9,7 @@ import {
   Timer,
 } from "lucide-react";
 
-import { Chip } from "@/registry/pro-marketing/components/chip";
+import { Chip } from "@/registry/pro-marketing/ui/chip";
 
 export function ChipExample() {
   return (

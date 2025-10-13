@@ -13,6 +13,7 @@ export const components: Registry["items"] = [
       {
         path: "components/blog-blockquote.tsx",
         type: "registry:component",
+        target: "components/shadcraft/blog-blockquote.tsx",
       },
     ],
     meta: {
@@ -29,38 +30,7 @@ export const components: Registry["items"] = [
       {
         path: "components/blog-image.tsx",
         type: "registry:component",
-      },
-    ],
-    meta: {
-      bundle: "pro-marketing",
-    },
-  },
-  {
-    name: "chip",
-    title: "Chip",
-    type: "registry:component",
-    description:
-      "A component that combines small text with an icon for quick callouts. This component highlights key values such as benefits, attributes, or job details.",
-    files: [
-      {
-        path: "components/chip.tsx",
-        type: "registry:component",
-      },
-    ],
-    meta: {
-      bundle: "pro-marketing",
-    },
-  },
-  {
-    name: "featured-icon",
-    title: "Featured Icon",
-    type: "registry:component",
-    description:
-      "A component that places an icon inside a styled square or circle frame for extra prominence. This component makes supporting visuals stand out in marketing layouts.",
-    files: [
-      {
-        path: "components/featured-icon.tsx",
-        type: "registry:component",
+        target: "components/shadcraft/blog-image.tsx",
       },
     ],
     meta: {
@@ -78,6 +48,7 @@ export const components: Registry["items"] = [
       {
         path: "components/feature-stack.tsx",
         type: "registry:component",
+        target: "components/shadcraft/feature-stack.tsx",
       },
     ],
     meta: {
@@ -95,6 +66,7 @@ export const components: Registry["items"] = [
       {
         path: "components/job-listing.tsx",
         type: "registry:component",
+        target: "components/shadcraft/job-listing.tsx",
       },
     ],
     meta: {
@@ -112,6 +84,7 @@ export const components: Registry["items"] = [
       {
         path: "components/metric.tsx",
         type: "registry:component",
+        target: "components/shadcraft/metric.tsx",
       },
     ],
     meta: {
@@ -129,23 +102,7 @@ export const components: Registry["items"] = [
       {
         path: "components/pricing-card.tsx",
         type: "registry:component",
-      },
-    ],
-    meta: {
-      bundle: "pro-marketing",
-    },
-  },
-  {
-    name: "profile-card",
-    title: "Profile Card",
-    type: "registry:component",
-    description:
-      "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
-    registryDependencies: ["avatar"],
-    files: [
-      {
-        path: "components/profile-card.tsx",
-        type: "registry:component",
+        target: "components/shadcraft/pricing-card.tsx",
       },
     ],
     meta: {
@@ -163,22 +120,7 @@ export const components: Registry["items"] = [
       {
         path: "components/section-heading.tsx",
         type: "registry:component",
-      },
-    ],
-    meta: {
-      bundle: "pro-marketing",
-    },
-  },
-  {
-    name: "star-rating",
-    title: "Star Rating",
-    type: "registry:component",
-    description:
-      "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
-    files: [
-      {
-        path: "components/star-rating.tsx",
-        type: "registry:component",
+        target: "components/shadcraft/section-heading.tsx",
       },
     ],
     meta: {
@@ -195,22 +137,7 @@ export const components: Registry["items"] = [
       {
         path: "components/sub-feature.tsx",
         type: "registry:component",
-      },
-    ],
-    meta: {
-      bundle: "pro-marketing",
-    },
-  },
-  {
-    name: "ui-showcase",
-    title: "UI Showcase",
-    type: "registry:component",
-    description:
-      "A Placeholder that displays content in a device-style frame. This component helps showcase product UI.",
-    files: [
-      {
-        path: "components/ui-showcase.tsx",
-        type: "registry:component",
+        target: "components/shadcraft/sub-feature.tsx",
       },
     ],
     meta: {

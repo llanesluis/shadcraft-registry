@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { FeaturedIcon } from "@/registry/pro-marketing/components/featured-icon";
+import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
 type FeatureStackContextValue = {
   size: "sm" | "md";
