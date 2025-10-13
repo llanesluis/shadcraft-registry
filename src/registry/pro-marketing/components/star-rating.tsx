@@ -8,7 +8,7 @@ type StarRatingProps = {
   max?: number;
   label?: string;
   size?: "sm" | "md" | "lg";
-  alignment?: "left" | "center" | "right";
+  orientation?: "vertical" | "horizontal";
   /**
    * Precision for partial stars. If set, the component will fill each star
    * proportionally (e.g., 3.2 -> 60% of the 4th star). Defaults to true.
@@ -22,7 +22,7 @@ export function StarRating({
   max = 5,
   label,
   size = "lg",
-  alignment = "center",
+  orientation = "vertical",
   allowPartial = true,
   className,
   containerClassName,
@@ -36,19 +36,17 @@ export function StarRating({
       data-slot="star-rating"
       className={cn(
         "flex flex-col items-center gap-1.5",
+        orientation === "horizontal" && "flex-row",
         size === "sm" && "[--star-size:calc(--spacing(3))]",
         size === "md" && "[--star-size:calc(--spacing(4))]",
         size === "lg" && "[--star-size:calc(--spacing(5))]",
-        alignment === "left" && "items-start text-left",
-        alignment === "center" && "items-center text-center",
-        alignment === "right" && "items-end text-right",
         containerClassName
       )}
       aria-label={`${clampedValue} out of ${safeMax} stars`}
       role="img"
       {...props}
     >
-      <div className={cn("flex items-center", className)}>
+      <div className={cn("flex items-center gap-0.5", className)}>
         {Array.from({ length: safeMax }).map((_, index) => {
           const starIndex = index + 1;
           const filledRatio = allowPartial
@@ -75,14 +73,17 @@ export function StarRating({
         })}
       </div>
 
-      {label ? (
-        <span
-          data-slot="star-rating-label"
-          className="text-muted-foreground font-sans text-xs leading-4 font-normal"
-        >
-          {label}
-        </span>
-      ) : null}
+      {label && <StarRatingLabel className={className}>{label}</StarRatingLabel>}
     </div>
+  );
+}
+
+function StarRatingLabel({ className, ...props }: React.ComponentProps<"span">) {
+  return (
+    <span
+      data-slot="star-rating-label"
+      className="text-muted-foreground font-sans text-xs leading-4 font-normal"
+      {...props}
+    />
   );
 }
