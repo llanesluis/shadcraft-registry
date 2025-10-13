@@ -509,8 +509,7 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/blocks/banner-2/page.tsx",
-          "type": "registry:page",
-          "target": "app/banner/page.tsx"
+          "type": "registry:block"
         }
       ],
       "meta": {
@@ -528,8 +527,7 @@
       "files": [
         {
           "path": "src/registry/pro-marketing/blocks/banner-3/page.tsx",
-          "type": "registry:page",
-          "target": "app/banner/page.tsx"
+          "type": "registry:component"
         }
       ],
       "meta": {

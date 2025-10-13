@@ -735,8 +735,8 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     files: [
       {
         path: "src/registry/pro-marketing/blocks/banner-2/page.tsx",
-        type: "registry:page",
-        target: "app/banner/page.tsx",
+        type: "registry:block",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -759,8 +759,8 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     files: [
       {
         path: "src/registry/pro-marketing/blocks/banner-3/page.tsx",
-        type: "registry:page",
-        target: "app/banner/page.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
