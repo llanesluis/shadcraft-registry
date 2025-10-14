@@ -29,8 +29,8 @@ export function MetricsSection() {
         <div className="grid gap-5 md:grid-cols-2 md:gap-x-9 md:gap-y-8">
           <Metric>
             <MetricLabel>12,500+</MetricLabel>
-            <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
+            <MetricSubLabel>Projects completed</MetricSubLabel>
+            <MetricActionButton>
               Our clients <ArrowRight />
             </MetricActionButton>
           </Metric>
@@ -38,23 +38,23 @@ export function MetricsSection() {
           <Metric>
             <MetricLabel>38% faster</MetricLabel>
             <MetricSubLabel>Delivery across teams</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
+            <MetricActionButton>
               Learn more <ArrowRight />
             </MetricActionButton>
           </Metric>
 
           <Metric>
             <MetricLabel>94%</MetricLabel>
-            <MetricSubLabel>User satisfaction reported</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
+            <MetricSubLabel>User satisfaction</MetricSubLabel>
+            <MetricActionButton>
               See feedback <ArrowRight />
             </MetricActionButton>
           </Metric>
 
           <Metric>
-            <MetricLabel>8 countries</MetricLabel>
-            <MetricSubLabel>With active customers and growing</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
+            <MetricLabel>8 zones</MetricLabel>
+            <MetricSubLabel>With active customers</MetricSubLabel>
+            <MetricActionButton>
               Our users <ArrowRight />
             </MetricActionButton>
           </Metric>

@@ -26,8 +26,8 @@ export function MetricsSection() {
       <div className="grid gap-5 md:grid-cols-2 md:gap-9 lg:grid-cols-4">
         <Metric size="lg">
           <MetricLabel>12,500+</MetricLabel>
-          <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>
-          <MetricActionButton className="mt-auto hidden md:flex">
+          <MetricSubLabel>Projects completed</MetricSubLabel>
+          <MetricActionButton className="mt-auto">
             Our clients <ArrowRight />
           </MetricActionButton>
         </Metric>
@@ -35,23 +35,23 @@ export function MetricsSection() {
         <Metric size="lg">
           <MetricLabel>38% faster</MetricLabel>
           <MetricSubLabel>Delivery across teams</MetricSubLabel>
-          <MetricActionButton className="mt-auto hidden md:flex">
+          <MetricActionButton className="mt-auto">
             Learn more <ArrowRight />
           </MetricActionButton>
         </Metric>
 
         <Metric size="lg">
           <MetricLabel>94%</MetricLabel>
-          <MetricSubLabel>User satisfaction reported</MetricSubLabel>
-          <MetricActionButton className="mt-auto hidden md:flex">
+          <MetricSubLabel>User satisfaction</MetricSubLabel>
+          <MetricActionButton className="mt-auto">
             See feedback <ArrowRight />
           </MetricActionButton>
         </Metric>
 
         <Metric size="lg">
-          <MetricLabel>8 countries</MetricLabel>
-          <MetricSubLabel>With active customers and growing</MetricSubLabel>
-          <MetricActionButton className="mt-auto hidden md:flex">
+          <MetricLabel>8 zones</MetricLabel>
+          <MetricSubLabel>With active customers</MetricSubLabel>
+          <MetricActionButton className="mt-auto">
             Our users <ArrowRight />
           </MetricActionButton>
         </Metric>

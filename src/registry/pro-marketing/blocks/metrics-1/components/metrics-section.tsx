@@ -9,7 +9,7 @@ export function MetricsSection() {
       <div className="grid gap-5 md:grid-cols-2 md:gap-9 lg:grid-cols-4">
         <Metric>
           <MetricLabel>12,500+</MetricLabel>
-          <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>
+          <MetricSubLabel>Projects completed</MetricSubLabel>
         </Metric>
 
         <Metric>
@@ -19,12 +19,12 @@ export function MetricsSection() {
 
         <Metric>
           <MetricLabel>94%</MetricLabel>
-          <MetricSubLabel>User satisfaction reported</MetricSubLabel>
+          <MetricSubLabel>User satisfaction</MetricSubLabel>
         </Metric>
 
         <Metric>
-          <MetricLabel>8 countries</MetricLabel>
-          <MetricSubLabel>With active customers and growing</MetricSubLabel>
+          <MetricLabel>8 zones</MetricLabel>
+          <MetricSubLabel>With active customers</MetricSubLabel>
         </Metric>
       </div>
     </section>

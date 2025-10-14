@@ -26,7 +26,7 @@ export function MetricsSection() {
       <div className="grid justify-center gap-5 md:grid-cols-2 md:gap-9 lg:grid-cols-4">
         <Metric size="lg" alignment="center">
           <MetricLabel>12,500+</MetricLabel>
-          <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>
+          <MetricSubLabel>Projects completed</MetricSubLabel>
           <MetricActionButton>
             Our clients <ArrowRight />
           </MetricActionButton>
@@ -42,15 +42,15 @@ export function MetricsSection() {
 
         <Metric size="lg" alignment="center">
           <MetricLabel>94%</MetricLabel>
-          <MetricSubLabel>User satisfaction reported</MetricSubLabel>
+          <MetricSubLabel>User satisfaction</MetricSubLabel>
           <MetricActionButton>
             See feedback <ArrowRight />
           </MetricActionButton>
         </Metric>
 
         <Metric size="lg" alignment="center">
-          <MetricLabel>8 countries</MetricLabel>
-          <MetricSubLabel>With active customers and growing</MetricSubLabel>
+          <MetricLabel>8 zones</MetricLabel>
+          <MetricSubLabel>With active customers</MetricSubLabel>
           <MetricActionButton>
             Our users <ArrowRight />
           </MetricActionButton>
