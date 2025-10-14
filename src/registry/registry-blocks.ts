@@ -98,6 +98,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
+      {
+        path: "blocks/careers-1/components/careers-section.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -118,6 +122,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
+      {
+        path: "blocks/careers-2/components/careers-section.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -136,6 +144,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/careers-3/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
+      },
+      {
+        path: "blocks/careers-3/components/careers-section.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
@@ -156,6 +168,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/careers-4/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
+      },
+      {
+        path: "blocks/careers-4/components/careers-section.tsx",
+        type: "registry:component",
       },
     ],
     meta: {

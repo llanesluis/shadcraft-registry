@@ -836,6 +836,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/careers-1/components/careers-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/careers-1/page.tsx");
@@ -866,6 +871,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/careers-2/components/careers-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/careers-2/page.tsx");
@@ -894,6 +904,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/careers-3/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/careers-3/components/careers-section.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -924,6 +939,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/careers-4/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/careers-4/components/careers-section.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {

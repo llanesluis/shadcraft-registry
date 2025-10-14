@@ -543,6 +543,10 @@
           "path": "src/registry/pro-marketing/blocks/careers-1/page.tsx",
           "type": "registry:page",
           "target": "app/careers/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/careers-1/components/careers-section.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {
@@ -565,6 +569,10 @@
           "path": "src/registry/pro-marketing/blocks/careers-2/page.tsx",
           "type": "registry:page",
           "target": "app/careers/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/careers-2/components/careers-section.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {
@@ -586,6 +594,10 @@
           "path": "src/registry/pro-marketing/blocks/careers-3/page.tsx",
           "type": "registry:page",
           "target": "app/careers/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/careers-3/components/careers-section.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {
@@ -608,6 +620,10 @@
           "path": "src/registry/pro-marketing/blocks/careers-4/page.tsx",
           "type": "registry:page",
           "target": "app/careers/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/careers-4/components/careers-section.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {
