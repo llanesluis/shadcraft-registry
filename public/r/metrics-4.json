@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "blocks/metrics-4/page.tsx",
-      "content": "import { MetricsSection } from \"@/registry/pro-marketing/blocks/metrics-4/components/metrics-section\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto px-5 py-12 lg:p-20\">\n      <MetricsSection />\n    </div>\n  );\n}\n",
+      "content": "import { MetricsSection } from \"@/registry/pro-marketing/blocks/metrics-4/components/metrics-section\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto min-h-svh content-center px-5 py-12 lg:p-20\">\n      <MetricsSection />\n    </div>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/metrics/page.tsx"
     },

@@ -2,7 +2,7 @@ import { MetricsSection } from "@/registry/pro-marketing/blocks/metrics-3/compon
 
 export default function Page() {
   return (
-    <div className="container mx-auto px-5 py-12 lg:p-20">
+    <div className="container mx-auto min-h-svh content-center px-5 py-12 lg:p-20">
       <MetricsSection />
     </div>
   );
