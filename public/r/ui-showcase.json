@@ -8,8 +8,7 @@
     {
       "path": "components/ui/ui-showcase.tsx",
       "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction UIShowcase({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"ui-showcase\"\n      className={cn(\n        \"bg-muted aspect-auto size-fit overflow-hidden rounded-xl border shadow-xl lg:rounded-2xl\",\n        \"has-data-[slot=ui-showcase-inset]:p-1 [&_img:not([class*='aspect-'])]:aspect-auto [&_img:not([class*='object-'])]:object-cover [&_img:not([class*='size-'])]:size-full\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction UIShowcaseInset({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"ui-showcase-inset\"\n      className={cn(\n        \"bg-background aspect-auto size-fit overflow-hidden rounded-[calc(var(--radius)+2px)] border-2 shadow-xl lg:rounded-[calc(var(--radius-2xl)-2px)]\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { UIShowcase, UIShowcaseInset };\n",
-      "type": "registry:ui",
-      "target": "components/shadcraft/ui-showcase.tsx"
+      "type": "registry:ui"
     }
   ],
   "meta": {

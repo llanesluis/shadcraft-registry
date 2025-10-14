@@ -8,8 +8,7 @@
     {
       "path": "components/ui/featured-icon.tsx",
       "content": "import { cva, VariantProps } from \"class-variance-authority\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\nconst featuredIconVariants = cva(\n  \"bg-muted border flex shrink-0 items-center justify-center [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='text-'])]:text-primary\",\n  {\n    variants: {\n      variant: {\n        circular: \"rounded-full\",\n        square: \"\",\n      },\n      size: {\n        sm: \"size-7 [&_svg:not([class*='size-'])]:size-3\",\n        md: \"size-11 [&_svg:not([class*='size-'])]:size-4\",\n        lg: \"size-16 [&_svg:not([class*='size-'])]:size-5\",\n      },\n    },\n    compoundVariants: [\n      {\n        size: \"sm\",\n        variant: \"square\",\n        class: \"rounded-lg\",\n      },\n      {\n        size: \"md\",\n        variant: \"square\",\n        class: \"rounded-xl\",\n      },\n      {\n        size: \"lg\",\n        variant: \"square\",\n        class: \"rounded-xl\",\n      },\n    ],\n    defaultVariants: {\n      variant: \"circular\",\n      size: \"md\",\n    },\n  }\n);\n\nexport function FeaturedIcon({\n  size,\n  variant,\n  className,\n  ...props\n}: React.ComponentProps<\"div\"> & VariantProps<typeof featuredIconVariants>) {\n  return (\n    <div\n      data-slot=\"featured-icon\"\n      className={cn(featuredIconVariants({ variant, size }), className)}\n      {...props}\n    />\n  );\n}\n",
-      "type": "registry:ui",
-      "target": "components/shadcraft/featured-icon.tsx"
+      "type": "registry:ui"
     }
   ],
   "meta": {

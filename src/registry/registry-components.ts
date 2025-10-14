@@ -13,7 +13,6 @@ export const components: Registry["items"] = [
       {
         path: "components/blog-blockquote.tsx",
         type: "registry:component",
-        target: "components/shadcraft/blog-blockquote.tsx",
       },
     ],
     meta: {
@@ -30,7 +29,6 @@ export const components: Registry["items"] = [
       {
         path: "components/blog-image.tsx",
         type: "registry:component",
-        target: "components/shadcraft/blog-image.tsx",
       },
     ],
     meta: {
@@ -48,7 +46,6 @@ export const components: Registry["items"] = [
       {
         path: "components/feature-stack.tsx",
         type: "registry:component",
-        target: "components/shadcraft/feature-stack.tsx",
       },
     ],
     meta: {
@@ -66,7 +63,6 @@ export const components: Registry["items"] = [
       {
         path: "components/job-listing.tsx",
         type: "registry:component",
-        target: "components/shadcraft/job-listing.tsx",
       },
     ],
     meta: {
@@ -84,7 +80,6 @@ export const components: Registry["items"] = [
       {
         path: "components/metric.tsx",
         type: "registry:component",
-        target: "components/shadcraft/metric.tsx",
       },
     ],
     meta: {
@@ -102,7 +97,6 @@ export const components: Registry["items"] = [
       {
         path: "components/pricing-card.tsx",
         type: "registry:component",
-        target: "components/shadcraft/pricing-card.tsx",
       },
     ],
     meta: {
@@ -120,7 +114,6 @@ export const components: Registry["items"] = [
       {
         path: "components/section-heading.tsx",
         type: "registry:component",
-        target: "components/shadcraft/section-heading.tsx",
       },
     ],
     meta: {
@@ -137,7 +130,6 @@ export const components: Registry["items"] = [
       {
         path: "components/sub-feature.tsx",
         type: "registry:component",
-        target: "components/shadcraft/sub-feature.tsx",
       },
     ],
     meta: {

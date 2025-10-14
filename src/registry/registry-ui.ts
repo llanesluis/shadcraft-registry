@@ -11,7 +11,6 @@ export const ui: Registry["items"] = [
       {
         path: "ui/chip.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/chip.tsx",
       },
     ],
     meta: {
@@ -28,7 +27,6 @@ export const ui: Registry["items"] = [
       {
         path: "ui/featured-icon.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/featured-icon.tsx",
       },
     ],
     meta: {
@@ -45,7 +43,6 @@ export const ui: Registry["items"] = [
       {
         path: "ui/heading.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/heading.tsx",
       },
     ],
     meta: {
@@ -63,7 +60,6 @@ export const ui: Registry["items"] = [
       {
         path: "ui/profile-card.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/profile-card.tsx",
       },
     ],
     meta: {
@@ -80,7 +76,6 @@ export const ui: Registry["items"] = [
       {
         path: "ui/star-rating.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/star-rating.tsx",
       },
     ],
     meta: {
@@ -97,7 +92,6 @@ export const ui: Registry["items"] = [
       {
         path: "ui/ui-showcase.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/ui-showcase.tsx",
       },
     ],
     meta: {

@@ -8,8 +8,7 @@
     {
       "path": "components/ui/chip.tsx",
       "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport function Chip({\n  icon,\n  label,\n  className,\n  ...props\n}: Omit<React.ComponentProps<\"div\">, \"children\"> & { icon: React.ReactElement; label: string }) {\n  return (\n    <div className={cn(\"flex items-center gap-1\", className)} {...props}>\n      {icon && (\n        <div\n          aria-hidden=\"true\"\n          className=\"text-muted-foreground [&_svg:not([class*='size-'])]:size-4\"\n        >\n          {icon}\n        </div>\n      )}\n      <span className=\"text-foreground text-sm font-medium\">{label}</span>\n    </div>\n  );\n}\n",
-      "type": "registry:ui",
-      "target": "components/shadcraft/chip.tsx"
+      "type": "registry:ui"
     }
   ],
   "meta": {
