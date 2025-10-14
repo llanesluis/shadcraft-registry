@@ -686,6 +686,10 @@
           "path": "src/registry/pro-marketing/blocks/footer-1/page.tsx",
           "type": "registry:page",
           "target": "app/footer/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/footer-1/components/footer.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {
@@ -707,6 +711,10 @@
           "path": "src/registry/pro-marketing/blocks/footer-2/page.tsx",
           "type": "registry:page",
           "target": "app/footer/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/footer-2/components/footer.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {
@@ -725,6 +733,10 @@
           "path": "src/registry/pro-marketing/blocks/footer-3/page.tsx",
           "type": "registry:page",
           "target": "app/footer/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/footer-3/components/footer.tsx",
+          "type": "registry:component"
         }
       ],
       "meta": {

@@ -969,6 +969,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/footer-1/components/footer.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/footer-1/page.tsx");
@@ -993,6 +998,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/footer-2/components/footer.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/footer-2/page.tsx");
@@ -1016,6 +1026,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/footer-3/page.tsx",
         type: "registry:page",
         target: "app/footer/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/footer-3/components/footer.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {

@@ -189,6 +189,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
+      {
+        path: "blocks/footer-1/components/footer.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -205,6 +209,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
+      {
+        path: "blocks/footer-2/components/footer.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -220,6 +228,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/footer-3/page.tsx",
         type: "registry:page",
         target: "app/footer/page.tsx",
+      },
+      {
+        path: "blocks/footer-3/components/footer.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
