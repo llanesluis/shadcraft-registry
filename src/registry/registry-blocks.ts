@@ -14,6 +14,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/banner/page.tsx",
       },
+      {
+        path: "blocks/banner-1/components/banner.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -29,6 +33,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/banner-2/page.tsx",
         type: "registry:page",
         target: "app/banner/page.tsx",
+      },
+      {
+        path: "blocks/banner-2/components/banner.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
@@ -46,6 +54,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/banner/page.tsx",
       },
+      {
+        path: "blocks/banner-3/components/banner.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -61,6 +73,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/banner-4/page.tsx",
         type: "registry:page",
         target: "app/banner/page.tsx",
+      },
+      {
+        path: "blocks/banner-4/components/banner.tsx",
+        type: "registry:component",
       },
     ],
     meta: {

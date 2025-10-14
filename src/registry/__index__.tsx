@@ -21,7 +21,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/chip.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/chip.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -46,7 +46,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/featured-icon.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/featured-icon.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -70,7 +70,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/heading.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/heading.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -95,7 +95,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/profile-card.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/profile-card.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -120,7 +120,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/star-rating.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/star-rating.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -145,7 +145,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/ui/ui-showcase.tsx",
         type: "registry:ui",
-        target: "components/shadcraft/ui-showcase.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -169,7 +169,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/blog-blockquote.tsx",
         type: "registry:component",
-        target: "components/shadcraft/blog-blockquote.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -194,7 +194,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/blog-image.tsx",
         type: "registry:component",
-        target: "components/shadcraft/blog-image.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -219,7 +219,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/feature-stack.tsx",
         type: "registry:component",
-        target: "components/shadcraft/feature-stack.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -244,7 +244,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/job-listing.tsx",
         type: "registry:component",
-        target: "components/shadcraft/job-listing.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -269,7 +269,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/metric.tsx",
         type: "registry:component",
-        target: "components/shadcraft/metric.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -294,7 +294,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/pricing-card.tsx",
         type: "registry:component",
-        target: "components/shadcraft/pricing-card.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -319,7 +319,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/section-heading.tsx",
         type: "registry:component",
-        target: "components/shadcraft/section-heading.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -344,7 +344,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       {
         path: "src/registry/pro-marketing/components/sub-feature.tsx",
         type: "registry:component",
-        target: "components/shadcraft/sub-feature.tsx",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -714,6 +714,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/banner/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/banner-1/components/banner.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/banner-1/page.tsx");
@@ -737,6 +742,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/banner-2/page.tsx",
         type: "registry:page",
         target: "app/banner/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/banner-2/components/banner.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -762,6 +772,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/banner/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/banner-3/components/banner.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/banner-3/page.tsx");
@@ -785,6 +800,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/banner-4/page.tsx",
         type: "registry:page",
         target: "app/banner/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/banner-4/components/banner.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
