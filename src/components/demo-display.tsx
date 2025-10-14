@@ -1,13 +1,13 @@
 import * as React from "react";
 
-import { BlockViewer } from "@/components/block-viewer";
+import { DemoViewer } from "@/components/demo-viewer";
 import {
   createFileTreeForRegistryItemFiles,
   getRegistryItem,
   RegistryItemFile,
 } from "@/lib/registry";
 
-export async function BlockDisplay({
+export async function DemoDisplay({
   name,
   showHeader = true,
 }: {
@@ -21,7 +21,7 @@ export async function BlockDisplay({
   const tree = getCachedFileTree(item.files);
   const files = getCachedFiles(item.files);
 
-  return <BlockViewer item={item} tree={tree} files={files} showHeader={showHeader} />;
+  return <DemoViewer item={item} tree={tree} files={files} showHeader={showHeader} />;
 }
 
 const getCachedRegistryItem = React.cache(async (name: string) => {

@@ -55,10 +55,10 @@ import { formatComponentName } from "@/utils/registry";
 
 const REGISTRY_URL = process.env.NEXT_PUBLIC_REGISTRY_URL;
 
-type BlockViewerContext = {
+type DemoViewerContext = {
   item: RegistryItem;
   view: "code" | "preview";
-  setView: (view: "code" | "preview") => void;
+  setView: React.Dispatch<React.SetStateAction<"code" | "preview">>;
   resizablePanelRef: React.RefObject<ImperativePanelHandle | null> | null;
   iframeKey?: number;
   setIframeKey?: React.Dispatch<React.SetStateAction<number>>;
@@ -74,26 +74,26 @@ type BlockViewerContext = {
     | null;
 };
 
-const BlockViewerContext = React.createContext<BlockViewerContext | null>(null);
+const DemoViewerContext = React.createContext<DemoViewerContext | null>(null);
 
-function useBlockViewer() {
-  const context = React.useContext(BlockViewerContext);
+function useDemoViewer() {
+  const context = React.useContext(DemoViewerContext);
   if (!context) {
-    throw new Error("useBlockViewer must be used within a BlockViewerProvider.");
+    throw new Error("useDemoViewer must be used within a DemoViewerProvider.");
   }
   return context;
 }
 
-function BlockViewerProvider({
+function DemoViewerProvider({
   item,
   tree,
   files,
   children,
-}: Pick<BlockViewerContext, "item" | "tree" | "files"> & {
+}: Pick<DemoViewerContext, "item" | "tree" | "files"> & {
   children: React.ReactNode;
 }) {
-  const [view, setView] = React.useState<BlockViewerContext["view"]>("preview");
-  const [activeFile, setActiveFile] = React.useState<BlockViewerContext["activeFile"]>(
+  const [view, setView] = React.useState<DemoViewerContext["view"]>("preview");
+  const [activeFile, setActiveFile] = React.useState<DemoViewerContext["activeFile"]>(
     files?.[0].target ?? null
   );
   const resizablePanelRef = React.useRef<ImperativePanelHandle>(null);
@@ -101,7 +101,7 @@ function BlockViewerProvider({
   const [panelSize, setPanelSize] = React.useState<number>(100);
 
   return (
-    <BlockViewerContext.Provider
+    <DemoViewerContext.Provider
       value={{
         item,
         view,
@@ -120,23 +120,23 @@ function BlockViewerProvider({
       <div
         id={item.name}
         data-view={view}
-        className="group/block-view-wrapper flex min-w-0 scroll-mt-24 flex-col items-stretch gap-2 overflow-hidden"
+        className="group/demo-view-wrapper flex min-w-0 scroll-mt-24 flex-col items-stretch gap-2 overflow-hidden"
         style={
           {
-            "--height": item.meta?.iframeHeight ?? "800px",
+            "--height": item.meta?.iframeHeight ?? "800px", // Not using this for now
           } as React.CSSProperties
         }
       >
         {children}
       </div>
-    </BlockViewerContext.Provider>
+    </DemoViewerContext.Provider>
   );
 }
 
-function BlockViewerHeader() {
-  const { item } = useBlockViewer();
+function DemoViewerHeader() {
+  const { item } = useDemoViewer();
   return (
-    <header data-slot="block-viewer-header">
+    <header data-slot="demo-viewer-header">
       <a
         href={`#${item.name}`}
         className="group/anchor inline-flex flex-1 flex-col font-medium md:flex-auto"
@@ -155,8 +155,8 @@ function BlockViewerHeader() {
   );
 }
 
-function BlockViewerToolbar() {
-  const { setView, view, item, resizablePanelRef, setIframeKey, setPanelSize } = useBlockViewer();
+function DemoViewerToolbar() {
+  const { setView, view, item, resizablePanelRef, setIframeKey, setPanelSize } = useDemoViewer();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   const handleResizeBreakpoint = (size: number) => {
@@ -167,6 +167,7 @@ function BlockViewerToolbar() {
 
   let url = `/view/${item.name}`;
 
+  // TODO: Solve this with middleware?
   if (item.type === "registry:ui" || item.type === "registry:component") {
     url = `/view/${item.name}-example`;
   }
@@ -230,9 +231,6 @@ function BlockViewerToolbar() {
             >
               <Smartphone />
             </Button>
-          </ButtonGroup>
-
-          <ButtonGroup>
             <Button
               variant="outline"
               size="icon-sm"
@@ -245,6 +243,9 @@ function BlockViewerToolbar() {
                 <Fullscreen />
               </Link>
             </Button>
+          </ButtonGroup>
+
+          <ButtonGroup>
             <Button
               variant="outline"
               size="sm"
@@ -264,8 +265,8 @@ function BlockViewerToolbar() {
   );
 }
 
-function BlockViewerIframe({ className }: { className?: string }) {
-  const { item, iframeKey } = useBlockViewer();
+function DemoViewerIframe({ className }: { className?: string }) {
+  const { item, iframeKey } = useDemoViewer();
 
   let url = `/view/${item.name}`;
 
@@ -284,9 +285,9 @@ function BlockViewerIframe({ className }: { className?: string }) {
   );
 }
 
-function BlockViewerView() {
+function DemoViewerPreview({ children }: { children: React.ReactNode }) {
   const isMobile = useIsMobile();
-  const { resizablePanelRef, setPanelSize } = useBlockViewer();
+  const { resizablePanelRef, setPanelSize } = useDemoViewer();
 
   React.useEffect(() => {
     if (isMobile) {
@@ -295,27 +296,26 @@ function BlockViewerView() {
   }, [isMobile, resizablePanelRef]);
 
   return (
-    <div className="flex size-full group-data-[view=code]/block-view-wrapper:hidden">
+    <div className="flex size-full group-data-[view=code]/demo-view-wrapper:hidden">
       <div className="relative grid w-full gap-4">
         {/* Background of the preview area */}
-        <div className="absolute inset-0 right-3 [background-image:radial-gradient(var(--border)_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
+        <div className="absolute inset-2 right-3 [background-image:radial-gradient(var(--border)_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
 
         <ResizablePanelGroup
           direction="horizontal"
-          className="bg-muted/50 rounded-lg border md:rounded-xl"
+          className="bg-muted/50 rounded-lg border md:rounded-xl md:p-1 md:pr-0"
         >
           <ResizablePanel
             ref={resizablePanelRef}
-            className="relative overflow-hidden rounded-lg sm:min-w-[320px] md:rounded-xl md:border-r"
+            className="relative min-w-[375px] overflow-hidden rounded-lg md:rounded-xl md:border"
             defaultSize={100}
-            minSize={30}
             onResize={(size: number) => {
               setPanelSize(size);
             }}
           >
-            <BlockViewerIframe />
+            {children}
           </ResizablePanel>
-          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-3 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-10 after:w-1.5 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-12 active:after:w-1 md:block" />
+          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-2 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-8 after:w-1 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-12 active:after:w-0.5 md:block" />
 
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
@@ -324,8 +324,8 @@ function BlockViewerView() {
   );
 }
 
-function BlockViewerCode() {
-  const { activeFile, files, setView } = useBlockViewer();
+function DemoViewerCode() {
+  const { activeFile, files, setView } = useDemoViewer();
   const file = React.useMemo(() => {
     return files?.find((file) => file.target === activeFile);
   }, [files, activeFile]);
@@ -348,7 +348,7 @@ function BlockViewerCode() {
   const language = file.path.split(".").pop() ?? "tsx";
 
   return (
-    <div className="isolate size-full group-data-[view=preview]/block-view-wrapper:hidden">
+    <div className="isolate size-full group-data-[view=preview]/demo-view-wrapper:hidden">
       <div className="bg-code text-code-foreground relative size-full content-center overflow-hidden rounded-lg border text-center md:rounded-xl">
         {showCodePanelOverlay ? (
           <Empty>
@@ -371,7 +371,7 @@ function BlockViewerCode() {
           </Empty>
         ) : (
           <div className="flex size-full">
-            <BlockViewerFileTreeSidebar />
+            <DemoViewerFileTreeSidebar />
             <figure className="!m-0 flex size-full min-w-0 flex-col rounded-xl border-none">
               <figcaption
                 className="text-code-foreground [&_svg]:text-code-foreground flex h-12 shrink-0 items-center gap-2 border-b px-4 py-2 [&_svg]:size-4 [&_svg]:opacity-70"
@@ -380,7 +380,7 @@ function BlockViewerCode() {
                 <FileIcon className="size-4 shrink-0" />
                 <span className="line-clamp-1 text-sm">{file.target}</span>
                 <div className="ml-auto flex items-center gap-2">
-                  <BlockCopyCodeButton />
+                  <DemoCopyCodeButton />
                 </div>
               </figcaption>
 
@@ -398,8 +398,8 @@ function BlockViewerCode() {
   );
 }
 
-export function BlockViewerFileTreeSidebar() {
-  const { tree } = useBlockViewer();
+function DemoViewerFileTreeSidebar() {
+  const { tree } = useDemoViewer();
 
   if (!tree || tree.length === 0) {
     return null;
@@ -428,7 +428,7 @@ export function BlockViewerFileTreeSidebar() {
 }
 
 function Tree({ item, index }: { item: FileTree; index: number }) {
-  const { activeFile, setActiveFile } = useBlockViewer();
+  const { activeFile, setActiveFile } = useDemoViewer();
 
   if (!item.children) {
     return (
@@ -484,8 +484,8 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
   );
 }
 
-function BlockCopyCodeButton() {
-  const { activeFile, item } = useBlockViewer();
+function DemoCopyCodeButton() {
+  const { activeFile, item } = useDemoViewer();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   const file = React.useMemo(() => {
@@ -512,26 +512,29 @@ function BlockCopyCodeButton() {
   );
 }
 
-function BlockViewer({
+function DemoViewer({
   item,
   tree,
   files,
   showHeader = true,
   ...props
-}: Pick<BlockViewerContext, "item" | "tree" | "files"> & { showHeader?: boolean }) {
+}: Pick<DemoViewerContext, "item" | "tree" | "files"> & { showHeader?: boolean }) {
   return (
-    <BlockViewerProvider item={item} tree={tree} files={files} {...props}>
+    <DemoViewerProvider item={item} tree={tree} files={files} {...props}>
       <div className="flex flex-col gap-2">
-        {showHeader && <BlockViewerHeader />}
-        <BlockViewerToolbar />
+        {showHeader && <DemoViewerHeader />}
+        <DemoViewerToolbar />
       </div>
 
-      <div className="isolate aspect-square md:aspect-auto md:h-(--height)">
-        <BlockViewerView />
-        <BlockViewerCode />
+      <div className="isolate aspect-[10/16] md:aspect-[4/5] lg:aspect-video">
+        <DemoViewerPreview>
+          <DemoViewerIframe />
+        </DemoViewerPreview>
+
+        <DemoViewerCode />
       </div>
-    </BlockViewerProvider>
+    </DemoViewerProvider>
   );
 }
 
-export { BlockViewer };
+export { DemoViewer };

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import React from "react";
 
-import { BlockDisplay } from "@/components/block-display";
+import { DemoDisplay } from "@/components/demo-display";
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/page-header";
 import { getRegistryItem, getUiItems } from "@/lib/registry";
 
@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: Promise<{ name: string 
         {item.description && <PageHeaderDescription>{item.description}</PageHeaderDescription>}
       </PageHeader>
 
-      <BlockDisplay key={item.name} name={item.name} showHeader={false} />
+      <DemoDisplay key={item.name} name={item.name} showHeader={false} />
     </main>
   );
 }
