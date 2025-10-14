@@ -1056,6 +1056,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-1/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/metrics-1/page.tsx");
@@ -1082,6 +1087,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/metrics-2/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-2/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -1110,6 +1120,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-3/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/metrics-3/page.tsx");
@@ -1136,6 +1151,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/metrics-4/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-4/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {
@@ -1164,6 +1184,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-5/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/metrics-5/page.tsx");
@@ -1191,6 +1216,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-6/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pro-marketing/blocks/metrics-6/page.tsx");
@@ -1217,6 +1247,11 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         path: "src/registry/pro-marketing/blocks/metrics-7/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/metrics-7/components/metrics-section.tsx",
+        type: "registry:component",
+        target: "",
       },
     ],
     component: React.lazy(async () => {

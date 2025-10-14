@@ -1,69 +1,9 @@
-import { ArrowRight } from "lucide-react";
+import { MetricsSection } from "@/registry/pro-marketing/blocks/metrics-3/components/metrics-section";
 
-import {
-  Metric,
-  MetricActionButton,
-  MetricLabel,
-  MetricSubLabel,
-} from "@/registry/pro-marketing/components/metric";
-import {
-  SectionHeading,
-  SectionHeadingBody,
-  SectionHeadingTitle,
-} from "@/registry/pro-marketing/components/section-heading";
-
-export default function Component() {
+export default function Page() {
   return (
-    <div className="grid w-full gap-5 lg:grid-cols-2 lg:gap-9">
-      <div className="flex flex-col gap-5 self-center md:gap-9">
-        <SectionHeading>
-          <SectionHeadingTitle className="text-5xl">
-            Trusted by Teams Everywhere
-          </SectionHeadingTitle>
-          <SectionHeadingBody>
-            Acme Inc. is helping thousands of creators and companies move faster, work smarter, and
-            deliver with confidence.
-          </SectionHeadingBody>
-        </SectionHeading>
-
-        <div className="grid gap-5 gap-y-5 md:grid-cols-2 md:gap-x-6 md:gap-y-8">
-          <Metric>
-            <MetricLabel>12,500+</MetricLabel>
-            <MetricSubLabel>Projects completed with Acme AI</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
-              Our clients <ArrowRight />
-            </MetricActionButton>
-          </Metric>
-
-          <Metric>
-            <MetricLabel>38% faster</MetricLabel>
-            <MetricSubLabel>Delivery across teams</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
-              Learn more <ArrowRight />
-            </MetricActionButton>
-          </Metric>
-
-          <Metric>
-            <MetricLabel>94%</MetricLabel>
-            <MetricSubLabel>User satisfaction reported</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
-              See feedback <ArrowRight />
-            </MetricActionButton>
-          </Metric>
-
-          <Metric>
-            <MetricLabel>8 countries</MetricLabel>
-            <MetricSubLabel>With active customers and growing</MetricSubLabel>
-            <MetricActionButton className="hidden md:flex">
-              Our users <ArrowRight />
-            </MetricActionButton>
-          </Metric>
-        </div>
-      </div>
-
-      <div className="aspect-square overflow-hidden rounded-2xl">
-        <img src="/assets/placeholder.svg" className="size-full object-cover" />
-      </div>
+    <div className="container mx-auto px-5 py-12 lg:p-20">
+      <MetricsSection />
     </div>
   );
 }

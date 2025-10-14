@@ -249,6 +249,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "blocks/metrics-1/components/metrics-section.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -264,6 +268,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/metrics-2/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
+      },
+      {
+        path: "blocks/metrics-2/components/metrics-section.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
@@ -281,6 +289,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "blocks/metrics-3/components/metrics-section.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -296,6 +308,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/metrics-4/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
+      },
+      {
+        path: "blocks/metrics-4/components/metrics-section.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
@@ -313,6 +329,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "blocks/metrics-5/components/metrics-section.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -329,6 +349,10 @@ export const blocks: Registry["items"] = [
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
+      {
+        path: "blocks/metrics-6/components/metrics-section.tsx",
+        type: "registry:component",
+      },
     ],
     meta: {
       bundle: "pro-marketing",
@@ -344,6 +368,10 @@ export const blocks: Registry["items"] = [
         path: "blocks/metrics-7/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
+      },
+      {
+        path: "blocks/metrics-7/components/metrics-section.tsx",
+        type: "registry:component",
       },
     ],
     meta: {
