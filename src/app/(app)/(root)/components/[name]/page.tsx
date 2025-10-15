@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: Promise<{ name: string 
   }
 
   return (
-    <main className="space-y-10">
+    <>
       <PageHeader>
         <span className="code-inline w-fit font-mono font-medium">{item.type}</span>
         <PageHeaderHeading>{item.title}</PageHeaderHeading>
@@ -34,6 +34,6 @@ export default async function Page({ params }: { params: Promise<{ name: string 
       </PageHeader>
 
       <DemoDisplay key={item.name} name={item.name} showHeader={false} />
-    </main>
+    </>
   );
 }

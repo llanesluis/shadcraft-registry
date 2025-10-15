@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: Promise<{ category: str
   }
 
   return (
-    <main className="space-y-10">
+    <>
       <PageHeader>
         <span className="code-inline w-fit font-mono font-medium">registry:block</span>
         <PageHeaderHeading>{categoryData.title}</PageHeaderHeading>
@@ -32,9 +32,15 @@ export default async function Page({ params }: { params: Promise<{ category: str
         )}
       </PageHeader>
 
-      {blocks.map((block) => (
-        <DemoDisplay key={block.name} name={block.name} />
-      ))}
-    </main>
+      <div className="space-y-16">
+        {blocks.length <= 0 ? (
+          <div className="text-muted-foreground font-mono text-sm">
+            No blocks found in this category
+          </div>
+        ) : (
+          blocks.map((block) => <DemoDisplay key={block.name} name={block.name} />)
+        )}
+      </div>
+    </>
   );
 }
