@@ -231,6 +231,9 @@ function DemoViewerToolbar() {
             >
               <Smartphone />
             </Button>
+          </ButtonGroup>
+
+          <ButtonGroup>
             <Button
               variant="outline"
               size="icon-sm"
@@ -243,9 +246,6 @@ function DemoViewerToolbar() {
                 <Fullscreen />
               </Link>
             </Button>
-          </ButtonGroup>
-
-          <ButtonGroup>
             <Button
               variant="outline"
               size="sm"
@@ -270,6 +270,7 @@ function DemoViewerIframe({ className }: { className?: string }) {
 
   let url = `/view/${item.name}`;
 
+  // TODO: Solve this with middleware?
   if (item.type === "registry:ui" || item.type === "registry:component") {
     url = `/view/${item.name}-example`;
   }
