@@ -1,6 +1,6 @@
 "use client";
 
-import { Blocks, ChevronDown, Component, LayoutTemplate, Puzzle } from "lucide-react";
+import { ChevronDown, LayoutTemplate } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { RegistryItem } from "shadcn/schema";
@@ -68,18 +68,15 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
   );
 
   return (
-    <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! p-2 py-6">
+    <SidebarContent className="scrollbar-thin scrollbar-gutter-stable h-[calc(100svh-var(--header-height)-var(--footer-height))]! p-2 py-6 pr-0">
       <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
 
       {/* UI */}
       <Collapsible defaultOpen={true} className="group/collapsible">
         <SidebarGroup>
           <CollapsibleTrigger className="w-full">
-            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-              <div className="flex min-w-0 items-center">
-                <Puzzle className="size-4 flex-shrink-0" />
-                <span className="ml-2 transition-all duration-200">UI Components</span>
-              </div>
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between pr-0">
+              <span>UI</span>
               <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
             </SidebarGroupLabel>
           </CollapsibleTrigger>
@@ -92,7 +89,10 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
                     const href = `/ui/${item.name}`;
                     const isActive = pathname === href;
                     return (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuItem
+                        key={item.name}
+                        className="text-muted-foreground font-medium"
+                      >
                         <SidebarMenuButton asChild isActive={isActive} className="line-clamp-1">
                           <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
                         </SidebarMenuButton>
@@ -114,11 +114,8 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
       <Collapsible defaultOpen={true} className="group/collapsible">
         <SidebarGroup>
           <CollapsibleTrigger className="w-full">
-            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-              <div className="flex min-w-0 items-center">
-                <Component className="size-4 flex-shrink-0" />
-                <span className="ml-2 transition-all duration-200">Components</span>
-              </div>
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between pr-0">
+              <span>Components</span>
               <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
             </SidebarGroupLabel>
           </CollapsibleTrigger>
@@ -131,7 +128,10 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
                     const href = `/components/${item.name}`;
                     const isActive = pathname === href;
                     return (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuItem
+                        key={item.name}
+                        className="text-muted-foreground font-medium"
+                      >
                         <SidebarMenuButton asChild isActive={isActive} className="line-clamp-1">
                           <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
                         </SidebarMenuButton>
@@ -153,11 +153,8 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
       <Collapsible defaultOpen={blockItems.length > 0} className="group/collapsible">
         <SidebarGroup>
           <CollapsibleTrigger className="w-full">
-            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-              <div className="flex min-w-0 items-center">
-                <Blocks className="size-4 flex-shrink-0" />
-                <span className="ml-2 transition-all duration-200">Blocks</span>
-              </div>
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between pr-0">
+              <span>Blocks</span>
               <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
             </SidebarGroupLabel>
           </CollapsibleTrigger>
@@ -170,7 +167,10 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
                     const href = `/blocks/${item.name}`;
                     const isActive = pathname === href;
                     return (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuItem
+                        key={item.name}
+                        className="text-muted-foreground font-medium"
+                      >
                         <SidebarMenuButton asChild isActive={isActive}>
                           <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
                         </SidebarMenuButton>
@@ -192,7 +192,7 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
       <Collapsible defaultOpen={templateItems.length > 0} className="group/collapsible">
         <SidebarGroup>
           <CollapsibleTrigger className="w-full">
-            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+            <SidebarGroupLabel className="flex cursor-pointer items-center justify-between pr-0">
               <div className="flex min-w-0 items-center">
                 <LayoutTemplate className="size-4 flex-shrink-0" />
                 <span className="ml-2 transition-all duration-200">Templates</span>
@@ -208,7 +208,10 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
                     const href = `/templates/${item.name}`;
                     const isActive = pathname === href;
                     return (
-                      <SidebarMenuItem key={item.name} className="text-muted-foreground">
+                      <SidebarMenuItem
+                        key={item.name}
+                        className="text-muted-foreground font-medium"
+                      >
                         <SidebarMenuButton asChild isActive={isActive}>
                           <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
                         </SidebarMenuButton>

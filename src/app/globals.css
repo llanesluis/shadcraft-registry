@@ -149,6 +149,14 @@
   }
 }
 
+@utility scrollbar-gutter-stable {
+  scrollbar-gutter: stable;
+}
+
+@utility scrollbar-gutter-both {
+  scrollbar-gutter: stable both-edges;
+}
+
 @utility container {
   @apply max-w-screen-2xl;
 }
