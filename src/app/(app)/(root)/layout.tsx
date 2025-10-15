@@ -7,14 +7,14 @@ import { getRegistryItems } from "@/lib/registry";
 export default function Layout({ children }: { children: React.ReactNode }) {
   const registryItems = getRegistryItems();
   return (
-    <div className="isolate flex size-full min-h-svh flex-col [--header-height:calc(--spacing(14))]">
+    <div className="isolate flex size-full min-h-svh flex-col [--header-height:calc(--spacing(12))]">
       <header className="bg-background sticky top-0 z-50 h-(--header-height) w-full border-b">
         <div className="container mx-auto size-full">
           <div className="flex size-full items-center justify-between gap-2 px-4 lg:px-6">
             <h1 className="font-mono font-semibold lowercase">Shadcraft Registry</h1>
 
             <div className="ml-auto flex items-center gap-2">
-              <ThemeToggle />
+              <ThemeToggle size="icon-sm" />
             </div>
           </div>
         </div>
@@ -33,8 +33,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <RootSidebar items={registryItems} className="bg-background h-full shrink-0" />
 
             <SidebarInset className="relative min-w-0">
-              <header className="flex h-12 w-full items-center gap-4 px-4 lg:px-6">
-                <SidebarTrigger className="size-8" size="icon" />
+              <header className="bg-background sticky top-(--header-height) z-50 flex h-10 w-full items-center gap-4 px-4 lg:px-6">
+                <SidebarTrigger size="icon-sm" className="size-8 cursor-pointer" />
                 {/* Ideally this should be a parallel route {breadcrumbs} */}
                 <Breadcrumbs />
               </header>
