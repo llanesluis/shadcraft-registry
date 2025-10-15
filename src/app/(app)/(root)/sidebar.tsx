@@ -15,6 +15,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarRail,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { formatComponentName } from "@/utils/registry";
@@ -25,39 +26,20 @@ export function RootSidebar({
   ...props
 }: React.ComponentProps<typeof Sidebar> & { items: RegistryItem[] }) {
   return (
-    <>
-      <div className="contents md:hidden">
-        <Sidebar
-          className={cn(
-            "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]!",
-            className
-          )}
-          collapsible={"offcanvas"}
-          {...props}
-        >
-          <MySidebarContent items={items} />
-        </Sidebar>
-      </div>
-
-      <div className="hidden md:contents">
-        <Sidebar
-          className={cn(
-            "sticky top-(--header-height) h-[calc(100svh-var(--header-height)-var(--footer-height))]! w-48",
-            className
-          )}
-          collapsible={"none"}
-          {...props}
-        >
-          {/* Sidebar Header */}
-          <MySidebarContent items={items} />
-          {/* Sidebar Footer */}
-        </Sidebar>
-      </div>
-    </>
+    <Sidebar className={cn("relative border-none", className)} collapsible="icon" {...props}>
+      {/* Sidebar Header */}
+      <MySidebarContent items={items} className="bg-background p-2" />
+      {/* Sidebar Footer */}
+      <SidebarRail />
+    </Sidebar>
   );
 }
 
-function MySidebarContent({ items }: { items: RegistryItem[] }) {
+function MySidebarContent({
+  items,
+  className,
+  ...props
+}: { items: RegistryItem[] } & React.ComponentProps<typeof SidebarContent>) {
   const pathname = usePathname();
 
   const uiItems = items.filter((item) => item.type === "registry:ui");
@@ -68,9 +50,7 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
   );
 
   return (
-    <SidebarContent className="scrollbar-thin scrollbar-gutter-stable h-[calc(100svh-var(--header-height)-var(--footer-height))]! p-2 py-6 pr-0">
-      <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
-
+    <SidebarContent className={cn("scrollbar-thin p-2", className)} {...props}>
       {/* UI */}
       <Collapsible defaultOpen={true} className="group/collapsible">
         <SidebarGroup>
@@ -228,8 +208,6 @@ function MySidebarContent({ items }: { items: RegistryItem[] }) {
           </CollapsibleContent>
         </SidebarGroup>
       </Collapsible>
-
-      <div className="from-background absolute inset-x-0 bottom-0 h-6 bg-linear-to-t to-transparent" />
     </SidebarContent>
   );
 }
