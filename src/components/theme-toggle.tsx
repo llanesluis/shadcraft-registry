@@ -1,16 +1,17 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { META_THEME_COLORS, useMetaColor } from "@/hooks/use-meta-colors";
 import { Check, Monitor, Moon, MoonIcon, Sun, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
+
+import { Button } from "@/components/ui/button";
 import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuTrigger,
-} from "./ui/context-menu";
+} from "@/components/ui/context-menu";
+import { META_THEME_COLORS, useMetaColor } from "@/hooks/use-meta-colors";
 
 export function ThemeToggle({ className, onClick, ...props }: React.ComponentProps<typeof Button>) {
   const { setTheme, resolvedTheme, theme } = useTheme();

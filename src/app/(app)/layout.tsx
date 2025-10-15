@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "The full shadcn/ui library for Figma plus Pro Components, Blocks, and Templates. Premium quality, and built to deliver fast.",
 };
 
-export default function RootLayout({
+export default function RootAppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning key="app-layout">
       <head>
         <script async crossOrigin="anonymous" src="https://tweakcn.com/live-preview.min.js" />
       </head>

@@ -1,4 +1,4 @@
-import { RootSidebar } from "@/app/(root)/sidebar";
+import { RootSidebar } from "@/app/(app)/(root)/sidebar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { getRegistryItems } from "@/lib/registry";
