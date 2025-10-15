@@ -527,7 +527,7 @@ function DemoViewer({
         <DemoViewerToolbar />
       </div>
 
-      <div className="isolate aspect-[10/16] md:aspect-[4/5] lg:aspect-video">
+      <div className="isolate aspect-[10/16] overflow-hidden md:aspect-[4/5] lg:aspect-video">
         <DemoViewerPreview>
           <DemoViewerIframe />
         </DemoViewerPreview>
