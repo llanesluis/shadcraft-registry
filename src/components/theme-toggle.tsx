@@ -12,6 +12,7 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 import { META_THEME_COLORS, useMetaColor } from "@/hooks/use-meta-colors";
+import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className, onClick, ...props }: React.ComponentProps<typeof Button>) {
   const { setTheme, resolvedTheme, theme } = useTheme();
@@ -25,9 +26,15 @@ export function ThemeToggle({ className, onClick, ...props }: React.ComponentPro
   return (
     <ContextMenu modal={false}>
       <ContextMenuTrigger asChild>
-        <Button variant="ghost" size="icon" onClick={toggleTheme} className={className} {...props}>
-          <SunIcon className="hidden size-4 [html.dark_&]:block" />
-          <MoonIcon className="hidden size-4 [html.light_&]:block" />
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleTheme}
+          className={cn("cursor-pointer", className)}
+          {...props}
+        >
+          <SunIcon className="hidden [html.dark_&]:block" />
+          <MoonIcon className="hidden [html.light_&]:block" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </ContextMenuTrigger>
