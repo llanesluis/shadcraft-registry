@@ -18,7 +18,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import { formatComponentName } from "@/utils/registry";
+import { formatComponentName, groupBlocksByCategories } from "@/utils/registry";
 
 export function RootSidebar({
   items,
@@ -43,8 +43,12 @@ function MySidebarContent({
   const pathname = usePathname();
 
   const uiItems = items.filter((item) => item.type === "registry:ui");
+
   const componentItems = items.filter((item) => item.type === "registry:component");
+
   const blockItems = items.filter((item) => item.type === "registry:block");
+  const blockItemsByCategories = groupBlocksByCategories(blockItems);
+
   const templateItems = items.filter(
     (item) => item.type === "registry:block" && !!item.meta?.template
   );
@@ -52,7 +56,7 @@ function MySidebarContent({
   return (
     <SidebarContent className={cn("scrollbar-thin p-2", className)} {...props}>
       {/* UI */}
-      <Collapsible defaultOpen={true} className="group/collapsible">
+      <Collapsible className="group/collapsible">
         <SidebarGroup>
           <CollapsibleTrigger className="w-full">
             <SidebarGroupLabel className="flex cursor-pointer items-center justify-between pr-0">
@@ -91,7 +95,7 @@ function MySidebarContent({
       </Collapsible>
 
       {/* Components */}
-      <Collapsible defaultOpen={true} className="group/collapsible">
+      <Collapsible className="group/collapsible">
         <SidebarGroup>
           <CollapsibleTrigger className="w-full">
             <SidebarGroupLabel className="flex cursor-pointer items-center justify-between pr-0">
@@ -142,17 +146,20 @@ function MySidebarContent({
           <CollapsibleContent>
             <SidebarGroupContent>
               <SidebarMenu>
-                {blockItems.length > 0 ? (
-                  blockItems.map((item) => {
-                    const href = `/blocks/${item.name}`;
+                {blockItemsByCategories.length > 0 ? (
+                  blockItemsByCategories.map((item) => {
+                    const href = `/blocks/${item.slug}`;
                     const isActive = pathname === href;
                     return (
-                      <SidebarMenuItem
-                        key={item.name}
-                        className="text-muted-foreground font-medium"
-                      >
+                      <SidebarMenuItem key={item.slug} className="text-muted-foreground">
                         <SidebarMenuButton asChild isActive={isActive}>
-                          <Link href={href}>{item.title || formatComponentName(item.name)}</Link>
+                          <Link
+                            href={href}
+                            className="flex items-center justify-between gap-2 font-medium"
+                          >
+                            {item.title}
+                            <span className="font-mono text-xs">{item.amount}</span>
+                          </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     );

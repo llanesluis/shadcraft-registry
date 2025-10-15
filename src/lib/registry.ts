@@ -15,20 +15,27 @@ export function getRegistryItems(): Registry["items"] {
 }
 
 export function getUiItems() {
-  return getRegistryItems().filter((component) => component.type === "registry:ui");
+  return getRegistryItems().filter((item) => item.type === "registry:ui");
 }
 
 export function getComponentItems() {
-  return getRegistryItems().filter((component) => component.type === "registry:component");
+  return getRegistryItems().filter((item) => item.type === "registry:component");
 }
 
 export function getBlockItems() {
-  return getRegistryItems().filter((component) => component.type === "registry:block");
+  return getRegistryItems().filter((item) => item.type === "registry:block");
+}
+
+export function getBlocksByCategories(categories: string[]) {
+  return getRegistryItems().filter((item) => {
+    const matchesCategories = item.categories?.some((category) => categories.includes(category));
+    return item.type === "registry:block" && matchesCategories;
+  });
 }
 
 export function getTemplateItems() {
   return getRegistryItems().filter(
-    (component) => component.type === "registry:block" && !!component.meta?.template
+    (item) => item.type === "registry:block" && !!item.meta?.template
   );
 }
 

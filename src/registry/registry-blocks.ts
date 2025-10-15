@@ -19,6 +19,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -39,6 +40,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -59,6 +61,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -79,6 +82,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -103,6 +107,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["careers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -127,6 +132,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["careers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -150,6 +156,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["careers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -174,6 +181,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["careers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -194,6 +202,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["footers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -214,6 +223,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["footers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -234,6 +244,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["footers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -254,6 +265,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -274,6 +286,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -294,6 +307,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -314,6 +328,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -334,6 +349,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -354,6 +370,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -374,6 +391,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
+    categories: ["metrics"],
     meta: {
       bundle: "pro-marketing",
     },
