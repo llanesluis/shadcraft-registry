@@ -12,7 +12,7 @@ export function Banner() {
 
   return (
     // To make the banner fixed, add classes like `fixed top-0 inset-x-0 z-50` to the container element
-    <div className="bg-background w-full">
+    <aside className="bg-background w-full">
       <div className="flex flex-row items-start justify-between gap-5 lg:items-center lg:gap-9">
         <p className="text-foreground flex-1 font-sans text-base leading-6 font-normal text-pretty">
           <span className="font-semibold">New from Acme Inc: </span> AI Productivity Suite.{" "}
@@ -27,6 +27,6 @@ export function Banner() {
           </Button>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

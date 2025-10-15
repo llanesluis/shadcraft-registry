@@ -13,7 +13,7 @@ export function Banner() {
 
   return (
     // To make the banner fixed, add classes like `fixed top-0 inset-x-0 z-50` to the container element
-    <div className="bg-background w-full">
+    <aside className="bg-background w-full">
       <div className="relative flex flex-col items-start gap-4 md:flex-row md:items-center">
         <FeaturedIcon variant="square">
           <Info />
@@ -38,6 +38,6 @@ export function Banner() {
           </Button>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }
