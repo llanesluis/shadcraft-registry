@@ -35,7 +35,7 @@ export function RootSidebar({
           collapsible={"offcanvas"}
           {...props}
         >
-          <SidebarContentWrapper items={items} />
+          <MySidebarContent items={items} />
         </Sidebar>
       </div>
 
@@ -48,14 +48,16 @@ export function RootSidebar({
           collapsible={"none"}
           {...props}
         >
-          <SidebarContentWrapper items={items} />
+          {/* Sidebar Header */}
+          <MySidebarContent items={items} />
+          {/* Sidebar Footer */}
         </Sidebar>
       </div>
     </>
   );
 }
 
-function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
+function MySidebarContent({ items }: { items: RegistryItem[] }) {
   const pathname = usePathname();
 
   const uiItems = items.filter((item) => item.type === "registry:ui");
@@ -66,7 +68,7 @@ function SidebarContentWrapper({ items }: { items: RegistryItem[] }) {
   );
 
   return (
-    <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! py-6">
+    <SidebarContent className="scrollbar-thin h-[calc(100svh-var(--header-height)-var(--footer-height))]! p-2 py-6">
       <div className="from-background absolute inset-x-0 top-0 z-10 h-6 bg-linear-to-b to-transparent" />
 
       {/* UI */}
