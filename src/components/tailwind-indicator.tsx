@@ -15,10 +15,6 @@ export function TailwindIndicator({
   showInProduction?: boolean;
   showScreenSizeTooltip?: boolean;
 }) {
-  if (process.env.NODE_ENV === "production" && showInProduction === false) {
-    return null;
-  }
-
   const [screenSize, setScreenSize] = React.useState<{ width: number; height: number }>({
     width: 0,
     height: 0,
@@ -32,6 +28,10 @@ export function TailwindIndicator({
     window.addEventListener("resize", updateScreenSize);
     return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
+
+  if (process.env.NODE_ENV === "production" && showInProduction === false) {
+    return null;
+  }
 
   if (showScreenSizeTooltip) {
     return (
