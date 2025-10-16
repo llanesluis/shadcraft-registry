@@ -32,8 +32,8 @@ export function CareersSection() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="aspect-video h-auto w-full overflow-hidden rounded-2xl md:aspect-[5/2]">
-        <img src="/assets/placeholder.svg" alt="Careers" className="size-full object-cover" />
+      <div className="bg-muted aspect-video h-auto w-full overflow-hidden rounded-2xl md:aspect-[5/2]">
+        <img src="/assets/careers-4.jpg" alt="Careers" className="size-full object-cover" />
       </div>
 
       <div className="mx-auto w-full max-w-3xl">

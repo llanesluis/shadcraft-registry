@@ -32,12 +32,12 @@ export function CareersSection() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="grid gap-5 md:grid-cols-2 lg:gap-9">
-        <div className="aspect-[5/4] size-full overflow-hidden rounded-2xl md:aspect-auto">
-          <img src="/assets/placeholder.svg" alt="Careers" className="size-full object-cover" />
+      <div className="grid gap-5 lg:grid-cols-2 lg:gap-9">
+        <div className="bg-muted aspect-[5/4] size-full overflow-hidden rounded-2xl md:aspect-auto">
+          <img src="/assets/careers-2.jpg" alt="Careers" className="size-full object-cover" />
         </div>
 
-        <div>
+        <div className="w-full max-w-3xl max-lg:mx-auto">
           <div className="flex flex-col gap-5 lg:gap-9">
             {data.map((career) => (
               <JobListing key={career.id}>
