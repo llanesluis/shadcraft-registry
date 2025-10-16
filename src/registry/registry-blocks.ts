@@ -293,6 +293,26 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "contact-6",
+    title: "Contact 6",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
+    files: [
+      {
+        path: "blocks/contact-6/contact-6.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/contact-6/components/map.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
     name: "footer-2",
     title: "Footer 2",
     type: "registry:block",

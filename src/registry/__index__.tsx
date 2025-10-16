@@ -1105,6 +1105,38 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     categories: ["contact"],
     meta: { bundle: "pro-marketing" },
   },
+  "contact-6": {
+    name: "contact-6",
+    type: "registry:block",
+    title: "Contact 6",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/feature-stack.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-6/contact-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/contact-6/components/map.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-6/contact-6.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
   "footer-2": {
     name: "footer-2",
     type: "registry:block",
