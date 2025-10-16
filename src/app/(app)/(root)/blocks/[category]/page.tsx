@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
-  return registryCategories.map((category) => ({ name: category.slug }));
+  return registryCategories.map((category) => ({ category: category.slug }));
 };
 
 export default async function Page({ params }: { params: Promise<{ category: string }> }) {
