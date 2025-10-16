@@ -1,7 +1,7 @@
 import { Building, Mail, MessagesSquare, Phone } from "lucide-react";
 
-import { LocationDot } from "@/registry/pro-marketing/blocks/contact-5/components/location-dot";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { LocationDot } from "@/registry/pro-marketing/blocks/contact-5/components/location-dot";
 import {
   FeatureStack,
   FeatureStackAction,
@@ -22,7 +22,7 @@ export function ContactSection() {
     <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">
         <SectionHeadingContentType>Contact us</SectionHeadingContentType>
-        <SectionHeadingTitle>Let's Connect</SectionHeadingTitle>
+        <SectionHeadingTitle>Let’s Connect</SectionHeadingTitle>
         <SectionHeadingBody>
           Have questions about Acme AI? Our team is here to help you get the answers you need.
         </SectionHeadingBody>
