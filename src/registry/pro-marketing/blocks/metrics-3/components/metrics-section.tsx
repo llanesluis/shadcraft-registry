@@ -62,7 +62,7 @@ export function MetricsSection() {
       </div>
 
       <div className="aspect-square overflow-hidden rounded-2xl">
-        <img src="/assets/placeholder.svg" className="size-full object-cover" />
+        <img src="/assets/metrics-3.jpg" className="size-full object-cover" />
       </div>
     </section>
   );
