@@ -208,6 +208,73 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "contact-1",
+    title: "Contact 1",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "input",
+      "textarea",
+      "checkbox",
+      getRegistryItemJsonUrl("section-heading"),
+    ],
+    files: [
+      {
+        path: "blocks/contact-1/contact-1.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "contact-2",
+    title: "Contact 2",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "input",
+      "textarea",
+      "checkbox",
+      "card",
+      getRegistryItemJsonUrl("section-heading"),
+    ],
+    files: [
+      {
+        path: "blocks/contact-2/contact-2.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "contact-3",
+    title: "Contact 3",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "input",
+      "textarea",
+      "checkbox",
+      getRegistryItemJsonUrl("section-heading"),
+    ],
+    files: [
+      {
+        path: "blocks/contact-3/contact-3.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
     name: "footer-2",
     title: "Footer 2",
     type: "registry:block",

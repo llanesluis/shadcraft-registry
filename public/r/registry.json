@@ -498,6 +498,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "banners"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -520,6 +523,9 @@
           "path": "src/registry/pro-marketing/blocks/banner-2/components/banner.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "banners"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -544,6 +550,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "banners"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -565,6 +574,9 @@
           "path": "src/registry/pro-marketing/blocks/banner-4/components/banner.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "banners"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -592,6 +604,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "careers"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -618,6 +633,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "careers"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -642,6 +660,9 @@
           "path": "src/registry/pro-marketing/blocks/careers-3/components/careers-section.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "careers"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -669,6 +690,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "careers"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -691,6 +715,82 @@
           "path": "src/registry/pro-marketing/blocks/footer-1/components/footer.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "footers"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-1",
+      "title": "Contact 1",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea",
+        "checkbox",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-1/contact-1.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-2",
+      "title": "Contact 2",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea",
+        "checkbox",
+        "card",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-2/contact-2.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-3",
+      "title": "Contact 3",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea",
+        "checkbox",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-3/contact-3.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -717,6 +817,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "footers"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -739,6 +842,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "footers"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -760,6 +866,9 @@
           "path": "src/registry/pro-marketing/blocks/metrics-1/components/metrics-section.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "metrics"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -784,6 +893,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "metrics"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -806,6 +918,9 @@
           "path": "src/registry/pro-marketing/blocks/metrics-3/components/metrics-section.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "metrics"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -830,6 +945,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "metrics"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -852,6 +970,9 @@
           "path": "src/registry/pro-marketing/blocks/metrics-5/components/metrics-section.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "metrics"
       ],
       "meta": {
         "bundle": "pro-marketing"
@@ -876,6 +997,9 @@
           "type": "registry:component"
         }
       ],
+      "categories": [
+        "metrics"
+      ],
       "meta": {
         "bundle": "pro-marketing"
       }
@@ -898,6 +1022,9 @@
           "path": "src/registry/pro-marketing/blocks/metrics-7/components/metrics-section.tsx",
           "type": "registry:component"
         }
+      ],
+      "categories": [
+        "metrics"
       ],
       "meta": {
         "bundle": "pro-marketing"

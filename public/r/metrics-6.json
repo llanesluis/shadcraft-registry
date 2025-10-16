@@ -22,5 +22,8 @@
   ],
   "meta": {
     "bundle": "pro-marketing"
-  }
+  },
+  "categories": [
+    "metrics"
+  ]
 }

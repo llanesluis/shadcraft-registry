@@ -21,5 +21,8 @@
   ],
   "meta": {
     "bundle": "pro-marketing"
-  }
+  },
+  "categories": [
+    "footers"
+  ]
 }

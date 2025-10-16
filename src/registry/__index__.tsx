@@ -728,7 +728,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["banners"],
     meta: { bundle: "pro-marketing" },
   },
   "banner-2": {
@@ -757,7 +757,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["banners"],
     meta: { bundle: "pro-marketing" },
   },
   "banner-3": {
@@ -786,7 +786,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["banners"],
     meta: { bundle: "pro-marketing" },
   },
   "banner-4": {
@@ -815,7 +815,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["banners"],
     meta: { bundle: "pro-marketing" },
   },
   "careers-1": {
@@ -850,7 +850,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["careers"],
     meta: { bundle: "pro-marketing" },
   },
   "careers-2": {
@@ -885,7 +885,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["careers"],
     meta: { bundle: "pro-marketing" },
   },
   "careers-3": {
@@ -919,7 +919,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["careers"],
     meta: { bundle: "pro-marketing" },
   },
   "careers-4": {
@@ -954,7 +954,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["careers"],
     meta: { bundle: "pro-marketing" },
   },
   "footer-1": {
@@ -983,7 +983,98 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["footers"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-1": {
+    name: "contact-1",
+    type: "registry:block",
+    title: "Contact 1",
+    description: "",
+    registryDependencies: [
+      "button",
+      "input",
+      "textarea",
+      "checkbox",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-1/contact-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-1/contact-1.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-2": {
+    name: "contact-2",
+    type: "registry:block",
+    title: "Contact 2",
+    description: "",
+    registryDependencies: [
+      "button",
+      "input",
+      "textarea",
+      "checkbox",
+      "card",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-2/contact-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-2/contact-2.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-3": {
+    name: "contact-3",
+    type: "registry:block",
+    title: "Contact 3",
+    description: "",
+    registryDependencies: [
+      "button",
+      "input",
+      "textarea",
+      "checkbox",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-3/contact-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-3/contact-3.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
     meta: { bundle: "pro-marketing" },
   },
   "footer-2": {
@@ -1012,7 +1103,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["footers"],
     meta: { bundle: "pro-marketing" },
   },
   "footer-3": {
@@ -1041,7 +1132,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["footers"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-1": {
@@ -1070,7 +1161,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-2": {
@@ -1102,7 +1193,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-3": {
@@ -1134,7 +1225,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-4": {
@@ -1166,7 +1257,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-5": {
@@ -1198,7 +1289,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-6": {
@@ -1230,7 +1321,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
   "metrics-7": {
@@ -1262,7 +1353,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: undefined,
+    categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
 };

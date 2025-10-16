@@ -23,5 +23,8 @@
   ],
   "meta": {
     "bundle": "pro-marketing"
-  }
+  },
+  "categories": [
+    "banners"
+  ]
 }
