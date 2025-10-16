@@ -220,7 +220,7 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-1/contact-1.tsx",
+        path: "blocks/contact-1/contact-section.tsx",
         type: "registry:component",
       },
     ],
@@ -243,7 +243,7 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-2/contact-2.tsx",
+        path: "blocks/contact-2/contact-section.tsx",
         type: "registry:component",
       },
     ],
@@ -265,7 +265,7 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-3/contact-3.tsx",
+        path: "blocks/contact-3/contact-section.tsx",
         type: "registry:component",
       },
     ],
@@ -283,7 +283,26 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-4/contact-4.tsx",
+        path: "blocks/contact-4/contact-section.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "contact-5",
+    title: "Contact 5",
+    type: "registry:block",
+    registryDependencies: [
+      "popover",
+      ...getRegistryItemsJsonUrls("section-heading", "feature-stack"),
+    ],
+    files: [
+      {
+        path: "blocks/contact-5/contact-section.tsx",
         type: "registry:component",
       },
     ],
@@ -299,11 +318,59 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-6/contact-6.tsx",
+        path: "blocks/contact-6/contact-section.tsx",
         type: "registry:component",
       },
       {
         path: "blocks/contact-6/components/map.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "contact-7",
+    title: "Contact 7",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
+    files: [
+      {
+        path: "blocks/contact-7/contact-section.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "contact-8",
+    title: "Contact 8",
+    type: "registry:block",
+    registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
+    files: [
+      {
+        path: "blocks/contact-8/contact-section.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "contact-9",
+    title: "Contact 9",
+    type: "registry:block",
+    registryDependencies: ["button", "avatar", getRegistryItemJsonUrl("section-heading")],
+    files: [
+      {
+        path: "blocks/contact-9/contact-section.tsx",
         type: "registry:component",
       },
     ],

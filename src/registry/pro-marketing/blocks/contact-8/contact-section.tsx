@@ -15,9 +15,9 @@ import {
 } from "@/registry/pro-marketing/components/section-heading";
 import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
-export function Contact4() {
+export function ContactSection() {
   return (
-    <section className="flex flex-col gap-12 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
+    <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">
         <SectionHeadingContentType>Contact us</SectionHeadingContentType>
         <SectionHeadingTitle>Let’s Connect</SectionHeadingTitle>
@@ -26,8 +26,16 @@ export function Contact4() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="mx-auto grid gap-12 lg:grid-cols-3 lg:gap-9">
-        <FeatureStack size="sm">
+      <div className="bg-muted aspect-square overflow-hidden rounded-2xl sm:aspect-[21/10]">
+        <img src="/assets/contact-8.jpg" className="size-full object-cover" />
+      </div>
+
+      <div className="mx-auto grid gap-5 lg:grid-cols-3 lg:gap-9">
+        <FeatureStack
+          size="sm"
+          alignment="left"
+          className="bg-card rounded-2xl border p-5 shadow-sm lg:p-9"
+        >
           <FeaturedIcon variant="square" size="md">
             <Mail />
           </FeaturedIcon>
@@ -40,7 +48,11 @@ export function Contact4() {
           </FeatureStackAction>
         </FeatureStack>
 
-        <FeatureStack size="sm">
+        <FeatureStack
+          size="sm"
+          alignment="left"
+          className="bg-card rounded-2xl border p-5 shadow-sm lg:p-9"
+        >
           <FeaturedIcon variant="square" size="md">
             <Phone />
           </FeaturedIcon>
@@ -53,7 +65,11 @@ export function Contact4() {
           </FeatureStackAction>
         </FeatureStack>
 
-        <FeatureStack size="sm">
+        <FeatureStack
+          size="sm"
+          alignment="left"
+          className="bg-card rounded-2xl border p-5 shadow-sm lg:p-9"
+        >
           <FeaturedIcon variant="square" size="md">
             <MessagesSquare />
           </FeaturedIcon>

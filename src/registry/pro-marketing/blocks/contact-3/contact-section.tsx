@@ -9,7 +9,7 @@ import {
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
 
-export function Contact3() {
+export function ContactSection() {
   return (
     <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <div className="grid items-center gap-5 md:grid-cols-[auto_1fr] lg:gap-9">

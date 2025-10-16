@@ -1,6 +1,5 @@
 import { Mail, MessagesSquare, Phone } from "lucide-react";
 
-import { Map } from "@/registry/pro-marketing/blocks/contact-6/components/map";
 import {
   FeatureStack,
   FeatureStackAction,
@@ -16,9 +15,9 @@ import {
 } from "@/registry/pro-marketing/components/section-heading";
 import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
-export function Contact6() {
+export function ContactSection() {
   return (
-    <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
+    <section className="flex flex-col gap-12 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">
         <SectionHeadingContentType>Contact us</SectionHeadingContentType>
         <SectionHeadingTitle>Let’s Connect</SectionHeadingTitle>
@@ -27,13 +26,9 @@ export function Contact6() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="bg-muted pointer-events-none aspect-square overflow-hidden rounded-2xl grayscale sm:aspect-[16/9] lg:aspect-[21/9]">
-        <Map />
-      </div>
-
       <div className="mx-auto grid gap-12 lg:grid-cols-3 lg:gap-9">
         <FeatureStack size="sm">
-          <FeaturedIcon variant="square" size="md" className="lg:hidden">
+          <FeaturedIcon variant="square" size="md">
             <Mail />
           </FeaturedIcon>
           <FeatureStackHeader>
@@ -46,7 +41,7 @@ export function Contact6() {
         </FeatureStack>
 
         <FeatureStack size="sm">
-          <FeaturedIcon variant="square" size="md" className="lg:hidden">
+          <FeaturedIcon variant="square" size="md">
             <Phone />
           </FeaturedIcon>
           <FeatureStackHeader>
@@ -59,7 +54,7 @@ export function Contact6() {
         </FeatureStack>
 
         <FeatureStack size="sm">
-          <FeaturedIcon variant="square" size="md" className="lg:hidden">
+          <FeaturedIcon variant="square" size="md">
             <MessagesSquare />
           </FeaturedIcon>
           <FeatureStackHeader>

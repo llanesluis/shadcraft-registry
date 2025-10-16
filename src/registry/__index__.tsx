@@ -1000,13 +1000,13 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-1/contact-1.tsx",
+        path: "src/registry/pro-marketing/blocks/contact-1/contact-section.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-1/contact-1.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact-1/contact-section.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1031,13 +1031,13 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-2/contact-2.tsx",
+        path: "src/registry/pro-marketing/blocks/contact-2/contact-section.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-2/contact-2.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact-2/contact-section.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1061,13 +1061,13 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-3/contact-3.tsx",
+        path: "src/registry/pro-marketing/blocks/contact-3/contact-section.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-3/contact-3.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact-3/contact-section.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1089,13 +1089,41 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-4/contact-4.tsx",
+        path: "src/registry/pro-marketing/blocks/contact-4/contact-section.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-4/contact-4.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact-4/contact-section.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-5": {
+    name: "contact-5",
+    type: "registry:block",
+    title: "Contact 5",
+    description: "",
+    registryDependencies: [
+      "popover",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/feature-stack.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-5/contact-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-5/contact-section.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1116,7 +1144,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-6/contact-6.tsx",
+        path: "src/registry/pro-marketing/blocks/contact-6/contact-section.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1127,7 +1155,89 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-6/contact-6.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact-6/contact-section.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-7": {
+    name: "contact-7",
+    type: "registry:block",
+    title: "Contact 7",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/feature-stack.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-7/contact-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-7/contact-section.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-8": {
+    name: "contact-8",
+    type: "registry:block",
+    title: "Contact 8",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/feature-stack.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-8/contact-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-8/contact-section.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["contact"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "contact-9": {
+    name: "contact-9",
+    type: "registry:block",
+    title: "Contact 9",
+    description: "",
+    registryDependencies: [
+      "button",
+      "avatar",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/contact-9/contact-section.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/contact-9/contact-section.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

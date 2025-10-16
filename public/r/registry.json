@@ -736,7 +736,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/contact-1/contact-1.tsx",
+          "path": "src/registry/pro-marketing/blocks/contact-1/contact-section.tsx",
           "type": "registry:component"
         }
       ],
@@ -761,7 +761,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/contact-2/contact-2.tsx",
+          "path": "src/registry/pro-marketing/blocks/contact-2/contact-section.tsx",
           "type": "registry:component"
         }
       ],
@@ -785,7 +785,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/contact-3/contact-3.tsx",
+          "path": "src/registry/pro-marketing/blocks/contact-3/contact-section.tsx",
           "type": "registry:component"
         }
       ],
@@ -807,7 +807,29 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/contact-4/contact-4.tsx",
+          "path": "src/registry/pro-marketing/blocks/contact-4/contact-section.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-5",
+      "title": "Contact 5",
+      "type": "registry:block",
+      "registryDependencies": [
+        "popover",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json",
+        "https://shadcraft-registry.vercel.app/r/feature-stack.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-5/contact-section.tsx",
           "type": "registry:component"
         }
       ],
@@ -828,11 +850,75 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/contact-6/contact-6.tsx",
+          "path": "src/registry/pro-marketing/blocks/contact-6/contact-section.tsx",
           "type": "registry:component"
         },
         {
           "path": "src/registry/pro-marketing/blocks/contact-6/components/map.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-7",
+      "title": "Contact 7",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://shadcraft-registry.vercel.app/r/section-heading.json",
+        "https://shadcraft-registry.vercel.app/r/feature-stack.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-7/contact-section.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-8",
+      "title": "Contact 8",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://shadcraft-registry.vercel.app/r/section-heading.json",
+        "https://shadcraft-registry.vercel.app/r/feature-stack.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-8/contact-section.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "contact-9",
+      "title": "Contact 9",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "avatar",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact-9/contact-section.tsx",
           "type": "registry:component"
         }
       ],
