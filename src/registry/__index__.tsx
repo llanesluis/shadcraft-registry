@@ -817,7 +817,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-1/components/careers-section.tsx",
+        path: "src/registry/pro-marketing/blocks/careers-1/components/careers-1.tsx",
         type: "registry:component",
         target: "",
       },
@@ -852,7 +852,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-2/components/careers-section.tsx",
+        path: "src/registry/pro-marketing/blocks/careers-2/components/careers-2.tsx",
         type: "registry:component",
         target: "",
       },
@@ -886,7 +886,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-3/components/careers-section.tsx",
+        path: "src/registry/pro-marketing/blocks/careers-3/components/careers-3.tsx",
         type: "registry:component",
         target: "",
       },
@@ -921,7 +921,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-4/components/careers-section.tsx",
+        path: "src/registry/pro-marketing/blocks/careers-4/components/careers-4.tsx",
         type: "registry:component",
         target: "",
       },

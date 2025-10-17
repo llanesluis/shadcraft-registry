@@ -19,9 +19,9 @@ import {
 } from "@/registry/pro-marketing/components/section-heading";
 import { Chip } from "@/registry/pro-marketing/ui/chip";
 
-export function CareersSection() {
+export function Careers1() {
   return (
-    <section className="grid gap-5 lg:gap-10">
+    <section className="grid gap-5 px-5 py-12 lg:gap-10 lg:p-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-3xl">
         <SectionHeadingContentType>Careers</SectionHeadingContentType>
         <SectionHeadingTitle>Careers at Acme Inc.</SectionHeadingTitle>
@@ -31,10 +31,6 @@ export function CareersSection() {
           from you.
         </SectionHeadingBody>
       </SectionHeading>
-
-      <div className="bg-muted aspect-video h-auto w-full overflow-hidden rounded-2xl md:aspect-[5/2]">
-        <img src="/assets/careers-4.jpg" alt="Careers" className="size-full object-cover" />
-      </div>
 
       <div className="mx-auto w-full max-w-3xl">
         <div className="flex flex-col gap-5 lg:gap-9">

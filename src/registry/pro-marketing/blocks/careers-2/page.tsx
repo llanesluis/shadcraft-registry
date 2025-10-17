@@ -1,9 +1,9 @@
-import { CareersSection } from "@/registry/pro-marketing/blocks/careers-2/components/careers-section";
+import { Careers2 } from "@/registry/pro-marketing/blocks/careers-2/components/careers-2";
 
 export default function Page() {
   return (
-    <div className="container mx-auto px-5 py-12 lg:p-20">
-      <CareersSection />
+    <div className="container mx-auto">
+      <Careers2 />
     </div>
   );
 }

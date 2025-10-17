@@ -19,9 +19,9 @@ import {
 } from "@/registry/pro-marketing/components/section-heading";
 import { Chip } from "@/registry/pro-marketing/ui/chip";
 
-export function CareersSection() {
+export function Careers2() {
   return (
-    <section className="grid gap-5 lg:gap-10">
+    <section className="grid gap-5 px-5 py-12 lg:gap-10 lg:p-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-3xl">
         <SectionHeadingContentType>Careers</SectionHeadingContentType>
         <SectionHeadingTitle>Careers at Acme Inc.</SectionHeadingTitle>

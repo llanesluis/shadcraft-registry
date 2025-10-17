@@ -87,7 +87,7 @@ export const blocks: Registry["items"] = [
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-1/components/careers-section.tsx",
+        path: "blocks/careers-1/components/careers-1.tsx",
         type: "registry:component",
       },
     ],
@@ -112,7 +112,7 @@ export const blocks: Registry["items"] = [
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-2/components/careers-section.tsx",
+        path: "blocks/careers-2/components/careers-2.tsx",
         type: "registry:component",
       },
     ],
@@ -136,7 +136,7 @@ export const blocks: Registry["items"] = [
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-3/components/careers-section.tsx",
+        path: "blocks/careers-3/components/careers-3.tsx",
         type: "registry:component",
       },
     ],
@@ -161,7 +161,7 @@ export const blocks: Registry["items"] = [
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-4/components/careers-section.tsx",
+        path: "blocks/careers-4/components/careers-4.tsx",
         type: "registry:component",
       },
     ],
