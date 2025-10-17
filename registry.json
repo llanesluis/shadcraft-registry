@@ -448,18 +448,14 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/banner-1/page.tsx",
-          "type": "registry:page",
-          "target": "app/banner/page.tsx"
-        },
-        {
-          "path": "src/registry/pro-marketing/blocks/banner-1/components/banner.tsx",
+          "path": "src/registry/pro-marketing/blocks/banner-1/components/banner-1.tsx",
           "type": "registry:component"
         }
       ],
       "categories": ["banners"],
       "meta": {
-        "bundle": "pro-marketing"
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
       }
     },
     {
@@ -472,18 +468,14 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/banner-2/page.tsx",
-          "type": "registry:page",
-          "target": "app/banner/page.tsx"
-        },
-        {
-          "path": "src/registry/pro-marketing/blocks/banner-2/components/banner.tsx",
+          "path": "src/registry/pro-marketing/blocks/banner-2/components/banner-2.tsx",
           "type": "registry:component"
         }
       ],
       "categories": ["banners"],
       "meta": {
-        "bundle": "pro-marketing"
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
       }
     },
     {
@@ -496,18 +488,14 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/banner-3/page.tsx",
-          "type": "registry:page",
-          "target": "app/banner/page.tsx"
-        },
-        {
-          "path": "src/registry/pro-marketing/blocks/banner-3/components/banner.tsx",
+          "path": "src/registry/pro-marketing/blocks/banner-3/components/banner-3.tsx",
           "type": "registry:component"
         }
       ],
       "categories": ["banners"],
       "meta": {
-        "bundle": "pro-marketing"
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
       }
     },
     {
@@ -517,18 +505,14 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/banner-4/page.tsx",
-          "type": "registry:page",
-          "target": "app/banner/page.tsx"
-        },
-        {
-          "path": "src/registry/pro-marketing/blocks/banner-4/components/banner.tsx",
+          "path": "src/registry/pro-marketing/blocks/banner-4/components/banner-4.tsx",
           "type": "registry:component"
         }
       ],
       "categories": ["banners"],
       "meta": {
-        "bundle": "pro-marketing"
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
       }
     },
     {

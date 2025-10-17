@@ -10,18 +10,14 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "input", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
-        path: "blocks/banner-1/page.tsx",
-        type: "registry:page",
-        target: "app/banner/page.tsx",
-      },
-      {
-        path: "blocks/banner-1/components/banner.tsx",
+        path: "blocks/banner-1/components/banner-1.tsx",
         type: "registry:component",
       },
     ],
     categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
     },
   },
   {
@@ -31,18 +27,14 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
-        path: "blocks/banner-2/page.tsx",
-        type: "registry:page",
-        target: "app/banner/page.tsx",
-      },
-      {
-        path: "blocks/banner-2/components/banner.tsx",
+        path: "blocks/banner-2/components/banner-2.tsx",
         type: "registry:component",
       },
     ],
     categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
     },
   },
   {
@@ -52,18 +44,14 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
-        path: "blocks/banner-3/page.tsx",
-        type: "registry:page",
-        target: "app/banner/page.tsx",
-      },
-      {
-        path: "blocks/banner-3/components/banner.tsx",
+        path: "blocks/banner-3/components/banner-3.tsx",
         type: "registry:component",
       },
     ],
     categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
     },
   },
   {
@@ -73,18 +61,14 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blocks/banner-4/page.tsx",
-        type: "registry:page",
-        target: "app/banner/page.tsx",
-      },
-      {
-        path: "blocks/banner-4/components/banner.tsx",
+        path: "blocks/banner-4/components/banner-4.tsx",
         type: "registry:component",
       },
     ],
     categories: ["banners"],
     meta: {
       bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
     },
   },
   {

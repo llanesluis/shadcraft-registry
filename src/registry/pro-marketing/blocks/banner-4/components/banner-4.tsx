@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-export function Banner() {
+export function Banner4() {
   const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) return null;

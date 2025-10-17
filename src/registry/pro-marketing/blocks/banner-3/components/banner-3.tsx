@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
-export function Banner() {
+export function Banner3() {
   const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) return null;
