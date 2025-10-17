@@ -12,9 +12,9 @@ import {
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
 
-export function MetricsSection() {
+export function Metrics3() {
   return (
-    <section className="grid w-full gap-5 md:gap-9 lg:grid-cols-2">
+    <section className="grid w-full gap-5 px-5 py-12 md:gap-9 lg:grid-cols-2 lg:p-20">
       <div className="flex flex-col gap-5 self-center md:gap-9">
         <SectionHeading>
           <SectionHeadingTitle className="text-5xl">

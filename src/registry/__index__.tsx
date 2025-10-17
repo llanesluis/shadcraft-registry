@@ -1412,7 +1412,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-1/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-1/components/metrics-1.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1444,7 +1444,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-2/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-2/components/metrics-2.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1476,7 +1476,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-3/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-3/components/metrics-3.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1508,7 +1508,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-4/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-4/components/metrics-4.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1540,7 +1540,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-5/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-5/components/metrics-5.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1572,7 +1572,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-6/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-6/components/metrics-6.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1604,7 +1604,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-7/components/metrics-section.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics-7/components/metrics-7.tsx",
         type: "registry:component",
         target: "",
       },

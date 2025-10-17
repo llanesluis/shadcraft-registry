@@ -1,8 +1,8 @@
 import { Metric, MetricLabel, MetricSubLabel } from "@/registry/pro-marketing/components/metric";
 
-export function MetricsSection() {
+export function Metrics1() {
   return (
-    <section className="flex w-full flex-col gap-5 md:gap-9">
+    <section className="flex w-full flex-col gap-5 px-5 py-12 md:gap-9 lg:p-20">
       <div className="aspect-[21/9] h-auto w-full overflow-hidden mask-y-from-60%">
         <img src="/assets/map.svg" className="size-full object-cover" />
       </div>

@@ -12,9 +12,9 @@ import {
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
 
-export function MetricsSection() {
+export function Metrics4() {
   return (
-    <section className="flex w-full flex-col gap-5 md:gap-9">
+    <section className="flex w-full flex-col gap-5 px-5 py-12 md:gap-9 lg:p-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-3xl">
         <SectionHeadingTitle>Trusted by Teams Everywhere</SectionHeadingTitle>
         <SectionHeadingBody>

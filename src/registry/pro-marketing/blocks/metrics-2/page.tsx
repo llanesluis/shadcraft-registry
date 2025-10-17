@@ -1,9 +1,9 @@
-import { MetricsSection } from "@/registry/pro-marketing/blocks/metrics-2/components/metrics-section";
+import { Metrics2 } from "@/registry/pro-marketing/blocks/metrics-2/components/metrics-2";
 
 export default function Page() {
   return (
-    <div className="container mx-auto min-h-svh content-center px-5 py-12 lg:p-20">
-      <MetricsSection />
+    <div className="container mx-auto min-h-svh content-center">
+      <Metrics2 />
     </div>
   );
 }
