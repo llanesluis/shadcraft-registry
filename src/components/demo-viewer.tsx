@@ -316,7 +316,7 @@ function DemoViewerPreview({ children }: { children: React.ReactNode }) {
           >
             {children}
           </ResizablePanel>
-          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-2 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-8 after:w-1 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-12 active:after:w-0.5 md:block" />
+          <ResizableHandle className="after:bg-border active:after:bg-muted-foreground hover:after:bg-muted-foreground relative hidden w-2 bg-transparent p-0 after:absolute after:top-1/2 after:left-1/2 after:h-10 after:w-1 after:-translate-y-1/2 after:rounded-full after:transition-all active:after:h-12 active:after:w-0.5 md:block" />
 
           <ResizablePanel defaultSize={0} minSize={0} />
         </ResizablePanelGroup>
