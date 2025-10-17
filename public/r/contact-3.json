@@ -12,13 +12,13 @@
   ],
   "files": [
     {
-      "path": "blocks/contact-3/page.tsx",
-      "content": "import { Contact3 } from \"@/registry/pro-marketing/blocks/contact-3/components/contact-3\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto\">\n      <Contact3 />\n    </div>\n  );\n}\n",
+      "path": "blocks/contact/contact-3/page.tsx",
+      "content": "import { Contact3 } from \"@/registry/pro-marketing/blocks/contact/contact-3/components/contact-3\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto\">\n      <Contact3 />\n    </div>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/contact/page.tsx"
     },
     {
-      "path": "blocks/contact-3/components/contact-3.tsx",
+      "path": "blocks/contact/contact-3/components/contact-3.tsx",
       "content": "import { Button } from \"@/components/ui/button\";\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Input } from \"@/components/ui/input\";\nimport { Textarea } from \"@/components/ui/textarea\";\nimport {\n  SectionHeading,\n  SectionHeadingBody,\n  SectionHeadingContentType,\n  SectionHeadingTitle,\n} from \"@/components/section-heading\";\n\nexport function Contact3() {\n  return (\n    <section className=\"flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20\">\n      <div className=\"grid items-center gap-5 md:grid-cols-[auto_1fr] lg:gap-9\">\n        <div className=\"flex flex-col gap-5 md:max-w-lg lg:gap-9\">\n          <SectionHeading>\n            <SectionHeadingContentType>Contact us</SectionHeadingContentType>\n            <SectionHeadingTitle>Let’s Talk</SectionHeadingTitle>\n            <SectionHeadingBody>\n              Have questions about Acme AI? Our team is here to help you get the answers you need.\n            </SectionHeadingBody>\n          </SectionHeading>\n\n          <form className=\"grid grid-cols-2 gap-4\">\n            <Input placeholder=\"Placeholder text\" />\n            <Input placeholder=\"Placeholder text\" />\n            <Input placeholder=\"Placeholder text\" className=\"col-span-2\" />\n            <Textarea placeholder=\"Content\" className=\"col-span-2 h-32\" />\n            <div className=\"col-span-2 flex items-center gap-2 py-2\">\n              <Checkbox />\n              <span className=\"text-sm font-normal\">\n                You agree to our simple{\" \"}\n                <a href=\"#\" className=\"text-primary underline\">\n                  Privacy Policy\n                </a>\n              </span>\n            </div>\n            <Button type=\"submit\" className=\"col-span-2\">\n              Send message\n            </Button>\n          </form>\n        </div>\n\n        <div className=\"aspect-square size-full overflow-hidden rounded-2xl md:aspect-[4/5]\">\n          <img src=\"/assets/contact-3.jpg\" className=\"size-full object-cover\" />\n        </div>\n      </div>\n    </section>\n  );\n}\n",
       "type": "registry:component"
     }

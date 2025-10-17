@@ -710,13 +710,15 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/banner-1/components/banner-1.tsx",
+        path: "src/registry/pro-marketing/blocks/banners/banner-1/components/banner-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/banner-1/components/banner-1.tsx");
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/banners/banner-1/components/banner-1.tsx"
+      );
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -734,13 +736,15 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: ["button", "https://shadcraft-registry.vercel.app/r/featured-icon.json"],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/banner-2/components/banner-2.tsx",
+        path: "src/registry/pro-marketing/blocks/banners/banner-2/components/banner-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/banner-2/components/banner-2.tsx");
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/banners/banner-2/components/banner-2.tsx"
+      );
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -758,13 +762,15 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: ["button", "https://shadcraft-registry.vercel.app/r/featured-icon.json"],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/banner-3/components/banner-3.tsx",
+        path: "src/registry/pro-marketing/blocks/banners/banner-3/components/banner-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/banner-3/components/banner-3.tsx");
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/banners/banner-3/components/banner-3.tsx"
+      );
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -782,13 +788,15 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: ["button"],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/banner-4/components/banner-4.tsx",
+        path: "src/registry/pro-marketing/blocks/banners/banner-4/components/banner-4.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/banner-4/components/banner-4.tsx");
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/banners/banner-4/components/banner-4.tsx"
+      );
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -812,18 +820,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/careers-1/page.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-1/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-1/components/careers-1.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-1/components/careers-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/careers-1/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/careers/careers-1/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -847,18 +855,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/careers-2/page.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-2/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-2/components/careers-2.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-2/components/careers-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/careers-2/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/careers/careers-2/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -881,18 +889,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/careers-3/page.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-3/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-3/components/careers-3.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-3/components/careers-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/careers-3/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/careers/careers-3/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -916,18 +924,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/careers-4/page.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-4/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/careers-4/components/careers-4.tsx",
+        path: "src/registry/pro-marketing/blocks/careers/careers-4/components/careers-4.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/careers-4/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/careers/careers-4/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -935,35 +943,6 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["careers"],
-    meta: { bundle: "pro-marketing" },
-  },
-  "footer-1": {
-    name: "footer-1",
-    type: "registry:block",
-    title: "Footer 1",
-    description: "",
-    registryDependencies: ["badge", "separator"],
-    files: [
-      {
-        path: "src/registry/pro-marketing/blocks/footer-1/page.tsx",
-        type: "registry:page",
-        target: "app/footer/page.tsx",
-      },
-      {
-        path: "src/registry/pro-marketing/blocks/footer-1/components/footer-1.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/footer-1/page.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["footers"],
     meta: { bundle: "pro-marketing" },
   },
   "contact-1": {
@@ -980,18 +959,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-1/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-1/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-1/components/contact-1.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-1/components/contact-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-1/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-1/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1016,18 +995,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-2/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-2/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-2/components/contact-2.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-2/components/contact-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-2/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-2/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1051,18 +1030,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-3/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-3/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-3/components/contact-3.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-3/components/contact-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-3/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-3/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1084,18 +1063,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-4/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-4/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-4/components/contact-4.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-4/components/contact-4.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-4/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-4/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1117,23 +1096,23 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-5/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-5/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-5/components/contact-5.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-5/components/contact-5.tsx",
         type: "registry:component",
         target: "",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-5/components/location-dot.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-5/components/location-dot.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-5/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-5/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1154,23 +1133,23 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-6/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-6/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-6/components/contact-6.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-6/components/contact-6.tsx",
         type: "registry:component",
         target: "",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-6/components/map.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-6/components/map.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-6/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-6/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1191,18 +1170,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-7/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-7/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-7/components/contact-7.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-7/components/contact-7.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-7/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-7/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1223,18 +1202,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-8/page.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-8/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/contact-8/components/contact-8.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-8/components/contact-8.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-8/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/contact/contact-8/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1256,14 +1235,14 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-9/components/contact-9.tsx",
+        path: "src/registry/pro-marketing/blocks/contact/contact-9/components/contact-9.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import(
-        "@/registry/pro-marketing/blocks/contact-9/components/contact-9.tsx"
+        "@/registry/pro-marketing/blocks/contact/contact-9/components/contact-9.tsx"
       );
       const exportName =
         Object.keys(mod).find(
@@ -1287,18 +1266,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/faqs-1/page.tsx",
+        path: "src/registry/pro-marketing/blocks/faqs/faqs-1/page.tsx",
         type: "registry:page",
         target: "app/faqs/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/faqs-1/components/faqs-1.tsx",
+        path: "src/registry/pro-marketing/blocks/faqs/faqs-1/components/faqs-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/faqs-1/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/faqs/faqs-1/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1320,18 +1299,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/faqs-2/page.tsx",
+        path: "src/registry/pro-marketing/blocks/faqs/faqs-2/page.tsx",
         type: "registry:page",
         target: "app/faqs/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/faqs-2/components/faqs-2.tsx",
+        path: "src/registry/pro-marketing/blocks/faqs/faqs-2/components/faqs-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/faqs-2/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/faqs/faqs-2/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1339,6 +1318,35 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["faqs"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "footer-1": {
+    name: "footer-1",
+    type: "registry:block",
+    title: "Footer 1",
+    description: "",
+    registryDependencies: ["badge", "separator"],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/footers/footer-1/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/footers/footer-1/components/footer-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/footers/footer-1/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["footers"],
     meta: { bundle: "pro-marketing" },
   },
   "footer-2": {
@@ -1349,18 +1357,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: ["input", "button", "badge", "separator"],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/footer-2/page.tsx",
+        path: "src/registry/pro-marketing/blocks/footers/footer-2/page.tsx",
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/footer-2/components/footer-2.tsx",
+        path: "src/registry/pro-marketing/blocks/footers/footer-2/components/footer-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/footer-2/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/footers/footer-2/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1378,18 +1386,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: ["separator"],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/footer-3/page.tsx",
+        path: "src/registry/pro-marketing/blocks/footers/footer-3/page.tsx",
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/footer-3/components/footer-3.tsx",
+        path: "src/registry/pro-marketing/blocks/footers/footer-3/components/footer-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/footer-3/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/footers/footer-3/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1407,18 +1415,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: ["https://shadcraft-registry.vercel.app/r/metric.json"],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-1/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-1/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-1/components/metrics-1.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-1/components/metrics-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-1/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-1/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1439,18 +1447,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-2/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-2/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-2/components/metrics-2.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-2/components/metrics-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-2/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-2/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1471,18 +1479,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-3/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-3/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-3/components/metrics-3.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-3/components/metrics-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-3/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-3/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1503,18 +1511,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-4/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-4/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-4/components/metrics-4.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-4/components/metrics-4.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-4/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-4/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1535,18 +1543,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-5/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-5/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-5/components/metrics-5.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-5/components/metrics-5.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-5/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-5/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1567,18 +1575,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-6/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-6/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-6/components/metrics-6.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-6/components/metrics-6.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-6/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-6/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1599,18 +1607,18 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/metrics-7/page.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-7/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/metrics-7/components/metrics-7.tsx",
+        path: "src/registry/pro-marketing/blocks/metrics/metrics-7/components/metrics-7.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/metrics-7/page.tsx");
+      const mod = await import("@/registry/pro-marketing/blocks/metrics/metrics-7/page.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1628,14 +1636,14 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: [],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/social-proof-1/components/social-proof-1.tsx",
+        path: "src/registry/pro-marketing/blocks/social-proof/social-proof-1/components/social-proof-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import(
-        "@/registry/pro-marketing/blocks/social-proof-1/components/social-proof-1.tsx"
+        "@/registry/pro-marketing/blocks/social-proof/social-proof-1/components/social-proof-1.tsx"
       );
       const exportName =
         Object.keys(mod).find(
@@ -1654,14 +1662,14 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: [],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/social-proof-2/components/social-proof-2.tsx",
+        path: "src/registry/pro-marketing/blocks/social-proof/social-proof-2/components/social-proof-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import(
-        "@/registry/pro-marketing/blocks/social-proof-2/components/social-proof-2.tsx"
+        "@/registry/pro-marketing/blocks/social-proof/social-proof-2/components/social-proof-2.tsx"
       );
       const exportName =
         Object.keys(mod).find(
@@ -1680,14 +1688,14 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     registryDependencies: [],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/social-proof-3/components/social-proof-3.tsx",
+        path: "src/registry/pro-marketing/blocks/social-proof/social-proof-3/components/social-proof-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
       const mod = await import(
-        "@/registry/pro-marketing/blocks/social-proof-3/components/social-proof-3.tsx"
+        "@/registry/pro-marketing/blocks/social-proof/social-proof-3/components/social-proof-3.tsx"
       );
       const exportName =
         Object.keys(mod).find(

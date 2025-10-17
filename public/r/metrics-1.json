@@ -8,13 +8,13 @@
   ],
   "files": [
     {
-      "path": "blocks/metrics-1/page.tsx",
-      "content": "import { Metrics1 } from \"@/registry/pro-marketing/blocks/metrics-1/components/metrics-1\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto min-h-svh content-center\">\n      <Metrics1 />\n    </div>\n  );\n}\n",
+      "path": "blocks/metrics/metrics-1/page.tsx",
+      "content": "import { Metrics1 } from \"@/registry/pro-marketing/blocks/metrics/metrics-1/components/metrics-1\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto min-h-svh content-center\">\n      <Metrics1 />\n    </div>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/metrics/page.tsx"
     },
     {
-      "path": "blocks/metrics-1/components/metrics-1.tsx",
+      "path": "blocks/metrics/metrics-1/components/metrics-1.tsx",
       "content": "import { Metric, MetricLabel, MetricSubLabel } from \"@/components/metric\";\n\nexport function Metrics1() {\n  return (\n    <section className=\"flex w-full flex-col gap-5 px-5 py-12 md:gap-9 lg:p-20\">\n      <div className=\"aspect-[21/9] h-auto w-full overflow-hidden mask-y-from-60%\">\n        <img src=\"/assets/map.svg\" className=\"size-full object-cover\" />\n      </div>\n      <div className=\"grid gap-5 md:grid-cols-2 md:gap-9 lg:grid-cols-4\">\n        <Metric>\n          <MetricLabel>12,500+</MetricLabel>\n          <MetricSubLabel>Projects completed</MetricSubLabel>\n        </Metric>\n\n        <Metric>\n          <MetricLabel>38% faster</MetricLabel>\n          <MetricSubLabel>Delivery across teams</MetricSubLabel>\n        </Metric>\n\n        <Metric>\n          <MetricLabel>94%</MetricLabel>\n          <MetricSubLabel>User satisfaction</MetricSubLabel>\n        </Metric>\n\n        <Metric>\n          <MetricLabel>8 zones</MetricLabel>\n          <MetricSubLabel>With active customers</MetricSubLabel>\n        </Metric>\n      </div>\n    </section>\n  );\n}\n",
       "type": "registry:component"
     }

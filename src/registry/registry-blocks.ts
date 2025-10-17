@@ -10,7 +10,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "input", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
-        path: "blocks/banner-1/components/banner-1.tsx",
+        path: "blocks/banners/banner-1/components/banner-1.tsx",
         type: "registry:component",
       },
     ],
@@ -27,7 +27,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
-        path: "blocks/banner-2/components/banner-2.tsx",
+        path: "blocks/banners/banner-2/components/banner-2.tsx",
         type: "registry:component",
       },
     ],
@@ -44,7 +44,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
-        path: "blocks/banner-3/components/banner-3.tsx",
+        path: "blocks/banners/banner-3/components/banner-3.tsx",
         type: "registry:component",
       },
     ],
@@ -61,7 +61,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blocks/banner-4/components/banner-4.tsx",
+        path: "blocks/banners/banner-4/components/banner-4.tsx",
         type: "registry:component",
       },
     ],
@@ -82,12 +82,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/careers-1/page.tsx",
+        path: "blocks/careers/careers-1/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-1/components/careers-1.tsx",
+        path: "blocks/careers/careers-1/components/careers-1.tsx",
         type: "registry:component",
       },
     ],
@@ -107,12 +107,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/careers-2/page.tsx",
+        path: "blocks/careers/careers-2/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-2/components/careers-2.tsx",
+        path: "blocks/careers/careers-2/components/careers-2.tsx",
         type: "registry:component",
       },
     ],
@@ -131,12 +131,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/careers-3/page.tsx",
+        path: "blocks/careers/careers-3/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-3/components/careers-3.tsx",
+        path: "blocks/careers/careers-3/components/careers-3.tsx",
         type: "registry:component",
       },
     ],
@@ -156,37 +156,16 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/careers-4/page.tsx",
+        path: "blocks/careers/careers-4/page.tsx",
         type: "registry:page",
         target: "app/careers/page.tsx",
       },
       {
-        path: "blocks/careers-4/components/careers-4.tsx",
+        path: "blocks/careers/careers-4/components/careers-4.tsx",
         type: "registry:component",
       },
     ],
     categories: ["careers"],
-    meta: {
-      bundle: "pro-marketing",
-    },
-  },
-  {
-    name: "footer-1",
-    title: "Footer 1",
-    type: "registry:block",
-    registryDependencies: ["badge", "separator"],
-    files: [
-      {
-        path: "blocks/footer-1/page.tsx",
-        type: "registry:page",
-        target: "app/footer/page.tsx",
-      },
-      {
-        path: "blocks/footer-1/components/footer-1.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["footers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -204,12 +183,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-1/page.tsx",
+        path: "blocks/contact/contact-1/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-1/components/contact-1.tsx",
+        path: "blocks/contact/contact-1/components/contact-1.tsx",
         type: "registry:component",
       },
     ],
@@ -232,12 +211,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-2/page.tsx",
+        path: "blocks/contact/contact-2/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-2/components/contact-2.tsx",
+        path: "blocks/contact/contact-2/components/contact-2.tsx",
         type: "registry:component",
       },
     ],
@@ -259,12 +238,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-3/page.tsx",
+        path: "blocks/contact/contact-3/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-3/components/contact-3.tsx",
+        path: "blocks/contact/contact-3/components/contact-3.tsx",
         type: "registry:component",
       },
     ],
@@ -282,12 +261,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-4/page.tsx",
+        path: "blocks/contact/contact-4/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-4/components/contact-4.tsx",
+        path: "blocks/contact/contact-4/components/contact-4.tsx",
         type: "registry:component",
       },
     ],
@@ -306,16 +285,16 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-5/page.tsx",
+        path: "blocks/contact/contact-5/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-5/components/contact-5.tsx",
+        path: "blocks/contact/contact-5/components/contact-5.tsx",
         type: "registry:component",
       },
       {
-        path: "blocks/contact-5/components/location-dot.tsx",
+        path: "blocks/contact/contact-5/components/location-dot.tsx",
         type: "registry:component",
       },
     ],
@@ -331,16 +310,16 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-6/page.tsx",
+        path: "blocks/contact/contact-6/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-6/components/contact-6.tsx",
+        path: "blocks/contact/contact-6/components/contact-6.tsx",
         type: "registry:component",
       },
       {
-        path: "blocks/contact-6/components/map.tsx",
+        path: "blocks/contact/contact-6/components/map.tsx",
         type: "registry:component",
       },
     ],
@@ -356,12 +335,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-7/page.tsx",
+        path: "blocks/contact/contact-7/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-7/components/contact-7.tsx",
+        path: "blocks/contact/contact-7/components/contact-7.tsx",
         type: "registry:component",
       },
     ],
@@ -377,12 +356,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-8/page.tsx",
+        path: "blocks/contact/contact-8/page.tsx",
         type: "registry:page",
         target: "app/contact/page.tsx",
       },
       {
-        path: "blocks/contact-8/components/contact-8.tsx",
+        path: "blocks/contact/contact-8/components/contact-8.tsx",
         type: "registry:component",
       },
     ],
@@ -398,7 +377,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "avatar", getRegistryItemJsonUrl("section-heading")],
     files: [
       {
-        path: "blocks/contact-9/components/contact-9.tsx",
+        path: "blocks/contact/contact-9/components/contact-9.tsx",
         type: "registry:component",
       },
     ],
@@ -417,12 +396,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/faqs-1/page.tsx",
+        path: "blocks/faqs/faqs-1/page.tsx",
         type: "registry:page",
         target: "app/faqs/page.tsx",
       },
       {
-        path: "blocks/faqs-1/components/faqs-1.tsx",
+        path: "blocks/faqs/faqs-1/components/faqs-1.tsx",
         type: "registry:component",
       },
     ],
@@ -441,16 +420,37 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/faqs-2/page.tsx",
+        path: "blocks/faqs/faqs-2/page.tsx",
         type: "registry:page",
         target: "app/faqs/page.tsx",
       },
       {
-        path: "blocks/faqs-2/components/faqs-2.tsx",
+        path: "blocks/faqs/faqs-2/components/faqs-2.tsx",
         type: "registry:component",
       },
     ],
     categories: ["faqs"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "footer-1",
+    title: "Footer 1",
+    type: "registry:block",
+    registryDependencies: ["badge", "separator"],
+    files: [
+      {
+        path: "blocks/footers/footer-1/page.tsx",
+        type: "registry:page",
+        target: "app/footer/page.tsx",
+      },
+      {
+        path: "blocks/footers/footer-1/components/footer-1.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footers"],
     meta: {
       bundle: "pro-marketing",
     },
@@ -462,12 +462,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["input", "button", "badge", "separator"],
     files: [
       {
-        path: "blocks/footer-2/page.tsx",
+        path: "blocks/footers/footer-2/page.tsx",
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
       {
-        path: "blocks/footer-2/components/footer-2.tsx",
+        path: "blocks/footers/footer-2/components/footer-2.tsx",
         type: "registry:component",
       },
     ],
@@ -483,12 +483,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["separator"],
     files: [
       {
-        path: "blocks/footer-3/page.tsx",
+        path: "blocks/footers/footer-3/page.tsx",
         type: "registry:page",
         target: "app/footer/page.tsx",
       },
       {
-        path: "blocks/footer-3/components/footer-3.tsx",
+        path: "blocks/footers/footer-3/components/footer-3.tsx",
         type: "registry:component",
       },
     ],
@@ -504,12 +504,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [getRegistryItemJsonUrl("metric")],
     files: [
       {
-        path: "blocks/metrics-1/page.tsx",
+        path: "blocks/metrics/metrics-1/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-1/components/metrics-1.tsx",
+        path: "blocks/metrics/metrics-1/components/metrics-1.tsx",
         type: "registry:component",
       },
     ],
@@ -525,12 +525,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
     files: [
       {
-        path: "blocks/metrics-2/page.tsx",
+        path: "blocks/metrics/metrics-2/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-2/components/metrics-2.tsx",
+        path: "blocks/metrics/metrics-2/components/metrics-2.tsx",
         type: "registry:component",
       },
     ],
@@ -546,12 +546,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
     files: [
       {
-        path: "blocks/metrics-3/page.tsx",
+        path: "blocks/metrics/metrics-3/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-3/components/metrics-3.tsx",
+        path: "blocks/metrics/metrics-3/components/metrics-3.tsx",
         type: "registry:component",
       },
     ],
@@ -567,12 +567,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
     files: [
       {
-        path: "blocks/metrics-4/page.tsx",
+        path: "blocks/metrics/metrics-4/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-4/components/metrics-4.tsx",
+        path: "blocks/metrics/metrics-4/components/metrics-4.tsx",
         type: "registry:component",
       },
     ],
@@ -588,12 +588,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
     files: [
       {
-        path: "blocks/metrics-5/page.tsx",
+        path: "blocks/metrics/metrics-5/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-5/components/metrics-5.tsx",
+        path: "blocks/metrics/metrics-5/components/metrics-5.tsx",
         type: "registry:component",
       },
     ],
@@ -609,12 +609,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
     files: [
       {
-        path: "blocks/metrics-6/page.tsx",
+        path: "blocks/metrics/metrics-6/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-6/components/metrics-6.tsx",
+        path: "blocks/metrics/metrics-6/components/metrics-6.tsx",
         type: "registry:component",
       },
     ],
@@ -630,12 +630,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "metric")],
     files: [
       {
-        path: "blocks/metrics-7/page.tsx",
+        path: "blocks/metrics/metrics-7/page.tsx",
         type: "registry:page",
         target: "app/metrics/page.tsx",
       },
       {
-        path: "blocks/metrics-7/components/metrics-7.tsx",
+        path: "blocks/metrics/metrics-7/components/metrics-7.tsx",
         type: "registry:component",
       },
     ],
@@ -651,7 +651,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: [],
     files: [
       {
-        path: "blocks/social-proof-1/components/social-proof-1.tsx",
+        path: "blocks/social-proof/social-proof-1/components/social-proof-1.tsx",
         type: "registry:component",
       },
     ],
@@ -668,7 +668,7 @@ export const blocks: Registry["items"] = [
     dependencies: ["react-fast-marquee"],
     files: [
       {
-        path: "blocks/social-proof-2/components/social-proof-2.tsx",
+        path: "blocks/social-proof/social-proof-2/components/social-proof-2.tsx",
         type: "registry:component",
       },
     ],
@@ -684,7 +684,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: [],
     files: [
       {
-        path: "blocks/social-proof-3/components/social-proof-3.tsx",
+        path: "blocks/social-proof/social-proof-3/components/social-proof-3.tsx",
         type: "registry:component",
       },
     ],
