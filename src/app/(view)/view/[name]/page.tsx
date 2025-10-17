@@ -46,7 +46,7 @@ export default async function ViewPage({ params }: { params: Promise<{ name: str
       <main
         className={cn(
           item.type !== "registry:block" && "flex size-full min-h-svh items-center justify-center",
-          item.meta?.containerClassname
+          item.meta?.containerClassName
         )}
       >
         <RenderComponent />

@@ -6,9 +6,9 @@ import {
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
 
-export function ContactSection() {
+export function Contact9() {
   return (
-    <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
+    <section className="flex flex-col gap-5 lg:gap-9">
       <div className="bg-background flex flex-col items-center gap-9 rounded-2xl border px-5 py-9 lg:p-9">
         <div className="*:data-[slot=avatar]:ring-background flex -space-x-3 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
           <Avatar className="size-10">
@@ -32,7 +32,10 @@ export function ContactSection() {
           </SectionHeadingBody>
         </SectionHeading>
 
-        <Button>Get in touch</Button>
+        <Button className="max-sm:hidden">Get in touch</Button>
+        <Button size="lg" className="hidden w-full max-sm:flex">
+          Get in touch
+        </Button>
       </div>
     </section>
   );

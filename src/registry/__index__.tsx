@@ -1231,13 +1231,15 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     ],
     files: [
       {
-        path: "src/registry/pro-marketing/blocks/contact-9/contact-section.tsx",
+        path: "src/registry/pro-marketing/blocks/contact-9/components/contact-9.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/pro-marketing/blocks/contact-9/contact-section.tsx");
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/contact-9/components/contact-9.tsx"
+      );
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1245,6 +1247,73 @@ export const Index: Record<string, RegistryItemWithComponent> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["contact"],
+    meta: { bundle: "pro-marketing", containerClassName: "px-5 py-12 lg:p-20" },
+  },
+  "faqs-1": {
+    name: "faqs-1",
+    type: "registry:block",
+    title: "FAQs 1",
+    description: "",
+    registryDependencies: [
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/feature-stack.json",
+      "https://shadcraft-registry.vercel.app/r/featured-icon.json",
+      "https://shadcraft-registry.vercel.app/r/contact-9.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/faqs-1/page.tsx",
+        type: "registry:page",
+        target: "app/faqs/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/faqs-1/components/faqs-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/faqs-1/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["faqs"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "faqs-2": {
+    name: "faqs-2",
+    type: "registry:block",
+    title: "FAQs 2",
+    description: "",
+    registryDependencies: [
+      "accordion",
+      "https://shadcraft-registry.vercel.app/r/section-heading.json",
+      "https://shadcraft-registry.vercel.app/r/contact-9.json",
+    ],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/faqs-2/page.tsx",
+        type: "registry:page",
+        target: "app/faqs/page.tsx",
+      },
+      {
+        path: "src/registry/pro-marketing/blocks/faqs-2/components/faqs-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pro-marketing/blocks/faqs-2/page.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["faqs"],
     meta: { bundle: "pro-marketing" },
   },
   "footer-2": {

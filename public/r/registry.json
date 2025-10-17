@@ -918,12 +918,68 @@
       ],
       "files": [
         {
-          "path": "src/registry/pro-marketing/blocks/contact-9/contact-section.tsx",
+          "path": "src/registry/pro-marketing/blocks/contact-9/components/contact-9.tsx",
           "type": "registry:component"
         }
       ],
       "categories": [
         "contact"
+      ],
+      "meta": {
+        "bundle": "pro-marketing",
+        "containerClassName": "px-5 py-12 lg:p-20"
+      }
+    },
+    {
+      "name": "faqs-1",
+      "title": "FAQs 1",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://shadcraft-registry.vercel.app/r/section-heading.json",
+        "https://shadcraft-registry.vercel.app/r/feature-stack.json",
+        "https://shadcraft-registry.vercel.app/r/featured-icon.json",
+        "https://shadcraft-registry.vercel.app/r/contact-9.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/faqs-1/page.tsx",
+          "type": "registry:page",
+          "target": "app/faqs/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/faqs-1/components/faqs-1.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "faqs"
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "faqs-2",
+      "title": "FAQs 2",
+      "type": "registry:block",
+      "registryDependencies": [
+        "accordion",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json",
+        "https://shadcraft-registry.vercel.app/r/contact-9.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/faqs-2/page.tsx",
+          "type": "registry:page",
+          "target": "app/faqs/page.tsx"
+        },
+        {
+          "path": "src/registry/pro-marketing/blocks/faqs-2/components/faqs-2.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "faqs"
       ],
       "meta": {
         "bundle": "pro-marketing"

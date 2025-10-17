@@ -370,11 +370,59 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "avatar", getRegistryItemJsonUrl("section-heading")],
     files: [
       {
-        path: "blocks/contact-9/contact-section.tsx",
+        path: "blocks/contact-9/components/contact-9.tsx",
         type: "registry:component",
       },
     ],
     categories: ["contact"],
+    meta: {
+      bundle: "pro-marketing",
+      containerClassName: "px-5 py-12 lg:p-20",
+    },
+  },
+  {
+    name: "faqs-1",
+    title: "FAQs 1",
+    type: "registry:block",
+    registryDependencies: [
+      ...getRegistryItemsJsonUrls("section-heading", "feature-stack", "featured-icon", "contact-9"),
+    ],
+    files: [
+      {
+        path: "blocks/faqs-1/page.tsx",
+        type: "registry:page",
+        target: "app/faqs/page.tsx",
+      },
+      {
+        path: "blocks/faqs-1/components/faqs-1.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "faqs-2",
+    title: "FAQs 2",
+    type: "registry:block",
+    registryDependencies: [
+      "accordion",
+      ...getRegistryItemsJsonUrls("section-heading", "contact-9"),
+    ],
+    files: [
+      {
+        path: "blocks/faqs-2/page.tsx",
+        type: "registry:page",
+        target: "app/faqs/page.tsx",
+      },
+      {
+        path: "blocks/faqs-2/components/faqs-2.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
     meta: {
       bundle: "pro-marketing",
     },
