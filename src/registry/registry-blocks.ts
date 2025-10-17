@@ -644,4 +644,53 @@ export const blocks: Registry["items"] = [
       bundle: "pro-marketing",
     },
   },
+  {
+    name: "social-proof-1",
+    title: "Social Proof 1",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/social-proof-1/components/social-proof-1.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["social-proof"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "social-proof-2",
+    title: "Social Proof 2",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: ["react-fast-marquee"],
+    files: [
+      {
+        path: "blocks/social-proof-2/components/social-proof-2.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["social-proof"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
+  {
+    name: "social-proof-3",
+    title: "Social Proof 3",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/social-proof-3/components/social-proof-3.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["social-proof"],
+    meta: {
+      bundle: "pro-marketing",
+    },
+  },
 ];

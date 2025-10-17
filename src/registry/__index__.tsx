@@ -1620,4 +1620,82 @@ export const Index: Record<string, RegistryItemWithComponent> = {
     categories: ["metrics"],
     meta: { bundle: "pro-marketing" },
   },
+  "social-proof-1": {
+    name: "social-proof-1",
+    type: "registry:block",
+    title: "Social Proof 1",
+    description: "",
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/social-proof-1/components/social-proof-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/social-proof-1/components/social-proof-1.tsx"
+      );
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["social-proof"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "social-proof-2": {
+    name: "social-proof-2",
+    type: "registry:block",
+    title: "Social Proof 2",
+    description: "",
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/social-proof-2/components/social-proof-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/social-proof-2/components/social-proof-2.tsx"
+      );
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["social-proof"],
+    meta: { bundle: "pro-marketing" },
+  },
+  "social-proof-3": {
+    name: "social-proof-3",
+    type: "registry:block",
+    title: "Social Proof 3",
+    description: "",
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/registry/pro-marketing/blocks/social-proof-3/components/social-proof-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/pro-marketing/blocks/social-proof-3/components/social-proof-3.tsx"
+      );
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["social-proof"],
+    meta: { bundle: "pro-marketing" },
+  },
 };
