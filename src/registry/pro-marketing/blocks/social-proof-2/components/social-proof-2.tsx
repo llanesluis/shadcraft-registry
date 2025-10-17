@@ -11,7 +11,7 @@ export function SocialProof2() {
             {logos.map((src) => (
               // Replace this with your real logos
               <div key={src} className="mx-5 flex shrink-0 items-center gap-2">
-                <img src={src} />
+                <img src={src} className="aspect-square size-10 object-contain" />
                 <span className="text-base font-bold">Logoipsum</span>
               </div>
             ))}
