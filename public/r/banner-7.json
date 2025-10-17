@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "banner-7",
+  "type": "registry:block",
+  "title": "Banner 7",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/banners/banner-7/components/banner-7.tsx",
+      "content": "\"use client\";\n\nimport { X } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport function Banner7() {\n  const [isVisible, setIsVisible] = useState(true);\n\n  if (!isVisible) return null;\n\n  return (\n    // To make the banner fixed, add classes like `fixed top-0 inset-x-0 z-50` to the container element\n    <aside className=\"bg-background border-border w-full rounded-xl border p-4 shadow-md\">\n      <div className=\"flex flex-row items-center justify-between gap-5 lg:gap-9\">\n        <div className=\"flex-1\">\n          <p className=\"text-foreground mx-auto w-fit font-sans text-base leading-6 font-normal text-pretty\">\n            <span className=\"font-semibold\">New from Acme Inc: </span> AI Productivity Suite.{\" \"}\n            <a href=\"#\" className=\"underline\">\n              Check it out\n            </a>\n          </p>\n        </div>\n\n        <div className=\"shrink-0\">\n          <Button size=\"icon-sm\" variant=\"ghost\" onClick={() => setIsVisible(false)}>\n            <X />\n          </Button>\n        </div>\n      </div>\n    </aside>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing",
+    "containerClassName": "absolute inset-x-0 top-0 p-4"
+  },
+  "categories": [
+    "banners"
+  ]
+}

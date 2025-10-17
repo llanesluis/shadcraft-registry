@@ -14,7 +14,7 @@ export function Banner1() {
 
   return (
     // To make the banner fixed, add classes like `fixed top-0 inset-x-0 z-50` to the container element
-    <aside className="bg-background w-full">
+    <aside className="bg-background border-border w-full rounded-xl border p-4 shadow-md">
       <div className="relative flex flex-col items-start gap-4 md:flex-row md:items-center">
         <FeaturedIcon variant="square">
           <Mail />
@@ -32,14 +32,19 @@ export function Banner1() {
 
           <form className="flex w-full shrink-0 flex-col gap-2 md:w-auto md:flex-row md:items-center">
             <Input placeholder="Enter your email" />
-            <Button type="submit">
+            <Button type="submit" className="cursor-pointer">
               <Mail /> Subscribe
             </Button>
           </form>
         </div>
 
         <div className="absolute top-0 right-0 md:static">
-          <Button size="icon-sm" variant="ghost" onClick={() => setIsVisible(false)}>
+          <Button
+            size="icon-sm"
+            variant="ghost"
+            className="cursor-pointer"
+            onClick={() => setIsVisible(false)}
+          >
             <X />
           </Button>
         </div>

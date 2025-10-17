@@ -24,7 +24,7 @@ export const blocks: Registry["items"] = [
     name: "banner-2",
     title: "Banner 2",
     type: "registry:block",
-    registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
+    registryDependencies: ["button", "input", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
         path: "blocks/banners/banner-2/components/banner-2.tsx",
@@ -58,10 +58,78 @@ export const blocks: Registry["items"] = [
     name: "banner-4",
     title: "Banner 4",
     type: "registry:block",
-    registryDependencies: ["button"],
+    registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
     files: [
       {
         path: "blocks/banners/banner-4/components/banner-4.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["banners"],
+    meta: {
+      bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
+    },
+  },
+  {
+    name: "banner-5",
+    title: "Banner 5",
+    type: "registry:block",
+    registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
+    files: [
+      {
+        path: "blocks/banners/banner-5/components/banner-5.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["banners"],
+    meta: {
+      bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
+    },
+  },
+  {
+    name: "banner-6",
+    title: "Banner 6",
+    type: "registry:block",
+    registryDependencies: ["button", getRegistryItemJsonUrl("featured-icon")],
+    files: [
+      {
+        path: "blocks/banners/banner-6/components/banner-6.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["banners"],
+    meta: {
+      bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
+    },
+  },
+  {
+    name: "banner-7",
+    title: "Banner 7",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/banners/banner-7/components/banner-7.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["banners"],
+    meta: {
+      bundle: "pro-marketing",
+      containerClassName: "absolute inset-x-0 top-0 p-4",
+    },
+  },
+  {
+    name: "banner-8",
+    title: "Banner 8",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/banners/banner-8/components/banner-8.tsx",
         type: "registry:component",
       },
     ],

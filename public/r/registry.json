@@ -507,6 +507,7 @@
       "type": "registry:block",
       "registryDependencies": [
         "button",
+        "input",
         "https://shadcraft-registry.vercel.app/r/featured-icon.json"
       ],
       "files": [
@@ -550,11 +551,98 @@
       "title": "Banner 4",
       "type": "registry:block",
       "registryDependencies": [
-        "button"
+        "button",
+        "https://shadcraft-registry.vercel.app/r/featured-icon.json"
       ],
       "files": [
         {
           "path": "src/registry/pro-marketing/blocks/banners/banner-4/components/banner-4.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "banners"
+      ],
+      "meta": {
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
+      }
+    },
+    {
+      "name": "banner-5",
+      "title": "Banner 5",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/featured-icon.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banners/banner-5/components/banner-5.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "banners"
+      ],
+      "meta": {
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
+      }
+    },
+    {
+      "name": "banner-6",
+      "title": "Banner 6",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/featured-icon.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banners/banner-6/components/banner-6.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "banners"
+      ],
+      "meta": {
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
+      }
+    },
+    {
+      "name": "banner-7",
+      "title": "Banner 7",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banners/banner-7/components/banner-7.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "banners"
+      ],
+      "meta": {
+        "bundle": "pro-marketing",
+        "containerClassName": "absolute inset-x-0 top-0 p-4"
+      }
+    },
+    {
+      "name": "banner-8",
+      "title": "Banner 8",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banners/banner-8/components/banner-8.tsx",
           "type": "registry:component"
         }
       ],
