@@ -45,7 +45,6 @@ export function getRegistryRenderComponent(name: string) {
 
 export async function getRegistryItem(name: string): Promise<RegistryItem | null> {
   const item = Index[name];
-  console.log(item);
   if (!item) return null;
 
   // Convert all file paths to object (pre-parse), without mutating typed data.
