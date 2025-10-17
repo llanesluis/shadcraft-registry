@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "blocks/contact-5/page.tsx",
-      "content": "import { Contact5 } from \"@/registry/pro-marketing/blocks/contact-5/components/contact-5\";\r\n\r\nexport default function Page() {\r\n  return (\r\n    <div className=\"container mx-auto\">\r\n      <Contact5 />\r\n    </div>\r\n  );\r\n}\r\n",
+      "content": "import { Contact5 } from \"@/registry/pro-marketing/blocks/contact-5/components/contact-5\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto\">\n      <Contact5 />\n    </div>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/contact/page.tsx"
     },

@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "blocks/contact-7/page.tsx",
-      "content": "import { Contact7 } from \"@/registry/pro-marketing/blocks/contact-7/components/contact-7\";\r\n\r\nexport default function Page() {\r\n  return (\r\n    <div className=\"container mx-auto\">\r\n      <Contact7 />\r\n    </div>\r\n  );\r\n}\r\n",
+      "content": "import { Contact7 } from \"@/registry/pro-marketing/blocks/contact-7/components/contact-7\";\n\nexport default function Page() {\n  return (\n    <div className=\"container mx-auto\">\n      <Contact7 />\n    </div>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/contact/page.tsx"
     },
