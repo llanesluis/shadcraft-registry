@@ -950,7 +950,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/footer/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/footer-1/components/footer.tsx",
+        path: "src/registry/pro-marketing/blocks/footer-1/components/footer-1.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1309,7 +1309,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/footer/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/footer-2/components/footer.tsx",
+        path: "src/registry/pro-marketing/blocks/footer-2/components/footer-2.tsx",
         type: "registry:component",
         target: "",
       },
@@ -1338,7 +1338,7 @@ export const Index: Record<string, RegistryItemWithComponent> = {
         target: "app/footer/page.tsx",
       },
       {
-        path: "src/registry/pro-marketing/blocks/footer-3/components/footer.tsx",
+        path: "src/registry/pro-marketing/blocks/footer-3/components/footer-3.tsx",
         type: "registry:component",
         target: "",
       },

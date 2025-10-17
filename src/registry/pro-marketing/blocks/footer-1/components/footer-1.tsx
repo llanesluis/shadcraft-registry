@@ -3,9 +3,9 @@ import { Circle, Facebook, Linkedin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
-export function Footer() {
+export function Footer1() {
   return (
-    <footer className="bg-background flex w-full flex-col gap-12 py-12 md:gap-9 lg:py-20">
+    <footer className="bg-background flex w-full flex-col gap-12 px-5 py-12 md:gap-9 lg:px-20 lg:py-20">
       <div className="grid gap-12 sm:grid-cols-2 md:gap-9 lg:grid-cols-4">
         {data.map((section) => (
           <div key={section.title} className="flex flex-col gap-2.5">

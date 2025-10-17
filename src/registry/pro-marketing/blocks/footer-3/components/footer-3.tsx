@@ -2,9 +2,9 @@ import { Circle, Facebook, Linkedin } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 
-export function Footer() {
+export function Footer3() {
   return (
-    <footer className="bg-background flex w-full flex-col gap-12 py-20 md:gap-9">
+    <footer className="bg-background flex w-full flex-col gap-12 px-5 py-20 md:gap-9 lg:px-20">
       <Separator />
 
       <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 md:gap-9 lg:grid-cols-4">

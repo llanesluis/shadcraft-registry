@@ -182,7 +182,7 @@ export const blocks: Registry["items"] = [
         target: "app/footer/page.tsx",
       },
       {
-        path: "blocks/footer-1/components/footer.tsx",
+        path: "blocks/footer-1/components/footer-1.tsx",
         type: "registry:component",
       },
     ],
@@ -423,7 +423,7 @@ export const blocks: Registry["items"] = [
         target: "app/footer/page.tsx",
       },
       {
-        path: "blocks/footer-2/components/footer.tsx",
+        path: "blocks/footer-2/components/footer-2.tsx",
         type: "registry:component",
       },
     ],
@@ -444,7 +444,7 @@ export const blocks: Registry["items"] = [
         target: "app/footer/page.tsx",
       },
       {
-        path: "blocks/footer-3/components/footer.tsx",
+        path: "blocks/footer-3/components/footer-3.tsx",
         type: "registry:component",
       },
     ],

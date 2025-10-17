@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 
-export function Footer() {
+export function Footer2() {
   return (
     <footer className="bg-background flex w-full flex-col gap-12 pt-12 md:gap-9 lg:pt-20">
       <div className="container mx-auto flex flex-col gap-5 px-5 md:flex-row md:gap-9 lg:px-20">
