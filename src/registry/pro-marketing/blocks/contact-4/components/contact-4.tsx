@@ -15,9 +15,9 @@ import {
 } from "@/registry/pro-marketing/components/section-heading";
 import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
-export function ContactSection() {
+export function Contact4() {
   return (
-    <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
+    <section className="flex flex-col gap-12 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">
         <SectionHeadingContentType>Contact us</SectionHeadingContentType>
         <SectionHeadingTitle>Let’s Connect</SectionHeadingTitle>
@@ -25,10 +25,6 @@ export function ContactSection() {
           Have questions about Acme AI? Our team is here to help you get the answers you need.
         </SectionHeadingBody>
       </SectionHeading>
-
-      <div className="bg-muted aspect-square overflow-hidden rounded-2xl sm:aspect-[21/10]">
-        <img src="/assets/contact-7.jpg" className="size-full object-cover" />
-      </div>
 
       <div className="mx-auto grid gap-12 lg:grid-cols-3 lg:gap-9">
         <FeatureStack size="sm">

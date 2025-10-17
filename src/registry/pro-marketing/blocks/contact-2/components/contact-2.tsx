@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,7 +10,7 @@ import {
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
 
-export function ContactSection() {
+export function Contact2() {
   return (
     <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">
@@ -20,7 +21,7 @@ export function ContactSection() {
         </SectionHeadingBody>
       </SectionHeading>
 
-      <div className="mx-auto max-w-md">
+      <Card className="mx-auto max-w-md px-5 py-9 lg:p-9">
         <form className="grid grid-cols-2 gap-4">
           <Input placeholder="Placeholder text" />
           <Input placeholder="Placeholder text" />
@@ -39,7 +40,7 @@ export function ContactSection() {
             Send message
           </Button>
         </form>
-      </div>
+      </Card>
     </section>
   );
 }

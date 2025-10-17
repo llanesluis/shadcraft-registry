@@ -204,7 +204,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-1/contact-section.tsx",
+        path: "blocks/contact-1/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-1/components/contact-1.tsx",
         type: "registry:component",
       },
     ],
@@ -227,7 +232,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-2/contact-section.tsx",
+        path: "blocks/contact-2/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-2/components/contact-2.tsx",
         type: "registry:component",
       },
     ],
@@ -249,7 +259,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-3/contact-section.tsx",
+        path: "blocks/contact-3/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-3/components/contact-3.tsx",
         type: "registry:component",
       },
     ],
@@ -267,7 +282,12 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-4/contact-section.tsx",
+        path: "blocks/contact-4/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-4/components/contact-4.tsx",
         type: "registry:component",
       },
     ],
@@ -286,7 +306,16 @@ export const blocks: Registry["items"] = [
     ],
     files: [
       {
-        path: "blocks/contact-5/contact-section.tsx",
+        path: "blocks/contact-5/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-5/components/contact-5.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/contact-5/components/location-dot.tsx",
         type: "registry:component",
       },
     ],
@@ -302,7 +331,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-6/contact-section.tsx",
+        path: "blocks/contact-6/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-6/components/contact-6.tsx",
         type: "registry:component",
       },
       {
@@ -322,7 +356,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-7/contact-section.tsx",
+        path: "blocks/contact-7/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-7/components/contact-7.tsx",
         type: "registry:component",
       },
     ],
@@ -338,7 +377,12 @@ export const blocks: Registry["items"] = [
     registryDependencies: [...getRegistryItemsJsonUrls("section-heading", "feature-stack")],
     files: [
       {
-        path: "blocks/contact-8/contact-section.tsx",
+        path: "blocks/contact-8/page.tsx",
+        type: "registry:page",
+        target: "app/contact/page.tsx",
+      },
+      {
+        path: "blocks/contact-8/components/contact-8.tsx",
         type: "registry:component",
       },
     ],

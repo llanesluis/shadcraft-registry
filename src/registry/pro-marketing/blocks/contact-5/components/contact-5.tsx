@@ -17,7 +17,7 @@ import {
   SectionHeadingTitle,
 } from "@/registry/pro-marketing/components/section-heading";
 
-export function ContactSection() {
+export function Contact5() {
   return (
     <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">

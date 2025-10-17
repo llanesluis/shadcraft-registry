@@ -15,7 +15,7 @@ import {
 } from "@/registry/pro-marketing/components/section-heading";
 import { FeaturedIcon } from "@/registry/pro-marketing/ui/featured-icon";
 
-export function ContactSection() {
+export function Contact8() {
   return (
     <section className="flex flex-col gap-5 px-5 py-12 lg:gap-9 lg:px-20 lg:py-20">
       <SectionHeading alignment="center" className="mx-auto w-full max-w-md">
