@@ -36,6 +36,7 @@ function Marquee({
     <FastMarquee
       data-slot="marquee"
       className={cn(marqueeVariants({ fade }), className)}
+      direction={direction}
       autoFill={autoFill}
       pauseOnHover={pauseOnHover}
       {...props}
