@@ -934,6 +934,82 @@
       }
     },
     {
+      "name": "cta-1",
+      "title": "CTA 1",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/cta/cta-1/components/cta-1.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": ["cta"],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "cta-2",
+      "title": "CTA 2",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/cta/cta-2/components/cta-2.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": ["cta"],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "cta-3",
+      "title": "CTA 3",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/cta/cta-3/components/cta-3.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": ["cta"],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
+      "name": "cta-4",
+      "title": "CTA 4",
+      "type": "registry:block",
+      "registryDependencies": [
+        "button",
+        "https://shadcraft-registry.vercel.app/r/section-heading.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/cta/cta-4/components/cta-4.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": ["cta"],
+      "meta": {
+        "bundle": "pro-marketing"
+      }
+    },
+    {
       "name": "faqs-1",
       "title": "FAQs 1",
       "type": "registry:block",

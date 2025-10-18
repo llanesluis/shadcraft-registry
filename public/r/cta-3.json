@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-3",
+  "type": "registry:block",
+  "title": "CTA 3",
+  "registryDependencies": [
+    "button",
+    "https://shadcraft-registry.vercel.app/r/section-heading.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/cta/cta-3/components/cta-3.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  SectionHeading,\n  SectionHeadingBody,\n  SectionHeadingTitle,\n} from \"@/components/section-heading\";\n\nexport function CTA3() {\n  return (\n    <section className=\"px-5 py-12 lg:p-20\">\n      <div className=\"bg-primary flex flex-col gap-3 rounded-xl px-5 py-12 lg:p-20\">\n        <SectionHeading alignment=\"center\">\n          <SectionHeadingTitle className=\"text-primary-foreground\">\n            Ready to Work Smarter with AI?\n          </SectionHeadingTitle>\n          <SectionHeadingBody className=\"text-primary-foreground/90\">\n            Start today and see how Acme Inc. helps you finish projects faster, with clarity and\n            focus at every step.\n          </SectionHeadingBody>\n        </SectionHeading>\n        <div className=\"flex flex-col gap-3 md:flex-row md:justify-center\">\n          <Button className=\"bg-primary-foreground text-primary hover:bg-primary-foreground/90\">\n            Learn More\n          </Button>\n          <Button className=\"bg-muted-foreground hover:bg-muted-foreground/90 text-muted cursor-pointer\">\n            Book a Demo\n          </Button>\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  },
+  "categories": [
+    "cta"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-1",
+  "type": "registry:block",
+  "title": "CTA 1",
+  "registryDependencies": [
+    "button",
+    "https://shadcraft-registry.vercel.app/r/section-heading.json"
+  ],
+  "files": [
+    {
+      "path": "blocks/cta/cta-1/components/cta-1.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  SectionHeading,\n  SectionHeadingBody,\n  SectionHeadingTitle,\n} from \"@/components/section-heading\";\n\nexport function CTA1() {\n  return (\n    <section className=\"flex flex-col gap-3 px-5 py-12 lg:p-20\">\n      <SectionHeading alignment=\"center\">\n        <SectionHeadingTitle>Ready to Work Smarter with AI?</SectionHeadingTitle>\n        <SectionHeadingBody>\n          Start today and see how Acme Inc. helps you finish projects faster, with clarity and focus\n          at every step.\n        </SectionHeadingBody>\n      </SectionHeading>\n\n      <div className=\"flex flex-col gap-3 md:flex-row md:justify-center\">\n        <Button className=\"cursor-pointer\">Learn More</Button>\n        <Button variant=\"secondary\" className=\"cursor-pointer\">\n          Book a Demo\n        </Button>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  },
+  "categories": [
+    "cta"
+  ]
+}
